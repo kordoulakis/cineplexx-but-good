@@ -8,17 +8,17 @@
 
 <div class="min-h-screen w-full flex flex-col items-center">
 	<div class="w-full max-w-7xl flex flex-col items-center py-8 px-4">
-		<header class="w-full flex justify-between items-end mb-12 border-b-4 border-primary pb-4">
-			<div class="flex align-bottom items-end gap-2">
-					<h1 class="text-6xl font-black uppercase tracking-tighter leading-none">Cineplexx</h1>
-					 <p class="font-light uppercase">but good</p>
+		<header class="w-full flex flex-col md:flex-row justify-between items-center md:items-end mb-12 border-b-4 border-primary pb-4 gap-6 md:gap-0">
+			<div class="flex flex-col items-center md:items-end md:flex-row align-bottom gap-2">
+					<h1 class="text-5xl sm:text-6xl font-black uppercase tracking-tighter leading-none text-center md:text-left">Cineplexx</h1>
+					 <p class="font-light uppercase text-sm sm:text-base">but good</p>
 			</div>
 
 			<ThemeSwitcher />
 		</header>
 
-		<main class="w-full">
-			<div class="mt-4">
+		<main class="w-full flex flex-col items-center">
+			<div class="mt-4 w-full flex justify-center">
 				<DateSelector bind:value={selectedDate} />
 			</div>
 			<CinemasAndMovies {selectedDate} />

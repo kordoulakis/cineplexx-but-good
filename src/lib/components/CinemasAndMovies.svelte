@@ -39,6 +39,7 @@
 				loading = false;
 			}
 		};
+
 		fetchData();
 	});
 </script>
@@ -56,7 +57,7 @@
 			</div>
 		{/if}
 
-		<div class="flex flex-col gap-6 mb-8">
+		<div class="flex flex-col items-center gap-6 mb-8 w-full">
 			<!-- Search Bar -->
 			<div class="relative w-full max-w-md">
 				<div class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
@@ -78,8 +79,8 @@
 				{/if}
 			</div>
 
-			<div class="flex flex-wrap gap-2 items-center">
-				<span class="text-sm font-semibold uppercase tracking-wider text-muted-foreground mr-2">Filters:</span>
+			<div class="flex flex-wrap gap-2 items-center justify-center">
+				<span class="text-sm font-semibold uppercase tracking-wider text-muted-foreground mr-2 w-full text-center sm:w-auto">Filters:</span>
 
 				<button
 					onclick={() => showOnlyOv = !showOnlyOv}
@@ -152,8 +153,8 @@
 				{#if filteredData.length > 0}
 				{@const cinema = cinemas.find(c => c.key === cinemaKey)}
 				<section class="flex flex-col gap-6">
-					<div class="border-b-2 border-primary/20 pb-4 mb-2 flex items-end justify-between">
-						<h2 class="text-4xl font-black uppercase tracking-tighter text-primary">
+					<div class="border-b-2 border-primary/20 pb-4 mb-2 flex flex-col sm:flex-row items-center sm:items-end justify-between gap-4 sm:gap-0">
+						<h2 class="text-3xl sm:text-4xl font-black uppercase tracking-tighter text-primary text-center sm:text-left">
 							{(result.ok && result.data[0]?.sessions[0]?.cinemaName) || cinema?.name || cinemaKey}
 						</h2>
 

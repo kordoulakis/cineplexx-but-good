@@ -58,14 +58,14 @@
 		<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-background/40"></div>
 	</div>
 
-	<Card.Header class="relative z-10 p-4 pb-2 space-y-1">
-		<h3 class="font-bold text-base leading-tight tracking-tight text-card-foreground" title={movie.title}>
+	<Card.Header class="relative z-10 p-4 pb-2 space-y-2">
+		<h3 class="font-bold text-lg leading-tight tracking-tight text-card-foreground text-center sm:text-left" title={movie.title}>
 			{movie.title}
 		</h3>
-		<div class="flex items-start justify-between gap-2">
+		<div class="flex items-center sm:items-start justify-center sm:justify-between gap-2">
 
 
-			<div class="flex gap-1 shrink-0 pt-0.5">
+			<div class="flex flex-wrap justify-center sm:justify-start gap-1 shrink-0 pt-0.5">
 				{#if isEnglishOV}
 					<Badge variant="default" class="bg-emerald-600 hover:bg-emerald-700 text-[10px] px-1.5 py-0 font-semibold tracking-wider uppercase">
 						OV
@@ -87,7 +87,7 @@
 		</div>
 
 		{#if movie.titleOriginalCalculated && movie.titleOriginalCalculated !== movie.title}
-			<p class="text-xs text-muted-foreground italic line-clamp-1">
+			<p class="text-xs text-muted-foreground italic line-clamp-1 text-center sm:text-left">
 				{movie.titleOriginalCalculated}
 			</p>
 		{/if}
@@ -95,22 +95,22 @@
 
 	<Card.Content class="relative z-10 p-4 pt-0 pb-3 flex-grow flex flex-col justify-between gap-3">
 		{#if showStartsAt}
-			<div class="flex items-center gap-1.5 text-xs text-muted-foreground">
+			<div class="flex items-center justify-center sm:justify-start gap-1.5 text-xs text-muted-foreground">
 				<CalendarIcon class="w-3.5 h-3.5 text-muted-foreground/70" />
 				<span>Starts {formattedDate}</span>
 			</div>
 		{/if}
 
 		<div class="space-y-2">
-			<div class="flex items-center gap-1 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+			<div class="flex items-center justify-center sm:justify-start gap-1 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
 				<ClockIcon class="w-3.5 h-3.5" />
 				<span>Showtimes</span>
 			</div>
 
 			{#if !displaySessions || displaySessions.length === 0}
-				<p class="text-xs text-muted-foreground italic">No screenings matching filters listed for this date.</p>
+				<p class="text-xs text-muted-foreground italic text-center sm:text-left">No screenings matching filters listed for this date.</p>
 			{:else}
-				<div class="flex flex-nowrap gap-1.5 overflow-x-auto pb-2 no-scrollbar">
+				<div class="flex flex-nowrap gap-1.5 overflow-x-auto pb-2 no-scrollbar justify-start sm:justify-start">
 					{#each displaySessions as session (session)}
 						{@const techs = getCleanTech(session.technologies, session.screenName)}
 

@@ -59,11 +59,11 @@
 	const isSelected = (date: DateValue) => date.toString() === value;
 </script>
 
-<div class="flex flex-col gap-4 w-full">
-	<div class="flex items-center gap-3">
-		<span class="text-xs font-bold uppercase tracking-widest text-muted-foreground">Select Date</span>
+<div class="flex flex-col gap-4 w-full items-center">
+	<div class="flex flex-col sm:flex-row items-center gap-3 w-full justify-center">
+		<span class="text-xs font-bold uppercase tracking-widest text-muted-foreground whitespace-nowrap">Select Date</span>
 		
-		<div class="flex flex-wrap gap-2">
+		<div class="flex flex-wrap gap-2 justify-center">
 			{#each quickDates as { date, label } (date.toString())}
 				<Button
 					variant={isSelected(date) ? "default" : "outline"}
