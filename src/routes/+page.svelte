@@ -9,9 +9,11 @@
 <div class="min-h-screen w-full flex flex-col items-center">
 	<div class="w-full max-w-7xl flex flex-col items-center py-8 px-4">
 		<header class="w-full flex justify-between items-end mb-12 border-b-4 border-primary pb-4">
-			<div class="flex flex-col gap-2">
-				<h1 class="text-6xl font-black uppercase tracking-tighter leading-none">Cineplexx</h1>
+			<div class="flex align-bottom items-end gap-2">
+					<h1 class="text-6xl font-black uppercase tracking-tighter leading-none">Cineplexx</h1>
+					 <p class="font-light uppercase">but good</p>
 			</div>
+
 			<ThemeSwitcher />
 		</header>
 
