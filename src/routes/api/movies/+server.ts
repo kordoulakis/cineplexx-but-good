@@ -1,12 +1,7 @@
-import type { Cinema, FetchResult, RawMovie, TrimmedMovie } from './types/types.ts';
-import { retryFetch } from './async.ts';
-
-export const cinemas: Cinema[] = [
-	{ id: 1003, key: 'donauzentrum', name: 'Donauzentrum', slug: 'Cineplexx-Donau-Zentrum' },
-	{ id: 1001, key: 'apollo', name: 'Apollo', slug: 'Apollo-Das-Kino' },
-	{ id: 1004, key: 'millennium', name: 'Millennium', slug: 'Cineplexx-Millennium-City' },
-	{ id: 1016, key: 'scs', name: 'SCS', slug: 'Cineplexx-Westfield-SCS' }
-];
+import type { RequestHandler } from '@sveltejs/kit';
+import { json } from '@sveltejs/kit';
+import type { RawMovie, TrimmedMovie, FetchResult } from '$lib/types/types';
+import { cinemas } from '$lib/types/types';
 
 const BASE = 'https://app.cineplexx.at/api/v1/cinemasweb';
 
@@ -65,18 +60,42 @@ function mapToTrimmedMovies(raw: RawMovie[]): TrimmedMovie[] {
 	});
 }
 
-export async function getMoviesForAllCinemas(
-	date: string,
-	options?: { retries?: number; timeoutMs?: number }
-): Promise<Record<string, FetchResult<TrimmedMovie[]>>> {
-	const retries = options?.retries ?? 2;
-	const timeoutMs = options?.timeoutMs ?? 8000;
+async function fetchWithTimeout<T>(url: string, timeoutMs: number): Promise<T> {
+	const controller = new AbortController();
+	const id = setTimeout(() => controller.abort(), timeoutMs);
 
-	// Map each cinema to an async operation
-	const promises = cinemas.map(async (cinema) => {
-		const url = `${BASE}/${cinema.id}/movies?date=${encodeURIComponent(date)}`;
+	try {
+		const response = await fetch(url, { signal: controller.signal });
+		if (!response.ok) throw new Error(`HTTP ${response.status}`);
+		return await response.json() as T;
+	} finally {
+		clearTimeout(id);
+	}
+}
+
+async function retryFetch<T>(url: string, attempts: number, timeoutMs: number): Promise<T> {
+	let lastError: unknown;
+	for (let i = 0; i <= attempts; i++) {
 		try {
-			const rawData = await retryFetch<RawMovie[]>(url, retries, timeoutMs);
+			return await fetchWithTimeout<T>(url, timeoutMs);
+		} catch (err) {
+			lastError = err;
+			if (i < attempts) await new Promise((res) => setTimeout(res, 300 * Math.pow(2, i)));
+		}
+	}
+	throw lastError;
+}
+
+export const GET: RequestHandler = async ({ url }) => {
+	const date = url.searchParams.get('date');
+	if (!date) {
+		return json({ error: 'Date parameter is required' }, { status: 400 });
+	}
+
+	const promises = cinemas.map(async (cinema) => {
+		const fetchUrl = `${BASE}/${cinema.id}/movies?date=${encodeURIComponent(date)}`;
+		try {
+			const rawData = await retryFetch<RawMovie[]>(fetchUrl, 2, 8000);
 			return { key: cinema.key, result: { ok: true, data: mapToTrimmedMovies(rawData) } as const };
 		} catch (err) {
 			const error = err instanceof Error ? err.message : String(err);
@@ -85,15 +104,14 @@ export async function getMoviesForAllCinemas(
 		}
 	});
 
-	// Fire all 4 requests concurrently
 	const responses = await Promise.all(promises);
-
-	// Re-assemble into the final dictionary object
-	return responses.reduce(
+	const schedules = responses.reduce(
 		(acc, curr) => {
 			acc[curr.key] = curr.result;
 			return acc;
 		},
 		{} as Record<string, FetchResult<TrimmedMovie[]>>
 	);
-}
+
+	return json(schedules);
+};

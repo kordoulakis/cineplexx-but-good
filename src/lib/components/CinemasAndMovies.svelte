@@ -1,12 +1,13 @@
 <script lang="ts">
-	import { getMoviesForAllCinemas, cinemas } from '$lib/api';
 	import type { TrimmedMovie, FetchResult } from '../types/types.ts';
+	import { cinemas } from '$lib/types/types';
 	import MovieCard from '$lib/components/MovieCard.svelte';
 	import { Badge } from '$lib/components/ui/badge';
 	import { Button } from '$lib/components/ui/button';
 	import ExternalLinkIcon from '@lucide/svelte/icons/external-link';
 
 	let { selectedDate = new Date().toISOString().split('T')[0] } = $props();
+
 	let schedules = $state<Record<string, FetchResult<TrimmedMovie[]>>>({});
 	let loading = $state(true);
 	let componentError = $state<string | null>(null);
@@ -25,12 +26,13 @@
 	};
 
 	$effect(() => {
-		// Track selectedDate at the top level of the effect
 		const dateToFetch = selectedDate;
 		const fetchData = async () => {
 			loading = true;
 			try {
-				schedules = await getMoviesForAllCinemas(dateToFetch);
+				const response = await fetch(`/api/movies?date=${dateToFetch}`);
+				if (!response.ok) throw new Error(`Failed to fetch: ${response.statusText}`);
+				schedules = await response.json();
 				componentError = null;
 			} catch (err) {
 				console.error('Component fetch crashed:', err);

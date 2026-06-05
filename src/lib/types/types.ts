@@ -56,3 +56,10 @@ export interface RawMovie {
 
 export type Cinema = { id: number; key: string; name: string; slug: string };
 export type FetchResult<T> = { ok: true; data: T } | { ok: false; error: string };
+
+export const cinemas: Cinema[] = [
+	{ id: 1003, key: 'donauzentrum', name: 'Donauzentrum', slug: 'Cineplexx-Donau-Zentrum' },
+	{ id: 1001, key: 'apollo', name: 'Apollo', slug: 'Apollo-Das-Kino' },
+	{ id: 1004, key: 'millennium', name: 'Millennium', slug: 'Cineplexx-Millennium-City' },
+	{ id: 1016, key: 'scs', name: 'SCS', slug: 'Cineplexx-Westfield-SCS' }
+];
