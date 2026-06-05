@@ -1,6 +1,0 @@
-allowBuilds:
-  '@parcel/watcher': false
-  esbuild: true
-  '@tailwindcss/oxide': true
-  sharp: false
-  workerd: false
