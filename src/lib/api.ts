@@ -12,32 +12,29 @@ const BASE = 'https://app.cineplexx.at/api/v1/cinemasweb';
 
 function mapToTrimmedMovies(raw: RawMovie[]): TrimmedMovie[] {
 	return (raw || []).map((movie) => {
-		const availableVersCMS = (movie.availableVersCMS || []).map((v) => ({
-			id: v.id,
-			Description: v.Description,
-			DescriptionEN: v.DescriptionEN
-		}));
-
-		const hasOVDescription = availableVersCMS.some(
-			(v) =>
-				v.DescriptionEN?.toLowerCase().includes('ov (english)') ||
-				v.Description?.toLowerCase().includes('ov (english)')
-		);
-
 		const sessions = (movie.sessions || []).map((s) => {
-			const isOvSession = s.technologies.flat().some((t) => t.toUpperCase() === 'OV');
+			const isOvSession = s.technologies.flat().some((t) => t.toUpperCase() === 'OV') || 
+				s.screenName.toUpperCase().includes('OV') ||
+				s.technologies.flat().some((t) => t.toUpperCase() === 'OMU');
 			return {
 				cinemaId: s.cinemaId,
 				cinemaName: s.cinemaName,
 				screenName: s.screenName,
 				technologies: s.technologies,
 				showtime: s.showtime,
-				// A session is OV if it has the tech OR if the movie version itself is OV
-				isOv: isOvSession || hasOVDescription
+				isOv: isOvSession
 			};
 		});
 
 		const hasOVTech = sessions.some((session) => session.isOv);
+		const isOvMovie = hasOVTech || 
+			[movie.titleOriginalCalculated, movie.title].some(t => 
+				t?.toUpperCase().includes('(OV)') || 
+				t?.toUpperCase().includes(' OV') ||
+				t?.toUpperCase().includes('(OMU)') || 
+				t?.toUpperCase().includes(' OMU')
+			);
+
 		const hasIMAXTech = sessions.some((session) =>
 			session.technologies.flat().some((t) => t.toUpperCase() === 'IMAX') ||
 			session.screenName.toUpperCase().includes('IMAX')
@@ -49,9 +46,13 @@ function mapToTrimmedMovies(raw: RawMovie[]): TrimmedMovie[] {
 			startDate: movie.startDate,
 			comingSoon: movie.comingSoon,
 			posterImage: movie.posterImage,
-			availableVersCMS,
+			availableVersCMS: (movie.availableVersCMS || []).map((v) => ({
+				id: v.id,
+				Description: v.Description,
+				DescriptionEN: v.DescriptionEN
+			})),
 			sessions,
-			isOv: hasOVTech || hasOVDescription,
+			isOv: isOvMovie,
 			isImax: hasIMAXTech
 		};
 	});

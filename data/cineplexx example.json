@@ -1,0 +1,4470 @@
+[
+  {
+    "id": "HO00018125",
+    "HOFilmCode": "A000019559",
+    "corporateFilmId": "A000019559",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/Digital_MO2_crt.OneSheet_crn.MontageOneSheet_siz.2480x3508_cta.Release-Date_cou.DE_German.des_546px.jpg",
+    "title": "*The Super Mario Galaxy Movie",
+    "titleAlt": null,
+    "titleCalculated": "Der Super Mario Galaxy Film",
+    "titleOriginalCalculated": "The Super Mario Galaxy Movie",
+    "trailers": [
+      {
+        "trailerKey": "728be9ca-835d-4182-bbc9-e6fa97a940cc",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260326_30_1023224_10d17223-a71c-4568-a69b-869654f159aa_custom_hd_mp4_avc_aac_16x9_1920x1080p_24hz_.40_0.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260326_30_1023224_10d17223-a71c-4568-a69b-869654f159aa_custom_hd_mp4_avc_aac_16x9_1920x1080p_24hz__720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260326_30_1023224_10d17223-a71c-4568-a69b-869654f159aa_custom_hd_mp4_avc_aac_16x9_1920x1080p_24hz__404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260326_30_1023224_10d17223-a71c-4568-a69b-869654f159aa_custom_hd_mp4_avc_aac_16x9_1920x1080p_24hz__720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/728be9ca-835d-4182-bbc9-e6fa97a940cc"
+      }
+    ],
+    "director": "Aaron Horvath",
+    "directors": [
+      "Aaron Horvath",
+      "Michael Jelenic"
+    ],
+    "actors": [
+      "Jack Black"
+    ],
+    "startDate": "2026-04-01",
+    "openingDate": "2026-04-01T00:00:00+02:00",
+    "genres": [
+      "Komödie",
+      "Action",
+      "Animation/Zeichentrick"
+    ],
+    "genreId": "0000000005",
+    "comingSoon": false,
+    "isScheduledAtCinema": null,
+    "rating": "Ab 8 Jahren",
+    "ratingDescription": "Ab 8 Jahren",
+    "allStateRatings": "{\"stateFsk\":[]}",
+    "ratingAlt": null,
+    "runTime": 99,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/2570_FP_1144432U_00088073_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/2570_FP_1144432U_00088596_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/2570_FP_1144432U_00088610_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/2570_FP_1144432U_00089160_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/2570_FP_1144432U_00089931_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/2570_FP_1144441U_00087486_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/2570_FP_1144441U_00088802_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/2570_FP_1144441U_00088728_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/2570_FP_1144441U_00089291_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/2570_FP_30_Fight_00086981_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/2570_FP_1144441U_00088906_295px.jpg"
+    ],
+    "teachingMaterials": [],
+    "cinemaIds": [
+      "1013",
+      "1030",
+      "1032",
+      "1001",
+      "1003",
+      "1004",
+      "1007",
+      "1008",
+      "1010",
+      "1011",
+      "1016",
+      "1019",
+      "1023",
+      "1002",
+      "1005",
+      "1014",
+      "1017",
+      "1018",
+      "1021",
+      "1022",
+      "1024",
+      "1033",
+      "1006",
+      "1012",
+      "1020"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": null,
+    "ratingGetmeshEn": null,
+    "originLangCMS": "English",
+    "availableTechCMS": [
+      {
+        "id": "311",
+        "Description": "<p>Dolby Atmos</p>",
+        "DescriptionEN": "<p>Dolby Atmos</p>"
+      },
+      {
+        "id": "62",
+        "Description": "<p>3D</p>\n",
+        "DescriptionEN": "<p>3D</p>\n"
+      },
+      {
+        "id": "310",
+        "Description": "<p>Dolby Cinema</p>\n",
+        "DescriptionEN": "<p>Dolby Cinema</p>\n"
+      },
+      {
+        "id": "316",
+        "Description": "<p>IMAX</p>\n",
+        "DescriptionEN": "<p>IMAX</p>\n"
+      },
+      {
+        "id": "313",
+        "Description": "<p>MX4D</p>",
+        "DescriptionEN": "<p>MX4D</p>"
+      }
+    ],
+    "availableVersCMS": [
+      {
+        "id": "143",
+        "Description": "<p>OV (English)</p>",
+        "DescriptionEN": "<p>OV (English)</p>\n"
+      },
+      {
+        "id": "297",
+        "Description": "<p>DF</p>\n",
+        "DescriptionEN": "<p>DF (german)</p>\n"
+      },
+      {
+        "id": "63",
+        "Description": "<p>OmU</p>\n",
+        "DescriptionEN": "<p>OmU</p>\n"
+      }
+    ],
+    "movieStartCMS": "2025-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "USA"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": false,
+    "distributorName": "Universal Pictures",
+    "shortURL": "der-super-mario-galaxy-film",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "DER SUPER MARIO GALAXY FILM ist der neue Animationsfilm, basierend auf der Welt von „Super Mario Bros.“",
+    "descriptionCalculated": "Das erste Mario-Abenteuer DER SUPER MARIO BROS. FILM startete 2023 in den Kinos, spielte weltweit mehr als 1,3 Milliarden Dollar ein. \n\nDER SUPER MARIO BROS. FILM und DER SUPER MARIO GALAXY FILM wurden federführend von Chris Meledandri (Illumination) und Shigeru Miyamoto (Nintendo) produziert. \n\nUniversal Pictures und Nintendo fungieren als Co-Produzenten. Den weltweiten Filmverleih übernimmt Universal Pictures.\n\n DER SUPER MARIO GALAXY FILM entstand erneut unter der Regie der beiden Filmemacher Aaron Horvath und Michael Jelenic. Matthew Fogel verantwortet ein weiteres Mal das Drehbuch. Brian Tyler komponierte auch für die Fortsetzung die Filmmusik.",
+    "descriptionShortCalculated": "DER SUPER MARIO GALAXY FILM ist der neue Animationsfilm, basierend auf der Welt von „Super Mario Bros.“",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00018124",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-121702",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00018124",
+        "sessionId": "121702",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 10",
+        "screenNumber": 10,
+        "technologies": [
+          [
+            "2D"
+          ],
+          [
+            "MONATSSPARER FAMILY"
+          ]
+        ],
+        "showtime": "2026-06-07T14:30:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSpF",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      },
+      {
+        "id": "1003-121728",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00018124",
+        "sessionId": "121728",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 8",
+        "screenNumber": 8,
+        "technologies": [
+          [
+            "2D"
+          ],
+          [
+            "MONATSSPARER FAMILY"
+          ]
+        ],
+        "showtime": "2026-06-07T17:30:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSpF",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  },
+  {
+    "id": "HO00018182",
+    "HOFilmCode": "A000019621",
+    "corporateFilmId": "A000019621",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/CERULEAN_PAYOFF_POSTER_GERMANY_klein.jpg",
+    "title": "*The Devil Wears Prada 2",
+    "titleAlt": null,
+    "titleCalculated": "Der Teufel trägt Prada 2",
+    "titleOriginalCalculated": "The Devil Wears Prada 2",
+    "trailers": [
+      {
+        "trailerKey": "74103751-7951-46f9-99e6-dd148dbbbfc5",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260202_30_1009625_DEVILWRSPRADA2_TLRB_DUB_TD_GER_dds_1080.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260202_30_1009625_DEVILWRSPRADA2_TLRB_DUB_TD_GER_dds_1080_720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260202_30_1009625_DEVILWRSPRADA2_TLRB_DUB_TD_GER_dds_1080_404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260202_30_1009625_DEVILWRSPRADA2_TLRB_DUB_TD_GER_dds_1080_720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/74103751-7951-46f9-99e6-dd148dbbbfc5"
+      }
+    ],
+    "director": "David Frankel",
+    "directors": [
+      "David Frankel"
+    ],
+    "actors": [
+      "Stanley Tucci",
+      "Emily Blunt",
+      "Meryl Streep",
+      "Anne Hathaway"
+    ],
+    "startDate": "2026-04-29",
+    "openingDate": "2026-04-29T00:00:00+02:00",
+    "genres": [
+      "Komödie",
+      "Drama"
+    ],
+    "genreId": "0000000002",
+    "comingSoon": false,
+    "isScheduledAtCinema": null,
+    "rating": "jugendfrei",
+    "ratingDescription": "jugendfrei",
+    "allStateRatings": "{\"stateFsk\":[]}",
+    "ratingAlt": null,
+    "runTime": 121,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DTtP2_Still1.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TDWP2-02725_R_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TDWP2-02722_R_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/Screenshot%202026-02-11%20155359.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TDWP2-03529_R_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TDWP2-00147_R_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TDWP2-12549_R_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TDWP2-25797_R_500px.jpg"
+    ],
+    "teachingMaterials": [],
+    "cinemaIds": [
+      "1019",
+      "1021",
+      "1030",
+      "1001",
+      "1003",
+      "1004",
+      "1005",
+      "1006",
+      "1008",
+      "1012",
+      "1020",
+      "1022",
+      "1023",
+      "1024",
+      "1029",
+      "1002",
+      "1014",
+      "1016",
+      "1017",
+      "1018",
+      "1032",
+      "1007",
+      "1010",
+      "1011",
+      "1013",
+      "1033"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": "sehenswert",
+    "ratingGetmeshEn": "worth seeing",
+    "originLangCMS": "English",
+    "availableTechCMS": [
+      {
+        "id": "310",
+        "Description": "<p>Dolby Cinema</p>\n",
+        "DescriptionEN": "<p>Dolby Cinema</p>\n"
+      },
+      {
+        "id": "311",
+        "Description": "<p>Dolby Atmos</p>",
+        "DescriptionEN": "<p>Dolby Atmos</p>"
+      }
+    ],
+    "availableVersCMS": [
+      {
+        "id": "143",
+        "Description": "<p>OV (English)</p>",
+        "DescriptionEN": "<p>OV (English)</p>\n"
+      },
+      {
+        "id": "297",
+        "Description": "<p>DF</p>\n",
+        "DescriptionEN": "<p>DF (german)</p>\n"
+      },
+      {
+        "id": "63",
+        "Description": "<p>OmU</p>\n",
+        "DescriptionEN": "<p>OmU</p>\n"
+      }
+    ],
+    "movieStartCMS": "2025-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "USA"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": null,
+    "distributorName": "The Walt Disney Company",
+    "shortURL": "der-teufel-trägt-prada-2",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "Meryl Streep, Anne Hathaway, Emily Blunt und Stanley Tucci kommen zurück.",
+    "descriptionCalculated": "Um es mit Mirandas Worten zu sagen: „Reißen Sie sich zusammen“, denn es ist wieder Zeit für High Heels, scharfe Blicke und große Mode‑Momente auf der großen Leinwand! Meryl Streep, Anne Hathaway, Emily Blunt und Stanley Tucci kehren als Miranda, Andy, Emily und Nigel zu den Fashion-Hotspots von New York City und in die eleganten Büros des Runway Magazins zurück.",
+    "descriptionShortCalculated": "Eine Fortsetzung? Im Frühling? Revolutionär. Meryl Streep, Anne Hathaway, Emily Blunt und Stanley Tucci kehren zurück in „Der Teufel trägt Prada 2“ – 2026 im Kino.",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00018181",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      },
+      {
+        "id": "1003-HO00019384",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-121696",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00018181",
+        "sessionId": "121696",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 11",
+        "screenNumber": 11,
+        "technologies": [
+          [
+            "2D"
+          ],
+          [
+            "MONATSSPARER"
+          ]
+        ],
+        "showtime": "2026-06-07T14:30:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSp",
+          "sehenswert",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      },
+      {
+        "id": "1003-121706",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00018181",
+        "sessionId": "121706",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 11",
+        "screenNumber": 11,
+        "technologies": [
+          [
+            "2D"
+          ],
+          [
+            "MONATSSPARER"
+          ]
+        ],
+        "showtime": "2026-06-07T17:00:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSp",
+          "sehenswert",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      },
+      {
+        "id": "1003-121717",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00018181",
+        "sessionId": "121717",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 11",
+        "screenNumber": 11,
+        "technologies": [
+          [
+            "2D"
+          ],
+          [
+            "MONATSSPARER"
+          ]
+        ],
+        "showtime": "2026-06-07T19:45:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSp",
+          "sehenswert",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      },
+      {
+        "id": "1003-121712",
+        "salesChannels": ";CALL;RSP;GSALE;CELL;KIOSK;PDA;WWW;POSBK;POS;IVR;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00019384",
+        "sessionId": "121712",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 10",
+        "screenNumber": 10,
+        "technologies": [
+          [
+            "2D",
+            "OV (Englisch)"
+          ],
+          [
+            "MONATSSPARER"
+          ]
+        ],
+        "showtime": "2026-06-07T18:45:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSp",
+          "OV",
+          "sehenswert",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  },
+  {
+    "id": "HO00018885",
+    "HOFilmCode": "A000020370",
+    "corporateFilmId": "A000020370",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DWWB_main_AT_A4_546px.jpg",
+    "title": "*The Magic Faraway Tree",
+    "titleAlt": null,
+    "titleCalculated": "Der Wunderweltenbaum",
+    "titleOriginalCalculated": "The Magic Faraway Tree",
+    "trailers": [
+      {
+        "trailerKey": "3aa77408-2bbc-47d8-97ce-6bb1ae7565f2",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260318_30_1020393_9ef3e95f-3bce-4bf0-bd7b-c7b65dc02bcb_custom_hd_mp4_avc_aac_16x9_1920x1080p_24hz_.30_0.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260318_30_1020393_9ef3e95f-3bce-4bf0-bd7b-c7b65dc02bcb_custom_hd_mp4_avc_aac_16x9_1920x1080p_24hz__720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260318_30_1020393_9ef3e95f-3bce-4bf0-bd7b-c7b65dc02bcb_custom_hd_mp4_avc_aac_16x9_1920x1080p_24hz__404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260318_30_1020393_9ef3e95f-3bce-4bf0-bd7b-c7b65dc02bcb_custom_hd_mp4_avc_aac_16x9_1920x1080p_24hz__720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/3aa77408-2bbc-47d8-97ce-6bb1ae7565f2"
+      }
+    ],
+    "director": "Ben Gregor",
+    "directors": [
+      "Ben Gregor"
+    ],
+    "actors": [
+      "Rebecca Ferguson",
+      "Andrew Garfield",
+      "Claire Foy",
+      "Nonso Anozie",
+      "Michael Palin",
+      "Jennifer  Saunders",
+      "Lenny Henry",
+      "Nicola Coughlan",
+      "Jessica Gunning"
+    ],
+    "startDate": "2026-04-30",
+    "openingDate": "2026-04-30T00:00:00+02:00",
+    "genres": [
+      "Fantasy",
+      "Abenteuer",
+      "Family"
+    ],
+    "genreId": "0000000010",
+    "comingSoon": false,
+    "isScheduledAtCinema": null,
+    "rating": "jugendfrei",
+    "ratingDescription": "jugendfrei",
+    "allStateRatings": "{\"stateFsk\":[]}",
+    "ratingAlt": null,
+    "runTime": 112,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TMFT_00103_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TMFT_02604_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TMFT_SG_00004_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TMFT_SG_000010_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TMFT_SG_00035_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TMFT_SG_00039_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TMFT_SG_00045_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TMFT_SG_00058_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TMFT_SG_00079_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TMFT_SG_00096_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TMFT_SG_00148_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TMFT_SG_00152_A4_295px.jpg"
+    ],
+    "teachingMaterials": [
+      {
+        "fullpath": "https://s3proxygw.cineplexx.at/cms-live/asset/AUT/Schulkino/Unterrichtsmaterial/2026/DER_WUNDERWELTENBAUM.pdf",
+        "value": "Unterrichtsmaterial"
+      }
+    ],
+    "cinemaIds": [
+      "1004",
+      "1006",
+      "1007",
+      "1010",
+      "1013",
+      "1016",
+      "1017",
+      "1003",
+      "1005",
+      "1008",
+      "1011",
+      "1012",
+      "1018",
+      "1019",
+      "1020",
+      "1022",
+      "1033",
+      "1001",
+      "1014",
+      "1002",
+      "1032",
+      "1024",
+      "1029"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": "sehenswert",
+    "ratingGetmeshEn": "worth seeing",
+    "originLangCMS": "Englisch",
+    "availableTechCMS": [],
+    "availableVersCMS": [
+      {
+        "id": "297",
+        "Description": "<p>DF</p>\n",
+        "DescriptionEN": "<p>DF (german)</p>\n"
+      },
+      {
+        "id": "818",
+        "Description": "<p>OV</p>",
+        "DescriptionEN": "<p>OV</p>"
+      },
+      {
+        "id": "63",
+        "Description": "<p>OmU</p>\n",
+        "DescriptionEN": "<p>OmU</p>\n"
+      }
+    ],
+    "movieStartCMS": "2025-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "GBR"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": true,
+    "distributorName": "Constantin Film",
+    "shortURL": "der-wunderweltenbaum",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "Familien-Fantasyabenteuer über die \nmagischen Erlebnisse einer ganz besonderen Familie.",
+    "descriptionCalculated": "Als die Geschwister Beth (Delilah Bennett-Cardy), Fran (Billie Gadson) und Joe (Phoenix Laroche) wider ihren Willen mit ihren Eltern (Andrew Garfield, Claire Foy) aufs Land ziehen, beginnt für die Familie ein ganz besonderes Abenteuer. In dem nahegelegenen, geheimnisvollen Wald entdecken die Kinder einen magischen Baum: den bis in die Wolken reichenden Wunderweltenbaum, in dem außergewöhnliche Wesen wohnen. Schnell schließen sie Freundschaft mit den Baumbewohnern Fee Seidenhaar (Nicola Coughlan), Frau Wasch (Jessica Gunning) und Mondgesicht (Nonso Anozie), die sie in fantastische Welten entführen. Gemeinsam erleben sie märchenhafte Abenteuer – bis sie auf einer ihrer Reisen ausgerechnet in der düsteren Welt der gefürchteten Schuldirektorin Madame Klaps (Rebecca Ferguson) notlanden müssen. Auch zuhause läuft es mit dem neuen Familienbetrieb plötzlich nicht mehr ganz nach Plan... \nWird ihnen die Flucht aus den Fängen von Madame Klaps gelingen und werden sie die Tomatenplantage ihrer Eltern retten? Können Seidenhaar und Mondgesicht die Geschwister davon überzeugen, dass Wunder möglich sind, wenn man nur fest daran glaubt?",
+    "descriptionShortCalculated": "Familien-Fantasyabenteuer über die \nmagischen Erlebnisse einer ganz besonderen Familie.",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00018883",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-121699",
+        "salesChannels": ";CALL;RSP;GSALE;CELL;KIOSK;PDA;WWW;POSBK;POS;IVR;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00018883",
+        "sessionId": "121699",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 3",
+        "screenNumber": 3,
+        "technologies": [
+          [
+            "2D"
+          ],
+          [
+            "MONATSSPARER FAMILY"
+          ]
+        ],
+        "showtime": "2026-06-07T14:15:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSpF",
+          "sehenswert",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  },
+  {
+    "id": "HO00019503",
+    "HOFilmCode": "A000021050",
+    "corporateFilmId": "A000021050",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DLDW_AT_kl.jpg",
+    "title": "*L'enfant du désert",
+    "titleAlt": null,
+    "titleCalculated": "Die Legende des Wüstenkindes",
+    "titleOriginalCalculated": "L'enfant du désert",
+    "trailers": [
+      {
+        "trailerKey": "c8952844-e657-4cb0-82f5-409ffd319a2a",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260326_30_1023190_l-enfant-du-desert-trailer-german-die-legende-des-wuestenkindes-haupttrailer-ger.50_0.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260326_30_1023190_l-enfant-du-desert-trailer-german-die-legende-des-wuestenkindes-haupttrailer-ger_720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260326_30_1023190_l-enfant-du-desert-trailer-german-die-legende-des-wuestenkindes-haupttrailer-ger_404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260326_30_1023190_l-enfant-du-desert-trailer-german-die-legende-des-wuestenkindes-haupttrailer-ger_720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/c8952844-e657-4cb0-82f5-409ffd319a2a"
+      }
+    ],
+    "director": "Gilles de Maistre",
+    "directors": [
+      "Gilles de Maistre"
+    ],
+    "actors": [
+      "Kev  Adams"
+    ],
+    "startDate": "2026-05-21",
+    "openingDate": "2026-05-21T00:00:00+02:00",
+    "genres": [
+      "Abenteuer"
+    ],
+    "genreId": "0000000010",
+    "comingSoon": false,
+    "isScheduledAtCinema": null,
+    "rating": "jugendfrei",
+    "ratingDescription": "jugendfrei",
+    "allStateRatings": "{\"stateFsk\":[]}",
+    "ratingAlt": null,
+    "runTime": 92,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DieLegendeDesWustenkindes_002_org_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DieLegendeDesWustenkindes_003_org_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DieLegendeDesWustenkindes_004_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DieLegendeDesWustenkindes_001_org_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DieLegendeDesWustenkindes_012_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DieLegendeDesWustenkindes_005_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DieLegendeDesWustenkindes_006_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DieLegendeDesWustenkindes_007_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DieLegendeDesWustenkindes_008_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DieLegendeDesWustenkindes_009_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DieLegendeDesWustenkindes_010_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DieLegendeDesWustenkindes_011_A4_295px.jpg"
+    ],
+    "teachingMaterials": [
+      {
+        "fullpath": "https://s3proxygw.cineplexx.at/cms-live/asset/AUT/Schulkino/Unterrichtsmaterial/2026/Die-Legende-des-Wuestenkindes-paedagogisches-Begleitmaterial_EU-3.pdf",
+        "value": "Pädagogisches Begleitmaterial"
+      }
+    ],
+    "cinemaIds": [
+      "1005",
+      "1019",
+      "1024",
+      "1033",
+      "1007",
+      "1010",
+      "1013",
+      "1018",
+      "1006",
+      "1032",
+      "1001",
+      "1014",
+      "1016",
+      "1021",
+      "1023",
+      "1003",
+      "1004",
+      "1008",
+      "1011",
+      "1012",
+      "1020",
+      "1022",
+      "1017"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": null,
+    "ratingGetmeshEn": null,
+    "originLangCMS": "French",
+    "availableTechCMS": [],
+    "availableVersCMS": [
+      {
+        "id": "297",
+        "Description": "<p>DF</p>\n",
+        "DescriptionEN": "<p>DF (german)</p>\n"
+      },
+      {
+        "id": "63",
+        "Description": "<p>OmU</p>\n",
+        "DescriptionEN": "<p>OmU</p>\n"
+      }
+    ],
+    "movieStartCMS": "2025-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "BEL",
+      "FRA"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": false,
+    "distributorName": "Constantin Film",
+    "shortURL": "die-legende-des-wüstenkindes",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "Die Legende des Wüstenkindes",
+    "descriptionCalculated": "Die 14-jährige Sun hat erfolgreich ein Buch veröffentlicht – inspiriert von einer Geschichte, die ihr  verstorbener Großvater ihr einst erzählte: Die beinahe unglaubliche Legende des Jungen Hadara, der während eines verheerenden Sandsturms von seiner Karawane getrennt wurde und von einer Gruppe Strauße gerettet wird. In der unwirtlichen Weite der Sahara wächst er fortan fernab seiner Familie auf, begleitet nur von seinem treusten Gefährten, einem jungen Wüstenfuchs. Als Sun im Rahmen einer  Preisverleihung für ihr Buch selbst zu einer Reise in die Sahara eingeladen wird, begegnet sie dort dem gleichaltrigen Nomadenmädchen Kharouba – und erkennt bald, dass die Legende des Wüstenkindes Hadara weit mehr ist als eine einfache Gute-Nacht-Geschichte…",
+    "descriptionShortCalculated": "Die Legende des Wüstenkindes.",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00019501",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-121724",
+        "salesChannels": ";CALL;RSP;GSALE;CELL;KIOSK;PDA;WWW;POSBK;POS;IVR;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00019501",
+        "sessionId": "121724",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 4",
+        "screenNumber": 4,
+        "technologies": [
+          [
+            "2D"
+          ],
+          [
+            "MONATSSPARER FAMILY"
+          ]
+        ],
+        "showtime": "2026-06-07T17:30:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSpF",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  },
+  {
+    "id": "HO00018582",
+    "HOFilmCode": "A000020047",
+    "corporateFilmId": "A000020047",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/Glennkill_GER_Mainart_Print_A3_300dpi_CMYK_546px.jpg",
+    "title": "*The Sheep Detectives",
+    "titleAlt": null,
+    "titleCalculated": "Glennkill: Ein Schafskrimi",
+    "titleOriginalCalculated": "The Sheep Detectives",
+    "trailers": [
+      {
+        "trailerKey": "df252e85-bd57-4851-aa9e-a209670ca265",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260330_30_1024247_38b943a9-b117-4e92-be85-4fe7773c016c_custom_hd_mp4_avc_aac_16x9_1920x1080p_24hz_.10_0.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260330_30_1024247_38b943a9-b117-4e92-be85-4fe7773c016c_custom_hd_mp4_avc_aac_16x9_1920x1080p_24hz__720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260330_30_1024247_38b943a9-b117-4e92-be85-4fe7773c016c_custom_hd_mp4_avc_aac_16x9_1920x1080p_24hz__404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260330_30_1024247_38b943a9-b117-4e92-be85-4fe7773c016c_custom_hd_mp4_avc_aac_16x9_1920x1080p_24hz__720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/df252e85-bd57-4851-aa9e-a209670ca265"
+      }
+    ],
+    "director": "Kyle Balda",
+    "directors": [
+      "Kyle Balda"
+    ],
+    "actors": [
+      "Emma Thompson",
+      "Patrick Stewart",
+      "Chris O’Dowd",
+      "Regina Hall",
+      "Hugh Jackman",
+      "Bryan Cranston",
+      "Molly Gordon",
+      "Julia Louis-Dreyfus",
+      "Hong Chau",
+      "Nicholas Galitzine",
+      "Tosin Cole",
+      "Nicholas Braun",
+      "Kobna Holdbrook-Smith",
+      "Conleth Hill",
+      "Mandeep Dhillon"
+    ],
+    "startDate": "2026-05-14",
+    "openingDate": "2026-05-14T00:00:00+02:00",
+    "genres": [
+      "Komödie",
+      "Action"
+    ],
+    "genreId": "0000000005",
+    "comingSoon": false,
+    "isScheduledAtCinema": null,
+    "rating": "Ab 6 Jahren",
+    "ratingDescription": "Ab 6 Jahren",
+    "allStateRatings": "{\"stateFsk\":[]}",
+    "ratingAlt": null,
+    "runTime": 110,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TSD_Trailer01_02860_R_295px.tif",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TBF_13121_R_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TSD_FP_059961_R_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TSD_TP01_00420_R_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TSD_TP01_01152_R_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TSD_TP01_02285_R_295px.jpg"
+    ],
+    "teachingMaterials": [],
+    "cinemaIds": [
+      "1012",
+      "1001",
+      "1003",
+      "1004",
+      "1008",
+      "1013",
+      "1016",
+      "1021",
+      "1023",
+      "1024",
+      "1002",
+      "1005",
+      "1006",
+      "1007",
+      "1010",
+      "1011",
+      "1017",
+      "1022",
+      "1018",
+      "1019",
+      "1033",
+      "1020",
+      "1032",
+      "1014",
+      "1030"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": "sehenswert",
+    "ratingGetmeshEn": "worth seeing",
+    "originLangCMS": "English",
+    "availableTechCMS": [
+      {
+        "id": "311",
+        "Description": "<p>Dolby Atmos</p>",
+        "DescriptionEN": "<p>Dolby Atmos</p>"
+      }
+    ],
+    "availableVersCMS": [
+      {
+        "id": "143",
+        "Description": "<p>OV (English)</p>",
+        "DescriptionEN": "<p>OV (English)</p>\n"
+      },
+      {
+        "id": "297",
+        "Description": "<p>DF</p>\n",
+        "DescriptionEN": "<p>DF (german)</p>\n"
+      },
+      {
+        "id": "63",
+        "Description": "<p>OmU</p>\n",
+        "DescriptionEN": "<p>OmU</p>\n"
+      }
+    ],
+    "movieStartCMS": "2025-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "GBR",
+      "USA",
+      "DEU",
+      "IRL"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": true,
+    "distributorName": "Sony Pictures",
+    "shortURL": "glennkill-ein-schafskrimi",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "In GLENNKILL: EIN SCHAFSKRIMI übernehmen keine Geringeren als Schafe die Ermittlungen und klären ein Verbrechen auf ihrer Farm auf.",
+    "descriptionCalculated": "Schäfer George (HUGH JACKMAN) liest seinen geliebten Schafen jeden Abend Krimis vor und nimmt an, dass sie kein Wort davon verstehen. Doch als ein mysteriöser Vorfall das friedliche Leben auf der Farm durchbricht, wird den Schafen bewusst, dass sie selbst nun die Ermittlungen übernehmen müssen. Also folgen sie der Spur der Beweise und machen menschliche Verdächtige ausfindig. Dabei beweisen sie, dass auch Schafe brillant darin sein können, Verbrechen aufzuklären. Ein neuer, geistreicher Krimi der etwas anderen Art!",
+    "descriptionShortCalculated": "In GLENNKILL: EIN SCHAFSKRIMI übernehmen keine Geringeren als Schafe die Ermittlungen und klären ein Verbrechen auf ihrer Farm auf.",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00018581",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-121680",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00018581",
+        "sessionId": "121680",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 9",
+        "screenNumber": 9,
+        "technologies": [
+          [
+            "2D"
+          ],
+          [
+            "MONATSSPARER"
+          ]
+        ],
+        "showtime": "2026-06-07T17:15:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSp",
+          "sehenswert",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      },
+      {
+        "id": "1003-121695",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00018581",
+        "sessionId": "121695",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 9",
+        "screenNumber": 9,
+        "technologies": [
+          [
+            "2D"
+          ],
+          [
+            "MONATSSPARER"
+          ]
+        ],
+        "showtime": "2026-06-07T19:30:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSp",
+          "sehenswert",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  },
+  {
+    "id": "HO00019352",
+    "HOFilmCode": "A000020880",
+    "corporateFilmId": "A000020880",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/holafrida_plakat_rgb_900px_712px.jpg",
+    "title": "*Hola Frida",
+    "titleAlt": null,
+    "titleCalculated": "Hola Frida",
+    "titleOriginalCalculated": "Hola Frida",
+    "trailers": [
+      {
+        "trailerKey": "f901b663-86b0-4031-9e2e-75622d670b15",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260313_30_1019213_HolaFrida_TR_DE51_24.10_0.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260313_30_1019213_HolaFrida_TR_DE51_24_720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260313_30_1019213_HolaFrida_TR_DE51_24_404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260313_30_1019213_HolaFrida_TR_DE51_24_720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/f901b663-86b0-4031-9e2e-75622d670b15"
+      }
+    ],
+    "director": "André Kadi",
+    "directors": [
+      "André Kadi",
+      "Karine Vézina"
+    ],
+    "actors": [
+      "Manuel Tadros",
+      "Olivia Ruiz",
+      "Emma Rodriguez",
+      "Rebeca Gonzales",
+      "Anne Girard",
+      "Sophie Faucher",
+      "Léo Coté"
+    ],
+    "startDate": "2026-05-29",
+    "openingDate": "2026-05-29T00:00:00+02:00",
+    "genres": [
+      "Animation/Zeichentrick",
+      "Biografie"
+    ],
+    "genreId": "0000000011",
+    "comingSoon": false,
+    "isScheduledAtCinema": null,
+    "rating": "jugendfrei",
+    "ratingDescription": "jugendfrei",
+    "allStateRatings": "{\"stateFsk\":[]}",
+    "ratingAlt": null,
+    "runTime": 84,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/HOLA-FRIDA-1%28C%29-eksystent-Filmverleih-Tobo-Media-Du-Coup-Studio-Production-Maison-43_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/HOLA-FRIDA-2%28C%29-eksystent-Filmverleih-Tobo-Media-Du-Coup-Studio-Production-Maison-43_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/HOLA-FRIDA-3%28C%29-eksystent-Filmverleih-Tobo-Media-Du-Coup-Studio-Production-Maison-43_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/HOLA-FRIDA-4%28C%29-eksystent-Filmverleih-Tobo-Media-Du-Coup-Studio-Production-Maison-43_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/HOLA-FRIDA-5%28C%29-eksystent-Filmverleih-Tobo-Media-Du-Coup-Studio-Production-Maison-43_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/HOLA-FRIDA-6%28C%29-eksystent-Filmverleih-Tobo-Media-Du-Coup-Studio-Production-Maison-43_500px.jpg"
+    ],
+    "teachingMaterials": [
+      {
+        "fullpath": "https://s3proxygw.cineplexx.at/cms-live/asset/AUT/Schulkino/Unterrichtsmaterial/2026/Viki-Filmtipp-ZOOM-Hola_Frida.pdf",
+        "value": "FilmTipp"
+      }
+    ],
+    "cinemaIds": [
+      "1004",
+      "1016",
+      "1001",
+      "1003",
+      "1012",
+      "1007",
+      "1014"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": null,
+    "ratingGetmeshEn": null,
+    "originLangCMS": "French",
+    "availableTechCMS": [],
+    "availableVersCMS": [
+      {
+        "id": "297",
+        "Description": "<p>DF</p>\n",
+        "DescriptionEN": "<p>DF (german)</p>\n"
+      },
+      {
+        "id": "63",
+        "Description": "<p>OmU</p>\n",
+        "DescriptionEN": "<p>OmU</p>\n"
+      }
+    ],
+    "movieStartCMS": "2025-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "CAN",
+      "FRA"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": null,
+    "distributorName": "Filmladen Filmverleih GmbH",
+    "shortURL": "hola-frida",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "Hola Frida erzählt mit Wärme, Humor und Poesie von der Kindheit Frida Kahlos – und davon, wie Fantasie Mut schenken kann.",
+    "descriptionCalculated": "Das ist die Geschichte eines ganz besonderen Mädchens. Ihr Zuhause ist Coyoacán in Mexiko – ein lebendiger Ort voller Farben, Musik und Magie. Frida ist neugierig, mutig und voller Energie. Sie beobachtet, entdeckt, träumt – und wenn das Leben ihr Schwierigkeiten in den Weg stellt, begegnet sie ihnen mit Fantasie und Kreativität.\r\nWas sie noch nicht weiß: Ihr besonderer Blick auf die Welt wird sie später zu einer der berühmtesten Künstlerinnen aller Zeiten machen.",
+    "descriptionShortCalculated": "Hola Frida erzählt mit Wärme, Humor und Poesie von der Kindheit Frida Kahlos – und davon, wie Fantasie Mut schenken kann.",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00019350",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-121681",
+        "salesChannels": ";CALL;RSP;GSALE;CELL;KIOSK;PDA;WWW;POSBK;POS;IVR;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00019350",
+        "sessionId": "121681",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "SUPREME",
+        "screenNumber": 5,
+        "technologies": [
+          [
+            "2D"
+          ],
+          [
+            "MONATSSPARER FAMILY"
+          ]
+        ],
+        "showtime": "2026-06-07T14:45:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSpF",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  },
+  {
+    "id": "HO00019510",
+    "HOFilmCode": "A000021058",
+    "corporateFilmId": "A000021058",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/InTheGrey_AT_kl.jpg",
+    "title": "*In the Grey",
+    "titleAlt": null,
+    "titleCalculated": "In the Grey",
+    "titleOriginalCalculated": "In the Grey",
+    "trailers": [
+      {
+        "trailerKey": "e12f15d1-b32d-416d-86ab-e6283328eb3b",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260326_30_1023214_InTheGrey__Trailer_1_16x9.50_0.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260326_30_1023214_InTheGrey__Trailer_1_16x9_720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260326_30_1023214_InTheGrey__Trailer_1_16x9_404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260326_30_1023214_InTheGrey__Trailer_1_16x9_720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/e12f15d1-b32d-416d-86ab-e6283328eb3b"
+      }
+    ],
+    "director": "Guy Ritchie",
+    "directors": [
+      "Guy Ritchie"
+    ],
+    "actors": [
+      "Henry Cavill",
+      "Rosamund Pike",
+      "Jake Gyllenhaal",
+      "Eiza González",
+      "Fisher  Stevens",
+      "Emmett J Scanlan",
+      "Jason Wong"
+    ],
+    "startDate": "2026-05-21",
+    "openingDate": "2026-05-21T00:00:00+02:00",
+    "genres": [
+      "Action"
+    ],
+    "genreId": "0000000005",
+    "comingSoon": false,
+    "isScheduledAtCinema": null,
+    "rating": "Ab 14 Jahren",
+    "ratingDescription": "Ab 14 Jahren",
+    "allStateRatings": "{\"stateFsk\":[]}",
+    "ratingAlt": null,
+    "runTime": 98,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/UGR_FG_00005122_org_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/UGR_FG_00005511_TL_org_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/UGR_00670_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/UGR_03789_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/UGR_05344_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/UGR_05618_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/UGR_06034_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/UGR_06122_A4%20%281%29_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/UGR_00893_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/UGR_03965_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/UGR_04671_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/UGR_03612_A4_500px.jpg"
+    ],
+    "teachingMaterials": [],
+    "cinemaIds": [
+      "1002",
+      "1005",
+      "1019",
+      "1007",
+      "1010",
+      "1013",
+      "1018",
+      "1006",
+      "1001",
+      "1014",
+      "1016",
+      "1003",
+      "1004",
+      "1008",
+      "1011",
+      "1012",
+      "1020",
+      "1022",
+      "1017",
+      "1032",
+      "1033",
+      "1024"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": null,
+    "ratingGetmeshEn": null,
+    "originLangCMS": "English",
+    "availableTechCMS": [],
+    "availableVersCMS": [
+      {
+        "id": "143",
+        "Description": "<p>OV (English)</p>",
+        "DescriptionEN": "<p>OV (English)</p>\n"
+      },
+      {
+        "id": "297",
+        "Description": "<p>DF</p>\n",
+        "DescriptionEN": "<p>DF (german)</p>\n"
+      }
+    ],
+    "movieStartCMS": "2025-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "GBR",
+      "USA"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": null,
+    "distributorName": "Constantin Film",
+    "shortURL": "in-the-grey",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "Auf einer Mission in der Grauzone der Macht ist jeder Schritt ein Glücksspiel, jeder Verbündete hat Hintergedanken – und selbst der raffinierteste Plan kann scheitern.",
+    "descriptionCalculated": "Mit automatischen Waffen und Sprengstoff gehen sie genauso geschickt um wie mit Einfluss, Macht und Worten: Ein Team von Eliteagenten (Eiza González, Jake Gyllenhaal, Henry Cavill), das in globalen Grauzonen agiert, wird auf einen skrupellosen Despoten angesetzt, der eine Milliarde Dollar hinterzogen hat. Auf einer streng bewachten Privatinsel entwickelt sich die trickreiche Mission, das Geld zurückzuholen, zu einem strategischen Wettrennen, bei dem jedes Mittel recht ist..",
+    "descriptionShortCalculated": "Auf einer Mission in der Grauzone der Macht ist jeder Schritt ein Glücksspiel, jeder Verbündete hat Hintergedanken – und selbst der raffinierteste Plan kann scheitern.",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00019509",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-121729",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00019509",
+        "sessionId": "121729",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 8",
+        "screenNumber": 8,
+        "technologies": [
+          [
+            "2D"
+          ],
+          [
+            "MONATSSPARER"
+          ]
+        ],
+        "showtime": "2026-06-07T19:45:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSp",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  },
+  {
+    "id": "HO00019638",
+    "HOFilmCode": "A000021200",
+    "corporateFilmId": "A000021200",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/MVN_Intl_Teaser_Digital1Sht_IMAX_UA-ua_kl.jpg",
+    "title": "*Michael - ukrainische Fassung",
+    "titleAlt": null,
+    "titleCalculated": "Maikl (Michael) / Майкл - ukrainische Fassung",
+    "titleOriginalCalculated": "Michael",
+    "trailers": [
+      {
+        "trailerKey": "9b574fad-eda4-4c8b-932e-e139ccc55345",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260202_30_1009673_16x9_mcl_crttrailer_crntrld_dur138s_ctacoming-soon_couat_de-dub-1920x1080-2.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260202_30_1009673_16x9_mcl_crttrailer_crntrld_dur138s_ctacoming-soon_couat_de-dub-1920x1080-2_720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260202_30_1009673_16x9_mcl_crttrailer_crntrld_dur138s_ctacoming-soon_couat_de-dub-1920x1080-2_404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260202_30_1009673_16x9_mcl_crttrailer_crntrld_dur138s_ctacoming-soon_couat_de-dub-1920x1080-2_720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/9b574fad-eda4-4c8b-932e-e139ccc55345"
+      }
+    ],
+    "director": "Antoine Fuqua",
+    "directors": [
+      "Antoine Fuqua"
+    ],
+    "actors": [
+      "Miles Teller",
+      "Laura Harrier",
+      "Colman Domingo",
+      "Nia Long",
+      "Jaafar Jackson",
+      "Kat Graham"
+    ],
+    "startDate": "2026-04-22",
+    "openingDate": "2026-04-22T00:00:00+02:00",
+    "genres": [
+      "Drama",
+      "Biografie"
+    ],
+    "genreId": "0000000018",
+    "comingSoon": false,
+    "isScheduledAtCinema": null,
+    "rating": "Ab 8 Jahren",
+    "ratingDescription": "Ab 8 Jahren",
+    "allStateRatings": "{\"stateFsk\":[]}",
+    "ratingAlt": null,
+    "runTime": 128,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/001_MKT_001_CIN_v0009_CNPT.1002_500px_1.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/042_PCF_1600_HUN_v0002_COMP.1064R_v1C_BCC4_295px_1.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/153_PBW_1180_CIN_v0018_COMP_g_r709.1025_295px_1.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/Maven_Trailer%20Grab_00001R2_295px_1.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/MAVEN_Unit_240207_00616R_CropC_Edit_v03_Flat_500px_1.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/MAVEN_Unit_240208_00091_v01R_BCC5_500px_1.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/MAVEN_Unit_240504_00234RC_Crop3_500px_1.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/Maven_Unit_250825_00171_v1R_BC_500px_1.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/michael_szenenbild12.jpg"
+    ],
+    "teachingMaterials": [],
+    "cinemaIds": [
+      "1003",
+      "1016"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": "wertvoll",
+    "ratingGetmeshEn": "valuable",
+    "originLangCMS": "English",
+    "availableTechCMS": [],
+    "availableVersCMS": [
+      {
+        "id": "6391",
+        "Description": "<p>Ukrainisch</p>",
+        "DescriptionEN": "<p>Ukranian</p>"
+      }
+    ],
+    "movieStartCMS": "2025-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "USA",
+      "GBR"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": null,
+    "distributorName": "Universal Pictures",
+    "shortURL": "maikl-michael-ukrainische-fassung",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "Ukrainische Fassung des Films über den King of Pop.",
+    "descriptionCalculated": "«Майкл» — це кінематографічне зображення життя і спадщини одного з найвпливовіших артистів історії. Фільм розповідає історію Майкла Джексона поза межами музики — шлях від відкриття його виняткового таланту як фронтмена The Jackson Five до становлення візіонера, чия творча амбіція підживлювала невтомне прагнення стати найбільшим артистом світу. Стрічка висвітлює як життя Джексона поза сценою, так і його найзнаковіші виступи з початку сольної кар’єри, даруючи глядачам місце в першому ряду, щоб побачити Майкла таким, яким його ще не бачили. Саме тут починається його історія.",
+    "descriptionShortCalculated": "Ukrainische Fassung des Films über den King of Pop.",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00019637",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-121725",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00019637",
+        "sessionId": "121725",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "SUPREME",
+        "screenNumber": 5,
+        "technologies": [
+          [
+            "2D"
+          ],
+          [
+            "MONATSSPARER"
+          ]
+        ],
+        "showtime": "2026-06-07T16:45:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSp",
+          "Ukrainisch",
+          "Wertvoll",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  },
+  {
+    "id": "HO00019512",
+    "HOFilmCode": "A000021061",
+    "corporateFilmId": "A000021061",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/MastersOfTheUniverse_GER_Mainplakat_A3_300dpi_CMYK%20%281%29_546px.jpg",
+    "title": "*Masters of the Universe",
+    "titleAlt": null,
+    "titleCalculated": "Masters of the Universe",
+    "titleOriginalCalculated": "Masters of the Universe",
+    "trailers": [
+      {
+        "trailerKey": "f73ba186-1db9-438a-a105-ed524257e82a",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260511_30_1033154_7843e197-6ca2-43d4-8690-02d6846b4b13_custom_hd_mp4_avc_aac_16x9_1920x1080p_24hz_.0_0.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260511_30_1033154_7843e197-6ca2-43d4-8690-02d6846b4b13_custom_hd_mp4_avc_aac_16x9_1920x1080p_24hz__720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260511_30_1033154_7843e197-6ca2-43d4-8690-02d6846b4b13_custom_hd_mp4_avc_aac_16x9_1920x1080p_24hz__404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260511_30_1033154_7843e197-6ca2-43d4-8690-02d6846b4b13_custom_hd_mp4_avc_aac_16x9_1920x1080p_24hz__720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/f73ba186-1db9-438a-a105-ed524257e82a"
+      }
+    ],
+    "director": "Travis Knight",
+    "directors": [
+      "Travis Knight"
+    ],
+    "actors": [
+      "Kristen Wiig",
+      "Idris Elba",
+      "Jared Leto",
+      "Alison Brie",
+      "Morena Baccarin",
+      "James Purefoy",
+      "Nicholas Galitzine",
+      "Camila Mendes",
+      "Jóhannes Haukur Jóhannesson",
+      "Charlotte Riley"
+    ],
+    "startDate": "2026-06-03",
+    "openingDate": "2026-06-03T00:00:00+02:00",
+    "genres": [
+      "Drama",
+      "Action",
+      "Abenteuer"
+    ],
+    "genreId": "0000000005",
+    "comingSoon": false,
+    "isScheduledAtCinema": null,
+    "rating": "Ab 12 Jahren",
+    "ratingDescription": "Ab 12 Jahren",
+    "allStateRatings": "{\"stateFsk\":[]}",
+    "ratingAlt": null,
+    "runTime": 142,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/He-man-and-crew.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/Masters-of-the-Universe_BD_422px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/MOTU_2026_UT_250317_KEYGIL_08670_R_xlarge_thumbnail.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/MOTU_2026_UT_250410_KEYGIL_15269_R6_xlarge_thumbnail.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/MOTU_2026_UT_250512_KEYGIL_20437_R_xlarge_thumbnail.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/I%20have%20the%20power%20moto_295px.jpg"
+    ],
+    "teachingMaterials": [],
+    "cinemaIds": [
+      "1005",
+      "1020",
+      "1014",
+      "1001",
+      "1003",
+      "1006",
+      "1010",
+      "1011",
+      "1012",
+      "1016",
+      "1018",
+      "1019",
+      "1032",
+      "1033",
+      "1007",
+      "1002",
+      "1017",
+      "1022",
+      "1008",
+      "1004",
+      "1013",
+      "1024"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": null,
+    "ratingGetmeshEn": null,
+    "originLangCMS": "English",
+    "availableTechCMS": [
+      {
+        "id": "310",
+        "Description": "<p>Dolby Cinema</p>\n",
+        "DescriptionEN": "<p>Dolby Cinema</p>\n"
+      },
+      {
+        "id": "311",
+        "Description": "<p>Dolby Atmos</p>",
+        "DescriptionEN": "<p>Dolby Atmos</p>"
+      },
+      {
+        "id": "316",
+        "Description": "<p>IMAX</p>\n",
+        "DescriptionEN": "<p>IMAX</p>\n"
+      }
+    ],
+    "availableVersCMS": [
+      {
+        "id": "143",
+        "Description": "<p>OV (English)</p>",
+        "DescriptionEN": "<p>OV (English)</p>\n"
+      },
+      {
+        "id": "297",
+        "Description": "<p>DF</p>\n",
+        "DescriptionEN": "<p>DF (german)</p>\n"
+      },
+      {
+        "id": "63",
+        "Description": "<p>OmU</p>\n",
+        "DescriptionEN": "<p>OmU</p>\n"
+      }
+    ],
+    "movieStartCMS": "2026-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "USA"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": null,
+    "distributorName": "Sony Pictures",
+    "shortURL": "masters-of-the-universe",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "Regisseur Travis Knight bringt das legendäre Franchise MASTERS OF THE UNIVERSE  in dem gleichnamigen epischen Live-Action-Abenteuer zurück auf die große Leinwand.",
+    "descriptionCalculated": "Der gerade einmal zehn Jahre alte Prinz Adam stürzt mit seinem Raumschiff auf der Erde ab und wird dabei von seinem magischen Schwert getrennt, das ihn mit seiner Heimat Eternia verbindet. Erst fast zwei Jahrzehnte später findet er es wieder und wird durch seine Kraft durch das All zurück auf seinen Heimatplaneten gewirbelt, um diesen gegen die finsteren Kräfte von Skeletor zu verteidigen. Doch um diesen besiegen zu können, muss Prinz Adam erst einmal die Geheimnisse seiner eigenen Vergangenheit aufdecken und zu He-Man, dem mächtigsten Mann des Universums, werden...",
+    "descriptionShortCalculated": "Regisseur Travis Knight bringt das legendäre Franchise MASTERS OF THE UNIVERSE  in dem gleichnamigen epischen Live-Action-Abenteuer zurück auf die große Leinwand.",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00019511",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      },
+      {
+        "id": "1003-HO00019922",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-121687",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00019511",
+        "sessionId": "121687",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 8",
+        "screenNumber": 8,
+        "technologies": [
+          [
+            "2D"
+          ],
+          []
+        ],
+        "showtime": "2026-06-07T14:15:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      },
+      {
+        "id": "1003-121684",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00019511",
+        "sessionId": "121684",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 12",
+        "screenNumber": 12,
+        "technologies": [
+          [
+            "2D"
+          ],
+          []
+        ],
+        "showtime": "2026-06-07T17:15:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      },
+      {
+        "id": "1003-121718",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00019511",
+        "sessionId": "121718",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "IMAX",
+        "screenNumber": 1,
+        "technologies": [
+          [
+            "IMAX",
+            "2D"
+          ],
+          []
+        ],
+        "showtime": "2026-06-07T20:30:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      },
+      {
+        "id": "1003-121714",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00019922",
+        "sessionId": "121714",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 12",
+        "screenNumber": 12,
+        "technologies": [
+          [
+            "2D",
+            "OV (Englisch)"
+          ],
+          []
+        ],
+        "showtime": "2026-06-07T20:00:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "OV",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  },
+  {
+    "id": "HO00019064",
+    "HOFilmCode": "A000020575",
+    "corporateFilmId": "A000020575",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/Conni2_AT_A4_546px.jpg",
+    "title": "*Meine Freundin Conni - Kranich Klaus",
+    "titleAlt": null,
+    "titleCalculated": "Meine Freundin Conni - Abenteuer mit Kranich Klaus",
+    "titleOriginalCalculated": "Meine Freundin Conni - Abenteuer mit Kranich Klaus",
+    "trailers": [
+      {
+        "trailerKey": "bd3f71e3-d5ab-4d71-ae40-dfb744019507",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260302_30_1014698_Conni2_Trailer_DE_24fps_stereo_web_H264_4k_flat_REV_MITTEL.50_0.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260302_30_1014698_Conni2_Trailer_DE_24fps_stereo_web_H264_4k_flat_REV_MITTEL_720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260302_30_1014698_Conni2_Trailer_DE_24fps_stereo_web_H264_4k_flat_REV_MITTEL_404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260302_30_1014698_Conni2_Trailer_DE_24fps_stereo_web_H264_4k_flat_REV_MITTEL_720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/bd3f71e3-d5ab-4d71-ae40-dfb744019507"
+      }
+    ],
+    "director": "Henning Windelband",
+    "directors": [
+      "Henning Windelband"
+    ],
+    "actors": [],
+    "startDate": "2026-05-14",
+    "openingDate": "2026-05-14T00:00:00+02:00",
+    "genres": [
+      "Animation/Zeichentrick",
+      "Family"
+    ],
+    "genreId": "0000000011",
+    "comingSoon": false,
+    "isScheduledAtCinema": null,
+    "rating": "jugendfrei",
+    "ratingDescription": "jugendfrei",
+    "allStateRatings": "{\"stateFsk\":[]}",
+    "ratingAlt": null,
+    "runTime": 78,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/-Conni2-_002000001_org_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/-Conni2-_004000001_org_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/-Conni2-_007000001_org_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/-Conni2-_009000001_org_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/-Conni2-_010000001_org_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/-Conni2-_012000001_org_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/-Conni2-_013000001_org_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/-Conni2-_014000001_org_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/-Conni2-_017000001_org_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/-Conni2-_019000001_org_295px.jpg"
+    ],
+    "teachingMaterials": [],
+    "cinemaIds": [
+      "1030",
+      "1016",
+      "1019",
+      "1001",
+      "1004",
+      "1005",
+      "1006",
+      "1007",
+      "1008",
+      "1011",
+      "1017",
+      "1018",
+      "1021",
+      "1023",
+      "1032",
+      "1033",
+      "1003",
+      "1014",
+      "1010",
+      "1022",
+      "1012",
+      "1013",
+      "1020",
+      "1024",
+      "1029"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": null,
+    "ratingGetmeshEn": null,
+    "originLangCMS": "German",
+    "availableTechCMS": [],
+    "availableVersCMS": [
+      {
+        "id": "297",
+        "Description": "<p>DF</p>\n",
+        "DescriptionEN": "<p>DF (german)</p>\n"
+      }
+    ],
+    "movieStartCMS": "2025-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "DEU"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": null,
+    "distributorName": "Constantin Film",
+    "shortURL": "meine-freundin-conni-abenteuer-mit-kranich-klaus",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "Fortsetzung zu „Meine Freundin Conni - Geheimnis um Kater Mau“.",
+    "descriptionCalculated": "Im Haus der Klawitters herrscht Aufbruchsstimmung. Conni ist aufgeregt. Ihre Eltern fahren mit ihrem Bruder zu Onkel Albert. Conni wäre nur zu gerne mitgefahren, aber dann würde sie Semires Geburtstagsparty verpassen. Natürlich bleiben Conni und Kater Mau nicht allein zu Hause, denn Opa Willi ist gekommen und Anna und Simon dürfen sogar bei ihr übernachten. Doch dann landet ein verletzter Kranich bei ihnen und braucht ihre Hilfe. Denn nicht nur die Verletzung macht Kranich Klaus zu schaffen, auch der spießige Nachbar Herr Oswald, der seinen astrein gepflegten Rosengarten in Gefahr sieht, ist hinter Klaus her. Gut, dass Conni und ihre Freunde Unterstützung von der Tierschützerin Renata und der Polizistin Selena bekommen. Zum großen Missfallen von Kater Mau und Anna dreht sich aber nun alles nur noch um den lustigen Vogel. Werden Conni und ihre Freunde es gemeinsam schaffen, dass Klaus rechtzeitig gesund wird, um mit den Zugvögeln nach Süden zu fliegen?",
+    "descriptionShortCalculated": "Fortsetzung zu „Meine Freundin Conni - Geheimnis um Kater Mau“.",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00019063",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-121690",
+        "salesChannels": ";CALL;RSP;GSALE;CELL;KIOSK;PDA;WWW;POSBK;POS;IVR;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00019063",
+        "sessionId": "121690",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 7",
+        "screenNumber": 7,
+        "technologies": [
+          [
+            "2D"
+          ],
+          [
+            "MONATSSPARER FAMILY"
+          ]
+        ],
+        "showtime": "2026-06-07T14:45:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSpF",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  },
+  {
+    "id": "HO00015475",
+    "HOFilmCode": "A000016718",
+    "corporateFilmId": "A000016718",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/Michael-Hauptplakat-ohne-MAX-A4-RGB_712px.jpg",
+    "title": "*Michael",
+    "titleAlt": null,
+    "titleCalculated": "Michael",
+    "titleOriginalCalculated": "Michael",
+    "trailers": [
+      {
+        "trailerKey": "9b574fad-eda4-4c8b-932e-e139ccc55345",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260202_30_1009673_16x9_mcl_crttrailer_crntrld_dur138s_ctacoming-soon_couat_de-dub-1920x1080-2.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260202_30_1009673_16x9_mcl_crttrailer_crntrld_dur138s_ctacoming-soon_couat_de-dub-1920x1080-2_720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260202_30_1009673_16x9_mcl_crttrailer_crntrld_dur138s_ctacoming-soon_couat_de-dub-1920x1080-2_404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260202_30_1009673_16x9_mcl_crttrailer_crntrld_dur138s_ctacoming-soon_couat_de-dub-1920x1080-2_720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/9b574fad-eda4-4c8b-932e-e139ccc55345"
+      }
+    ],
+    "director": "Antoine Fuqua",
+    "directors": [
+      "Antoine Fuqua"
+    ],
+    "actors": [
+      "Miles Teller",
+      "Laura Harrier",
+      "Colman Domingo",
+      "Nia Long",
+      "Jaafar Jackson",
+      "Kat Graham"
+    ],
+    "startDate": "2026-04-22",
+    "openingDate": "2026-04-22T00:00:00+02:00",
+    "genres": [
+      "Drama",
+      "Biografie"
+    ],
+    "genreId": "0000000018",
+    "comingSoon": true,
+    "isScheduledAtCinema": null,
+    "rating": "Ab 8 Jahren",
+    "ratingDescription": "Ab 8 Jahren",
+    "allStateRatings": "{\"stateFsk\":[]}",
+    "ratingAlt": null,
+    "runTime": 128,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/001_MKT_001_CIN_v0009_CNPT.1002_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/153_PBW_1180_CIN_v0018_COMP_g_r709.1025_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/MAVEN_Unit_240207_00616R_CropC_Edit_v03_Flat_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/MAVEN_Unit_240208_00091_v01R_BCC5_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/MAVEN_Unit_240504_00234RC_Crop3_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/042_PCF_1600_HUN_v0002_COMP.1064R_v1C_BCC4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/Maven_Trailer%20Grab_00001R2_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/Maven_Unit_250825_00171_v1R_BC_500px.jpg"
+    ],
+    "teachingMaterials": [],
+    "cinemaIds": [
+      "1019",
+      "1013",
+      "1003",
+      "1004",
+      "1005",
+      "1006",
+      "1008",
+      "1012",
+      "1014",
+      "1023",
+      "1024",
+      "1032",
+      "1001",
+      "1002",
+      "1007",
+      "1010",
+      "1011",
+      "1016",
+      "1017",
+      "1018",
+      "1021",
+      "1022",
+      "1033",
+      "1030",
+      "1020",
+      "1029"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": "wertvoll",
+    "ratingGetmeshEn": "valuable",
+    "originLangCMS": "Englisch",
+    "availableTechCMS": [
+      {
+        "id": "316",
+        "Description": "<p>IMAX</p>\n",
+        "DescriptionEN": "<p>IMAX</p>\n"
+      },
+      {
+        "id": "310",
+        "Description": "<p>Dolby Cinema</p>\n",
+        "DescriptionEN": "<p>Dolby Cinema</p>\n"
+      },
+      {
+        "id": "311",
+        "Description": "<p>Dolby Atmos</p>",
+        "DescriptionEN": "<p>Dolby Atmos</p>"
+      },
+      {
+        "id": "313",
+        "Description": "<p>MX4D</p>",
+        "DescriptionEN": "<p>MX4D</p>"
+      }
+    ],
+    "availableVersCMS": [
+      {
+        "id": "297",
+        "Description": "<p>DF</p>\n",
+        "DescriptionEN": "<p>DF (german)</p>\n"
+      },
+      {
+        "id": "143",
+        "Description": "<p>OV (English)</p>",
+        "DescriptionEN": "<p>OV (English)</p>\n"
+      },
+      {
+        "id": "63",
+        "Description": "<p>OmU</p>\n",
+        "DescriptionEN": "<p>OmU</p>\n"
+      }
+    ],
+    "movieStartCMS": "2025-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "USA",
+      "GBR"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": true,
+    "distributorName": "Universal Pictures",
+    "shortURL": "michael",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "Er ist einer der einflussreichsten Künstler aller Zeiten – der King of Pop.",
+    "descriptionCalculated": "MICHAEL ist das Portrait eines Ausnahmekünstlers, dessen Musik die Welt bewegt und jede Generation bis heute inspiriert hat. Der Film erzählt die Geschichte von Michael Jacksons Leben – weit über die Musik hinaus. Er zeichnet seinen Weg nach von der Entdeckung seines außergewöhnlichen Talents als Leadsänger der Jackson Five bis hin zu dem visionären Künstler, dessen kreativer Ehrgeiz ihn unermüdlich antrieb, der größte Entertainer der Welt zu werden. Von einigen seiner legendären Auftritte aus seiner frühen Solokarriere bis zu seinem Leben abseits der Bühne – das Publikum hat einen Platz in der ersten Reihe bei einem nie zuvor dagewesenen Blick auf das Leben der Pop-Ikone. Hier fängt seine Geschichte an. Jaafar Jackson gibt mit MICHAEL sein Spielfilmdebüt. Neben ihm sind Nia Long (Empire, Boyz n the Hood – Jungs im Viertel) und Laura Harrier (BlacKkKlansman, Spider-Man: Homecoming) zu sehen, außerdem Miles Teller (Top Gun: Maverick, Whiplash) und der zweifach für den Oscar® nominierte Colman Domingo (Sing Sing, Rustin). Regie führt Antoine Fuqua, der preisgekrönte Filmemacher u. a. von Training Day und der Equalizer-Reihe. Das Drehbuch schrieb der dreifach Oscar®-nominierte John Logan (Gladiator, Aviator). Produziert wurde MICHAEL von Oscar®-Gewinner Graham King (Departed – Unter Feinden, Bohemian Rhapsody), John Branca (Ausführender Produzent von Michael Jackson’s This Is It, Thriller 40) und John McClain (Ausführender Produzent von Michael Jackson’s This Is It, Michael Jackson Live at Wembley July 16, 1988).",
+    "descriptionShortCalculated": "Er ist einer der einflussreichsten Künstler aller Zeiten – der King of Pop.",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00015474",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      },
+      {
+        "id": "1003-HO00015473",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-121708",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00015474",
+        "sessionId": "121708",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 3",
+        "screenNumber": 3,
+        "technologies": [
+          [
+            "2D",
+            "OV (Englisch)"
+          ],
+          [
+            "MONATSSPARER"
+          ]
+        ],
+        "showtime": "2026-06-07T16:45:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSp",
+          "OV",
+          "Wertvoll",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      },
+      {
+        "id": "1003-121727",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00015474",
+        "sessionId": "121727",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 7",
+        "screenNumber": 7,
+        "technologies": [
+          [
+            "2D",
+            "DOLBY ATMOS",
+            "OV (Englisch)"
+          ],
+          [
+            "MONATSSPARER"
+          ]
+        ],
+        "showtime": "2026-06-07T19:30:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSp",
+          "OV",
+          "Wertvoll",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      },
+      {
+        "id": "1003-121705",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00015473",
+        "sessionId": "121705",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 6",
+        "screenNumber": 6,
+        "technologies": [
+          [
+            "2D"
+          ],
+          [
+            "MONATSSPARER"
+          ]
+        ],
+        "showtime": "2026-06-07T17:30:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSp",
+          "Wertvoll",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      },
+      {
+        "id": "1003-121716",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00015473",
+        "sessionId": "121716",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 6",
+        "screenNumber": 6,
+        "technologies": [
+          [
+            "2D"
+          ],
+          [
+            "MONATSSPARER"
+          ]
+        ],
+        "showtime": "2026-06-07T20:00:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSp",
+          "Wertvoll",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  },
+  {
+    "id": "HO00018824",
+    "HOFilmCode": "A000020308",
+    "corporateFilmId": "A000020308",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/Nu-ernberg_Plakat_A1_RGB_546px.jpg",
+    "title": "*Nuremberg",
+    "titleAlt": null,
+    "titleCalculated": "Nürnberg",
+    "titleOriginalCalculated": "Nuremberg",
+    "trailers": [
+      {
+        "trailerKey": "415e553c-1a90-4092-b09c-ff52d9627563",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260127_30_1008568_NUERNBERG__TSR2_1080_24fps_20_DE-Kino.40_0.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260127_30_1008568_NUERNBERG__TSR2_1080_24fps_20_DE-Kino_720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260127_30_1008568_NUERNBERG__TSR2_1080_24fps_20_DE-Kino_404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260127_30_1008568_NUERNBERG__TSR2_1080_24fps_20_DE-Kino_720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/415e553c-1a90-4092-b09c-ff52d9627563"
+      }
+    ],
+    "director": "James Vanderbilt",
+    "directors": [
+      "James Vanderbilt"
+    ],
+    "actors": [
+      "Michael  Shannon",
+      "Rami Malek",
+      "Russell Crowe",
+      "Richard E. Grant",
+      "Wrenn Schmidt",
+      "Leo Woodall",
+      "Colin Hanks",
+      "John Slattery",
+      "Mark O’Brien",
+      "Lydia Peckham"
+    ],
+    "startDate": "2026-05-07",
+    "openingDate": "2026-05-07T00:00:00+02:00",
+    "genres": [
+      "Drama",
+      "Thriller",
+      "Historie"
+    ],
+    "genreId": "0000000003",
+    "comingSoon": false,
+    "isScheduledAtCinema": null,
+    "rating": "Ab 14 Jahren",
+    "ratingDescription": "Ab 14 Jahren",
+    "allStateRatings": "{\"stateFsk\":[]}",
+    "ratingAlt": null,
+    "runTime": 149,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/1_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/2_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/3_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/7_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/10_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/11_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/Nu-ernberg_Gerichtsszene_500px.jpg"
+    ],
+    "teachingMaterials": [],
+    "cinemaIds": [
+      "1004",
+      "1020",
+      "1028",
+      "1011",
+      "1016",
+      "1001",
+      "1005",
+      "1002",
+      "1007",
+      "1014",
+      "1025",
+      "1017",
+      "1003",
+      "1029",
+      "1009",
+      "1006",
+      "1013",
+      "1010",
+      "1030"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": null,
+    "ratingGetmeshEn": null,
+    "originLangCMS": "English",
+    "availableTechCMS": [],
+    "availableVersCMS": [
+      {
+        "id": "143",
+        "Description": "<p>OV (English)</p>",
+        "DescriptionEN": "<p>OV (English)</p>\n"
+      },
+      {
+        "id": "297",
+        "Description": "<p>DF</p>\n",
+        "DescriptionEN": "<p>DF (german)</p>\n"
+      },
+      {
+        "id": "63",
+        "Description": "<p>OmU</p>\n",
+        "DescriptionEN": "<p>OmU</p>\n"
+      }
+    ],
+    "movieStartCMS": "2025-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "USA"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": true,
+    "distributorName": "Polyfilm",
+    "shortURL": "nürnberg",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "Das hochkarätig besetzte Justizdrama erzählt vom folgenreichsten Prozess des 20. Jahrhunderts, der zudem die Geburtsstunde des Völkerrechts markiert.",
+    "descriptionCalculated": "Hermann Göring wird von den Alliierten verhaftet und würde als ranghöchster, noch verbliebener Nazi bestenfalls die Kapitulation unterschreiben. Aber die Alliierten wollen das NS-Regime, allen voran Göring, für seine unfassbaren Taten vor einem internationalen Gericht zur Rechenschaft ziehen. Neben dem Chefankläger Jackson wird auch der Psychiater Dr. Kelley berufen. Er soll die Angeklagten auf ihre Prozessfähigkeit hin untersuchen. Schnell ist Dr. Kelley von Görings Scharfsinn und Charisma eingenommen. Obwohl er dessen Machtspiele durchschaut, kann er sich der manipulativen Stärke und Faszination des Bösen nur schwer entziehen. Um Görings Vertrauen zu gewinnen, überschreitet Dr. Kelley moralische Grenzen und gefährdet sogar den Nürnberger Prozess.",
+    "descriptionShortCalculated": "Das hochkarätig besetzte Justizdrama erzählt vom folgenreichsten Prozess des 20. Jahrhunderts, der zudem die Geburtsstunde des Völkerrechts markiert.",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00018823",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-121726",
+        "salesChannels": ";CALL;RSP;GSALE;CELL;KIOSK;PDA;WWW;POSBK;POS;IVR;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00018823",
+        "sessionId": "121726",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "SUPREME",
+        "screenNumber": 5,
+        "technologies": [
+          [
+            "2D"
+          ],
+          [
+            "MONATSSPARER"
+          ]
+        ],
+        "showtime": "2026-06-07T19:15:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSp",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  },
+  {
+    "id": "HO00019652",
+    "HOFilmCode": "A000021215",
+    "corporateFilmId": "A000021215",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/PSGR_INTL_2480x3512_Online_Teaser_1Sht_Road_AT_R1_kl.jpg",
+    "title": "*Passenger",
+    "titleAlt": null,
+    "titleCalculated": "Passenger",
+    "titleOriginalCalculated": "Passenger",
+    "trailers": [
+      {
+        "trailerKey": "0612e1cd-a8e4-47a9-bf3a-7dfaa619fa66",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260415_30_1028527_PASSENGER_ITR-B_GER-DE_DUB_NUR-IM-KINO-MIT-BANDEROLE_H264_1080p2398.0_0.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260415_30_1028527_PASSENGER_ITR-B_GER-DE_DUB_NUR-IM-KINO-MIT-BANDEROLE_H264_1080p2398_720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260415_30_1028527_PASSENGER_ITR-B_GER-DE_DUB_NUR-IM-KINO-MIT-BANDEROLE_H264_1080p2398_404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260415_30_1028527_PASSENGER_ITR-B_GER-DE_DUB_NUR-IM-KINO-MIT-BANDEROLE_H264_1080p2398_720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/0612e1cd-a8e4-47a9-bf3a-7dfaa619fa66"
+      }
+    ],
+    "director": "André Øvredal",
+    "directors": [
+      "André Øvredal"
+    ],
+    "actors": [
+      "Melissa Leo",
+      "Jacob Scipio",
+      "Lou Llobell"
+    ],
+    "startDate": "2026-05-28",
+    "openingDate": "2026-05-28T00:00:00+02:00",
+    "genres": [
+      "Horror"
+    ],
+    "genreId": "0000000025",
+    "comingSoon": false,
+    "isScheduledAtCinema": null,
+    "rating": "ab 16",
+    "ratingDescription": "",
+    "allStateRatings": "{\"stateFsk\":[{\"stateId\":\"AT-1\",\"fsk\":{\"title\":\"Ab 18 Jahren\",\"TitleEN\":\"From 18 years\",\"value\":\"18\"}},{\"stateId\":\"AT-2\",\"fsk\":{\"title\":\"Ab 16 Jahren\",\"TitleEN\":\"From 16 years\",\"value\":\"16\"}},{\"stateId\":\"AT-3\",\"fsk\":{\"title\":\"Ab 16 Jahren\",\"TitleEN\":\"From 16 years\",\"value\":\"16\"}},{\"stateId\":\"AT-4\",\"fsk\":{\"title\":\"Ab 16 Jahren\",\"TitleEN\":\"From 16 years\",\"value\":\"16\"}},{\"stateId\":\"AT-5\",\"fsk\":{\"title\":\"Ab 16 Jahren\",\"TitleEN\":\"From 16 years\",\"value\":\"16\"}},{\"stateId\":\"AT-6\",\"fsk\":{\"title\":\"Ab 16 Jahren\",\"TitleEN\":\"From 16 years\",\"value\":\"16\"}},{\"stateId\":\"AT-7\",\"fsk\":{\"title\":\"Ab 16 Jahren\",\"TitleEN\":\"From 16 years\",\"value\":\"16\"}},{\"stateId\":\"AT-8\",\"fsk\":{\"title\":\"Ab 16 Jahren\",\"TitleEN\":\"From 16 years\",\"value\":\"16\"}},{\"stateId\":\"AT-9\",\"fsk\":{\"title\":\"Ab 16 Jahren\",\"TitleEN\":\"From 16 years\",\"value\":\"16\"}}]}",
+    "ratingAlt": null,
+    "runTime": 94,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/Passenger_SB_PH.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/PSNGR_FRAME_038R_org_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/PSNGR_FRAME_045R_org_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/PSNGR_FRAME_093R_org_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/PSNGR_FRAME_010R_org_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/PSNGR_FRAME_013R_org_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/PSNGR_FRAME_076R_org_295px.jpg"
+    ],
+    "teachingMaterials": [],
+    "cinemaIds": [
+      "1003",
+      "1004",
+      "1005",
+      "1014",
+      "1016",
+      "1020",
+      "1010",
+      "1012",
+      "1001",
+      "1008",
+      "1002",
+      "1017",
+      "1019",
+      "1018"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": null,
+    "ratingGetmeshEn": null,
+    "originLangCMS": "English",
+    "availableTechCMS": [
+      {
+        "id": "311",
+        "Description": "<p>Dolby Atmos</p>",
+        "DescriptionEN": "<p>Dolby Atmos</p>"
+      }
+    ],
+    "availableVersCMS": [
+      {
+        "id": "143",
+        "Description": "<p>OV (English)</p>",
+        "DescriptionEN": "<p>OV (English)</p>\n"
+      },
+      {
+        "id": "297",
+        "Description": "<p>DF</p>\n",
+        "DescriptionEN": "<p>DF (german)</p>\n"
+      }
+    ],
+    "movieStartCMS": "2025-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "USA"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": null,
+    "distributorName": "Constantin Film",
+    "shortURL": "passenger",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "130 Millionen Menschen machen jedes Jahr einen Roadtrip. 15.400 von ihnen werden nie wieder gesehen.",
+    "descriptionCalculated": "Ein junges Paar wird Zeuge eines grausamen Unfalls auf dem Highway. Sie verlassen den Unfallort – aber nicht allein. Eine dämonische Präsenz namens „The Passenger“ verwandelt ihr Van-Life-Abenteuer in einen Albtraum und lässt nicht von ihnen ab, bis sie von beiden Besitz ergriffen hat.",
+    "descriptionShortCalculated": "130 Millionen Menschen machen jedes Jahr einen Roadtrip. 15.400 von ihnen werden nie wieder gesehen.",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00019651",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-121720",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00019651",
+        "sessionId": "121720",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 13",
+        "screenNumber": 13,
+        "technologies": [
+          [
+            "2D"
+          ],
+          []
+        ],
+        "showtime": "2026-06-07T20:00:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  },
+  {
+    "id": "HO00019499",
+    "HOFilmCode": "A000021047",
+    "corporateFilmId": "A000021047",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/SCRY_INTL_2480x3512_Online_Teaser1Sht_Theatre_AT_A4_546px.jpg",
+    "title": "*Scary Movie",
+    "titleAlt": null,
+    "titleCalculated": "Scary Movie",
+    "titleOriginalCalculated": "Scary Movie",
+    "trailers": [
+      {
+        "trailerKey": "6aa48fca-60dd-4198-ab12-daa1ff1271c9",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260423_30_1030033_SCARYMOVIE6_SOCIAL_MICHAEL-58_GER-DE_DUB_DATE-WITH-BANDEROLE_H264_1080p2398.20_0.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260423_30_1030033_SCARYMOVIE6_SOCIAL_MICHAEL-58_GER-DE_DUB_DATE-WITH-BANDEROLE_H264_1080p2398_720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260423_30_1030033_SCARYMOVIE6_SOCIAL_MICHAEL-58_GER-DE_DUB_DATE-WITH-BANDEROLE_H264_1080p2398_404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260423_30_1030033_SCARYMOVIE6_SOCIAL_MICHAEL-58_GER-DE_DUB_DATE-WITH-BANDEROLE_H264_1080p2398_720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/6aa48fca-60dd-4198-ab12-daa1ff1271c9"
+      },
+      {
+        "trailerKey": "19cd35ba-e1e7-4ad8-a1ab-b5b53004a16b",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260326_30_1023128_SCARYMOVIE6_ITR-A_GER-DE_DUB_NUR-IM-KINO-WITH-BANDEROLE_H264_1080p251.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260326_30_1023128_SCARYMOVIE6_ITR-A_GER-DE_DUB_NUR-IM-KINO-WITH-BANDEROLE_H264_1080p251_720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260326_30_1023128_SCARYMOVIE6_ITR-A_GER-DE_DUB_NUR-IM-KINO-WITH-BANDEROLE_H264_1080p251_404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260326_30_1023128_SCARYMOVIE6_ITR-A_GER-DE_DUB_NUR-IM-KINO-WITH-BANDEROLE_H264_1080p251_720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/19cd35ba-e1e7-4ad8-a1ab-b5b53004a16b"
+      }
+    ],
+    "director": null,
+    "directors": [],
+    "actors": null,
+    "startDate": "2026-06-03",
+    "openingDate": "2026-06-03T00:00:00+02:00",
+    "genres": [
+      "Komödie",
+      "Horror"
+    ],
+    "genreId": "0000000002",
+    "comingSoon": false,
+    "isScheduledAtCinema": null,
+    "rating": "Ab 16 Jahren",
+    "ratingDescription": "Ab 16 Jahren",
+    "allStateRatings": "{\"stateFsk\":[]}",
+    "ratingAlt": null,
+    "runTime": 97,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/SM6-05653R2_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/SM6-05697RC3_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/SM6-07917R2C_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/SM6-11680R_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/SM6-13154R2_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/SM6-14320R_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/SCARY6_Thumbnail_OfficialTrailer_16x9_Apple_V2_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/SM6-08631R_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/SM6-04010R_A4_500px.jpg"
+    ],
+    "teachingMaterials": [],
+    "cinemaIds": [
+      "1001",
+      "1002",
+      "1003",
+      "1004",
+      "1005",
+      "1008",
+      "1011",
+      "1016",
+      "1017",
+      "1019",
+      "1020",
+      "1022",
+      "1010",
+      "1014",
+      "1018",
+      "1007",
+      "1006",
+      "1012",
+      "1032",
+      "1033",
+      "1013",
+      "1023",
+      "1021",
+      "1024"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": null,
+    "ratingGetmeshEn": null,
+    "originLangCMS": "English",
+    "availableTechCMS": [
+      {
+        "id": "311",
+        "Description": "<p>Dolby Atmos</p>",
+        "DescriptionEN": "<p>Dolby Atmos</p>"
+      },
+      {
+        "id": "310",
+        "Description": "<p>Dolby Cinema</p>\n",
+        "DescriptionEN": "<p>Dolby Cinema</p>\n"
+      }
+    ],
+    "availableVersCMS": [
+      {
+        "id": "143",
+        "Description": "<p>OV (English)</p>",
+        "DescriptionEN": "<p>OV (English)</p>\n"
+      },
+      {
+        "id": "297",
+        "Description": "<p>DF</p>\n",
+        "DescriptionEN": "<p>DF (german)</p>\n"
+      }
+    ],
+    "movieStartCMS": "2025-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "USA",
+      "GBR"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": null,
+    "distributorName": "Constantin Film",
+    "shortURL": "scary-movie",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "Paramount Pictures und Miramax präsentieren die Wayans Brothers Produktion “SCARY MOVIE”",
+    "descriptionCalculated": "Kein Horrorfilm-Franchise ist mehr sicher! Sechsundzwanzig Jahre nachdem sie einem  verdächtig vertrauten maskierten Mörder („Ghostface“) entkommen sind, gerät der harte Kern erneut ins Visier des Killers. Marlon Wayans („Shorty“), Shawn Wayans („Ray“), Anna Faris („Cindy“) und Regina Hall („Brenda“) kommen in „Scary Movie“ wieder  zusammen, um sich, gemeinsam mit altbekannten und neuen Gesichtern, durch Reboots, Remakes, Requels, Prequels, Sequels, Spin-offs, elevated Horror, Originalgeschichten, alles, was das Wort „Legacy“ enthält, und jedes „letzte Kapitel“, das absolut nicht das letzte ist, zu schlitzen. Nichts ist heilig, kein Klischee bleibt verschont, jede Grenze wird überschritten. Die Wayans sind zurück und canceln die „Cancel Culture“.",
+    "descriptionShortCalculated": "Paramount Pictures und Miramax präsentieren die Wayans Brothers Produktion \n“SCARY MOVIE”",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00019498",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      },
+      {
+        "id": "1003-HO00019813",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-121688",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00019498",
+        "sessionId": "121688",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 2",
+        "screenNumber": 2,
+        "technologies": [
+          [
+            "2D",
+            "DOLBY ATMOS"
+          ],
+          []
+        ],
+        "showtime": "2026-06-07T14:15:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      },
+      {
+        "id": "1003-121709",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00019498",
+        "sessionId": "121709",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 2",
+        "screenNumber": 2,
+        "technologies": [
+          [
+            "2D",
+            "DOLBY ATMOS"
+          ],
+          []
+        ],
+        "showtime": "2026-06-07T18:30:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      },
+      {
+        "id": "1003-121719",
+        "salesChannels": ";CALL;RSP;GSALE;CELL;KIOSK;PDA;WWW;POSBK;POS;IVR;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00019498",
+        "sessionId": "121719",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 2",
+        "screenNumber": 2,
+        "technologies": [
+          [
+            "2D",
+            "DOLBY ATMOS"
+          ],
+          []
+        ],
+        "showtime": "2026-06-07T20:30:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      },
+      {
+        "id": "1003-121679",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00019813",
+        "sessionId": "121679",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 4",
+        "screenNumber": 4,
+        "technologies": [
+          [
+            "2D",
+            "OV (Englisch)"
+          ],
+          []
+        ],
+        "showtime": "2026-06-07T19:45:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "OV",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  },
+  {
+    "id": "HO00020123",
+    "HOFilmCode": "A000021716",
+    "corporateFilmId": "A000021716",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/SommerAufAsphalt_Poster_A4_300dpi_712px.jpg",
+    "title": "*Sommer auf Asphalt",
+    "titleAlt": null,
+    "titleCalculated": "Sommer auf Asphalt",
+    "titleOriginalCalculated": "Sommer auf Asphalt",
+    "trailers": [
+      {
+        "trailerKey": "3a7e30dc-d22a-4181-ab5a-3e8ef5da507a",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260521_30_1035193_tvhd_SOMMER_AUF_ASPHALT_Trailer.40_0.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260521_30_1035193_tvhd_SOMMER_AUF_ASPHALT_Trailer_720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260521_30_1035193_tvhd_SOMMER_AUF_ASPHALT_Trailer_404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260521_30_1035193_tvhd_SOMMER_AUF_ASPHALT_Trailer_720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/3a7e30dc-d22a-4181-ab5a-3e8ef5da507a"
+      }
+    ],
+    "director": "Simon Ostermann",
+    "directors": [
+      "Simon Ostermann"
+    ],
+    "actors": [
+      "Mala Emde",
+      "Christoph Maria Herbst",
+      "Aaron Hilmer",
+      "Gina Haller",
+      "Jenny Schily"
+    ],
+    "startDate": "2026-06-04",
+    "openingDate": "2026-06-04T00:00:00+02:00",
+    "genres": [
+      "Komödie",
+      "Drama"
+    ],
+    "genreId": "0000000002",
+    "comingSoon": false,
+    "isScheduledAtCinema": null,
+    "rating": "ab 16",
+    "ratingDescription": "",
+    "allStateRatings": "{\"stateFsk\":[{\"stateId\":\"AT-1\",\"fsk\":{\"title\":\"Ab 18 Jahren\",\"TitleEN\":\"From 18 years\",\"value\":\"18\"}},{\"stateId\":\"AT-2\",\"fsk\":{\"title\":\"Ab 16 Jahren\",\"TitleEN\":\"From 16 years\",\"value\":\"16\"}},{\"stateId\":\"AT-3\",\"fsk\":{\"title\":\"Ab 16 Jahren\",\"TitleEN\":\"From 16 years\",\"value\":\"16\"}},{\"stateId\":\"AT-4\",\"fsk\":{\"title\":\"Ab 16 Jahren\",\"TitleEN\":\"From 16 years\",\"value\":\"16\"}},{\"stateId\":\"AT-5\",\"fsk\":{\"title\":\"Ab 16 Jahren\",\"TitleEN\":\"From 16 years\",\"value\":\"16\"}},{\"stateId\":\"AT-6\",\"fsk\":{\"title\":\"Ab 16 Jahren\",\"TitleEN\":\"From 16 years\",\"value\":\"16\"}},{\"stateId\":\"AT-7\",\"fsk\":{\"title\":\"Ab 16 Jahren\",\"TitleEN\":\"From 16 years\",\"value\":\"16\"}},{\"stateId\":\"AT-8\",\"fsk\":{\"title\":\"Ab 16 Jahren\",\"TitleEN\":\"From 16 years\",\"value\":\"16\"}},{\"stateId\":\"AT-9\",\"fsk\":{\"title\":\"Ab 16 Jahren\",\"TitleEN\":\"From 16 years\",\"value\":\"16\"}}]}",
+    "ratingAlt": null,
+    "runTime": 93,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/AUT/movies/Sommer%20auf%20Asphalt/04_Les-MalaEmde_Tyler-AaronHilmer_c_WuesteMedien-FrizziKurkhaus_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/AUT/movies/Sommer%20auf%20Asphalt/01_Les-MalaEmde_Bert-ChristophMariaHerbst_c_WuesteMedien-FrizziKurkhaus_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/AUT/movies/Sommer%20auf%20Asphalt/08_Bert-ChristophMariaHerbst_c_WuesteMedien-FrizziKurkhaus_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/AUT/movies/Sommer%20auf%20Asphalt/02_Les-MalaEmde_Bert-ChristophMariaHerbst_c_WuesteMedien-FrizziKurkhaus_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/AUT/movies/Sommer%20auf%20Asphalt/03_Les-MalaEmde_c_WuesteMedien-FrizziKurkhaus_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/AUT/movies/Sommer%20auf%20Asphalt/05_Bert-ChristophMariaHerbst_Tyler-AaronHilmer_c_WuesteMedien-FrizziKurkhaus_500px.jpg"
+    ],
+    "teachingMaterials": [],
+    "cinemaIds": [
+      "1003",
+      "1011"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": null,
+    "ratingGetmeshEn": null,
+    "originLangCMS": "German",
+    "availableTechCMS": [],
+    "availableVersCMS": [
+      {
+        "id": "297",
+        "Description": "<p>DF</p>\n",
+        "DescriptionEN": "<p>DF (german)</p>\n"
+      }
+    ],
+    "movieStartCMS": "2026-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "DEU"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": null,
+    "distributorName": "Einhorn Film",
+    "shortURL": "sommer-auf-asphalt",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "SOMMER AUF ASPHALT ist eine warmherzige Vater-Tochter-Komödie über Selbstbestimmung, Familie und Zugehörigkeit.",
+    "descriptionCalculated": "Les (Mala Emde) lebt schnell, spontan und unbeschwert. Tagsüber rast sie als Fahrradkurierin durch die Stadt, nach Feierabend stürzt sie irgendwo mit ihren Freunden ab. Anhalten, innehalten oder sich Gedanken über die Zukunft machen? Nicht mit Les. Zumindest nicht, bis ihr Vater Bert (Christoph Maria Herbst) – mit dem sie eigentlich so gut wie keinen Kontakt hat – ganz unerwartet vor der Tür steht und nach einem Unfall sogar ungefragt für seine Tochter aufs Rad steigt. Als Les dann auch noch von ihrer ungeplanten Schwangerschaft erfährt, ist sie vollends in einer neuen Realität angekommen. Der werdende Vater Tyler (Aaron Hilmer) hätte zwar Lust auf ein Kind, ist aber leider selbst noch eins. Les‘ Welt steht komplett Kopf – und dabei hat Bert ihr noch nicht einmal gesagt, dass er bald sterben wird…",
+    "descriptionShortCalculated": "SOMMER AUF ASPHALT ist eine warmherzige Vater-Tochter-Komödie über Selbstbestimmung, Familie und Zugehörigkeit.",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00020122",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-121707",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00020122",
+        "sessionId": "121707",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 13",
+        "screenNumber": 13,
+        "technologies": [
+          [
+            "2D"
+          ],
+          []
+        ],
+        "showtime": "2026-06-07T17:15:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  },
+  {
+    "id": "HO00017519",
+    "HOFilmCode": "A000018895",
+    "corporateFilmId": "A000018895",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TheMandalorianAndGrogu_Teaser2_DE_A4_72dpi_RGB_546px.jpg",
+    "title": "*Star Wars: The Mandalorian and Grogu",
+    "titleAlt": null,
+    "titleCalculated": "Star Wars: The Mandalorian and Grogu",
+    "titleOriginalCalculated": "Star Wars: The Mandalorian & Grogu",
+    "trailers": [
+      {
+        "trailerKey": "6db33bb7-df88-4e92-90f4-f86a23bbe268",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260417_30_1028965_MandoAndGrogu_TLRS_DUB_TD_GER_1920x1080_video.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260417_30_1028965_MandoAndGrogu_TLRS_DUB_TD_GER_1920x1080_video_720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260417_30_1028965_MandoAndGrogu_TLRS_DUB_TD_GER_1920x1080_video_404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260417_30_1028965_MandoAndGrogu_TLRS_DUB_TD_GER_1920x1080_video_720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/6db33bb7-df88-4e92-90f4-f86a23bbe268"
+      }
+    ],
+    "director": "Jon Favreau",
+    "directors": [
+      "Jon Favreau"
+    ],
+    "actors": [
+      "Sigourney Weaver",
+      "Pedro Pascal",
+      "Jonny Coyne"
+    ],
+    "startDate": "2026-05-20",
+    "openingDate": "2026-05-20T00:00:00+02:00",
+    "genres": [
+      "Fantasy",
+      "Action",
+      "Abenteuer"
+    ],
+    "genreId": "0000000005",
+    "comingSoon": false,
+    "isScheduledAtCinema": null,
+    "rating": "Ab 14 Jahren",
+    "ratingDescription": "Ab 14 Jahren",
+    "allStateRatings": "{\"stateFsk\":[]}",
+    "ratingAlt": null,
+    "runTime": 132,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TM%26G_Photo%20%281%29_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TM%26G_Photo%20%283%29_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TM%26G_Photo%20%285%29_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TM%26G_Photo%20%287%29_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TM%26G_Photo%20%289%29_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TM%26G_Photo%20%286%29_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TM%26G_Photo%20%2810%29_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TM%26G_Photo%20%2815%29%20%281%29_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TM%26G_Photo%20%2819%29_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TM%26G_Photo%20%2816%29_295px.jpg"
+    ],
+    "teachingMaterials": [],
+    "cinemaIds": [
+      "1030",
+      "1001",
+      "1003",
+      "1004",
+      "1007",
+      "1008",
+      "1012",
+      "1013",
+      "1016",
+      "1021",
+      "1023",
+      "1024",
+      "1002",
+      "1005",
+      "1006",
+      "1010",
+      "1011",
+      "1022",
+      "1017",
+      "1018",
+      "1019",
+      "1033",
+      "1020",
+      "1014",
+      "1032"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": "sehenswert",
+    "ratingGetmeshEn": "worth seeing",
+    "originLangCMS": "Englisch",
+    "availableTechCMS": [
+      {
+        "id": "316",
+        "Description": "<p>IMAX</p>\n",
+        "DescriptionEN": "<p>IMAX</p>\n"
+      },
+      {
+        "id": "62",
+        "Description": "<p>3D</p>\n",
+        "DescriptionEN": "<p>3D</p>\n"
+      },
+      {
+        "id": "310",
+        "Description": "<p>Dolby Cinema</p>\n",
+        "DescriptionEN": "<p>Dolby Cinema</p>\n"
+      },
+      {
+        "id": "311",
+        "Description": "<p>Dolby Atmos</p>",
+        "DescriptionEN": "<p>Dolby Atmos</p>"
+      },
+      {
+        "id": "313",
+        "Description": "<p>MX4D</p>",
+        "DescriptionEN": "<p>MX4D</p>"
+      }
+    ],
+    "availableVersCMS": [
+      {
+        "id": "143",
+        "Description": "<p>OV (English)</p>",
+        "DescriptionEN": "<p>OV (English)</p>\n"
+      },
+      {
+        "id": "297",
+        "Description": "<p>DF</p>\n",
+        "DescriptionEN": "<p>DF (german)</p>\n"
+      },
+      {
+        "id": "63",
+        "Description": "<p>OmU</p>\n",
+        "DescriptionEN": "<p>OmU</p>\n"
+      }
+    ],
+    "movieStartCMS": "2026-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "USA"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": null,
+    "distributorName": "The Walt Disney Company",
+    "shortURL": "star-wars-12",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "Unter der Regie von Jon Favreau begeben sich der Mandalorianer und Grogu auf ihre bisher spannendste Mission.",
+    "descriptionCalculated": "Das Dunkle Imperium ist gefallen und die imperialen Kriegsherren sind weiterhin über die Galaxis verstreut. Während die Neue Republik daran arbeitet, alles zu schützen, wofür die Rebellion gekämpft hat, sichern sie sich die Unterstützung des legendären mandalorianischen Kopfgeldjägers Din Djarin und seines jungen Lehrlings Grogu.",
+    "descriptionShortCalculated": "Unter der Regie von Jon Favreau begeben sich der Mandalorianer und Grogu auf ihre bisher spannendste Mission.",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00017517",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-121530",
+        "salesChannels": ";VENDO;USHER;POS;POSBK;IVR;KIOSK;WWW;PDA;CELL;CALL;RSP;GSALE;",
+        "cinemaId": "1003",
+        "movieId": "HO00017517",
+        "sessionId": "121530",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "IMAX",
+        "screenNumber": 1,
+        "technologies": [
+          [
+            "IMAX 3D"
+          ],
+          []
+        ],
+        "showtime": "2026-06-07T17:45:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "sehenswert",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      },
+      {
+        "id": "1003-121713",
+        "salesChannels": ";CALL;RSP;GSALE;CELL;KIOSK;PDA;WWW;POSBK;POS;IVR;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00017517",
+        "sessionId": "121713",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 3",
+        "screenNumber": 3,
+        "technologies": [
+          [
+            "3D"
+          ],
+          []
+        ],
+        "showtime": "2026-06-07T19:30:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "sehenswert",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  },
+  {
+    "id": "HO00019710",
+    "HOFilmCode": "A000021276",
+    "corporateFilmId": "A000021276",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TADC_Poster-2x3_DE_4-7JUN_kl.jpg",
+    "title": "*The Amazing Digital Circus: The Last Act",
+    "titleAlt": null,
+    "titleCalculated": "The Amazing Digital Circus: Der letzte Akt",
+    "titleOriginalCalculated": "The Amazing Digital Circus: The Last Act",
+    "trailers": [
+      {
+        "trailerKey": "25fb84b4-e2c5-45c4-bd9e-c10465c2f887",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260428_30_1031016_TADC_TLR_1440p_30f_Stereo_Web_DE-XX_JUN47.20_0.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260428_30_1031016_TADC_TLR_1440p_30f_Stereo_Web_DE-XX_JUN47_720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260428_30_1031016_TADC_TLR_1440p_30f_Stereo_Web_DE-XX_JUN47_404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260428_30_1031016_TADC_TLR_1440p_30f_Stereo_Web_DE-XX_JUN47_720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/25fb84b4-e2c5-45c4-bd9e-c10465c2f887"
+      }
+    ],
+    "director": "Gooseworx  ",
+    "directors": [
+      "Gooseworx  "
+    ],
+    "actors": [
+      "Lizzie Freeman",
+      "Michael Kovach",
+      "Marissa Lenti",
+      "Ashley Nichols",
+      "Alex Rochon",
+      "Sean Chiplock",
+      "Amanda Hufford"
+    ],
+    "startDate": "2026-06-04",
+    "openingDate": "2026-06-04T00:00:00+02:00",
+    "genres": [
+      "Drama",
+      "Thriller",
+      "Abenteuer",
+      "Animation/Zeichentrick"
+    ],
+    "genreId": "0000000010",
+    "comingSoon": false,
+    "isScheduledAtCinema": null,
+    "rating": "Ab 12 Jahren",
+    "ratingDescription": "Ab 12 Jahren",
+    "allStateRatings": "{\"stateFsk\":[]}",
+    "ratingAlt": null,
+    "runTime": 95,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DigitalCircus_SB1.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DigitalCircus_SB2.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DigitalCircus_SB3.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DigitalCircus_SB4.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DigitalCircus_SB5.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DigitalCircus_SB6.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/DigitalCircus_SB7.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/vlcsnap-2026-04-16-18h59m46s666_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/vlcsnap-2026-04-16-18h59m52s164_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/vlcsnap-2026-04-16-19h00m07s825_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/vlcsnap-2026-04-16-19h00m12s413_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/vlcsnap-2026-04-16-19h00m38s176_295px.jpg"
+    ],
+    "teachingMaterials": [],
+    "cinemaIds": [
+      "1033",
+      "1001",
+      "1002",
+      "1003",
+      "1004",
+      "1005",
+      "1006",
+      "1007",
+      "1008",
+      "1010",
+      "1011",
+      "1012",
+      "1013",
+      "1014",
+      "1016",
+      "1017",
+      "1018",
+      "1019",
+      "1020",
+      "1021",
+      "1022",
+      "1023",
+      "1024",
+      "1032",
+      "1030"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": null,
+    "ratingGetmeshEn": null,
+    "originLangCMS": "English",
+    "availableTechCMS": [],
+    "availableVersCMS": [
+      {
+        "id": "63",
+        "Description": "<p>OmU</p>\n",
+        "DescriptionEN": "<p>OmU</p>\n"
+      },
+      {
+        "id": "297",
+        "Description": "<p>DF</p>\n",
+        "DescriptionEN": "<p>DF (german)</p>\n"
+      },
+      {
+        "id": "143",
+        "Description": "<p>OV (English)</p>",
+        "DescriptionEN": "<p>OV (English)</p>\n"
+      }
+    ],
+    "movieStartCMS": "2026-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "AUS"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": null,
+    "distributorName": "Piece of Magic Entertainment",
+    "shortURL": "the-amazing-digital-circus-the-last-act",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "Das große Finale von „The Amazing Digital Circus“ steht mit einer Kinopremiere in Spielfilmlänge vor der Tür!",
+    "descriptionCalculated": "Die virale Internet-Sensation „The Amazing Digital Circus“ findet ihren lang erwarteten\nAbschluss in einer Kinoveröffentlichung in Spielfilmlänge! Dieser „Letzte Akt“ verbindet\nEpisode 8 mit der brandneuen, einstündigen Episode 9, die Fans vor allen anderen auf der\nWelt sehen können.\nDa Caine fort ist und der Zirkus dunkel geworden ist, bleibt der Truppe nur noch die Fehler\nund Traumata ihrer Vergangenheit als Gesellschaft. Während sich die Aussicht auf die\nEwigkeit um sie herum verdichtet, entdecken sie die Wahrheit über den Digitalen Zirkus\nund seine Geschichte. Werden sie sich mit dem, was sie aufdecken, abfinden, oder werden\nsie… die andere Wahl treffen? Außerdem sagt vermutlich irgendwann jemand etwas\nLustiges, denn das Ende kann doch nicht SO deprimierend sein, oder?",
+    "descriptionShortCalculated": "Das große Finale von „The Amazing Digital Circus“ steht mit einer Kinopremiere in\nSpielfilmlänge vor der Tür!",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00019709",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-120003",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00019709",
+        "sessionId": "120003",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 7",
+        "screenNumber": 7,
+        "technologies": [
+          [
+            "2D"
+          ],
+          []
+        ],
+        "showtime": "2026-06-07T17:00:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  },
+  {
+    "id": "HO00019238",
+    "HOFilmCode": "A000020757",
+    "corporateFilmId": "A000020757",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/TomUndJerry-DerVerloreneKompass_A4_300dpi-724x1024_712px.jpg",
+    "title": "*Mao He Lao Sliu: Xing Pan Qi Yuan",
+    "titleAlt": null,
+    "titleCalculated": "Tom & Jerry – Der verlorene Kompass",
+    "titleOriginalCalculated": "Mâo Hé Lâoshâ: Xîng Pán Qí Yuán",
+    "trailers": [
+      {
+        "trailerKey": "f68d69da-bfb2-470b-abf4-125738b76afb",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20260326_30_1023231_webhd_Tom_und_Jerry_Kompass_TLR-1_60_Stereo_1.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260326_30_1023231_webhd_Tom_und_Jerry_Kompass_TLR-1_60_Stereo_1_720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20260326_30_1023231_webhd_Tom_und_Jerry_Kompass_TLR-1_60_Stereo_1_404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20260326_30_1023231_webhd_Tom_und_Jerry_Kompass_TLR-1_60_Stereo_1_720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/f68d69da-bfb2-470b-abf4-125738b76afb"
+      }
+    ],
+    "director": "Zhang Gang",
+    "directors": [
+      "Zhang Gang"
+    ],
+    "actors": [],
+    "startDate": "2026-04-30",
+    "openingDate": "2026-04-30T00:00:00+02:00",
+    "genres": [
+      "Komödie",
+      "Animation/Zeichentrick"
+    ],
+    "genreId": "0000000011",
+    "comingSoon": false,
+    "isScheduledAtCinema": null,
+    "rating": "Ab 6 Jahren",
+    "ratingDescription": "Ab 6 Jahren",
+    "allStateRatings": "{\"stateFsk\":[]}",
+    "ratingAlt": null,
+    "runTime": 100,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/01_TomUndJerry_DerVerloreneKompass_c_Einhorn-Film_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/02_TomUndJerry_DerVerloreneKompass_c_Einhorn-Film_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/03_TomUndJerry_DerVerloreneKompass_c_Einhorn-Film_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/04_TomUndJerry_DerVerloreneKompass_c_Einhorn-Film_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/05_TomUndJerry_DerVerloreneKompass_c_Einhorn-Film_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/06_TomUndJerry_DerVerloreneKompass_c_Einhorn-Film_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/07_TomUndJerry_DerVerloreneKompass_c_Einhorn-Film_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/08_TomUndJerry_DerVerloreneKompass_c_Einhorn-Film_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/09_TomUndJerry_DerVerloreneKompass_c_Einhorn.Film_295px.jpg"
+    ],
+    "teachingMaterials": [],
+    "cinemaIds": [
+      "1012",
+      "1004",
+      "1010",
+      "1013",
+      "1016",
+      "1022",
+      "1006",
+      "1017",
+      "1018",
+      "1020",
+      "1007",
+      "1008",
+      "1014",
+      "1003",
+      "1019",
+      "1005"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": null,
+    "ratingGetmeshEn": null,
+    "originLangCMS": "Chinese",
+    "availableTechCMS": [],
+    "availableVersCMS": [
+      {
+        "id": "297",
+        "Description": "<p>DF</p>\n",
+        "DescriptionEN": "<p>DF (german)</p>\n"
+      }
+    ],
+    "movieStartCMS": "2025-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "CHN"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": null,
+    "distributorName": "Einhorn Film",
+    "shortURL": "tom-und-jerry-der-verlorene-kompass",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "Eine Jagd um die Welt: Tom und Jerry – Der verlorene Kompass",
+    "descriptionCalculated": "In ihrem neuesten Abenteuer beweisen Tom und Jerry, dass sie auch nach Jahrzehnten nichts von ihrem Charme verloren haben – auch wenn sie diesen diesmal weit abseits ihres gewohnten Wohnzimmers versprühen. In „Tom und Jerry – Der verlorene Kompass“ tauscht das Duo den heimischen Teppich gegen den staubigen Dschungel und vergessene Tempel ein: Was als klassische Verfolgungsjagd beginnt, eskaliert schnell zu einer weltumspannenden Schatzsuche. Als Tom ein mysteriöses, goldenes Artefakt in die Pfoten fällt, ahnt er nicht, dass Jerry bereits den passenden Plan dazu im Kopf hat. Gemeinsam (und doch wie immer gegeneinander) müssen sie das Geheimnis des „Verlorenen Kompasses“ lüften, bevor ein exzentrischer Grabräuber ihnen zuvorkommt.",
+    "descriptionShortCalculated": "Eine Jagd um die Welt: Tom und Jerry – Der verlorene Kompass",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00019237",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-121698",
+        "salesChannels": ";CALL;RSP;GSALE;CELL;KIOSK;PDA;WWW;POSBK;POS;IVR;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00019237",
+        "sessionId": "121698",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 12",
+        "screenNumber": 12,
+        "technologies": [
+          [
+            "2D"
+          ],
+          [
+            "MONATSSPARER FAMILY"
+          ]
+        ],
+        "showtime": "2026-06-07T14:30:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSpF",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  },
+  {
+    "id": "HO00016506",
+    "HOFilmCode": "A000017825",
+    "corporateFilmId": "A000017825",
+    "posterImage": "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/Woodwalkers2_AT_A4_546px.jpg",
+    "title": "*Woodwalkers 2",
+    "titleAlt": null,
+    "titleCalculated": "Woodwalkers 2",
+    "titleOriginalCalculated": "Woodwalkers 2",
+    "trailers": [
+      {
+        "trailerKey": "b217dd85-2cc8-4a5e-b991-db79ca392b3f",
+        "keyframeUrl": "https://kf-cineplexx.sf.apa.at/cineplexx/20251105_30_991569_Woodwalkers-2-Haupttrailer.20_0.jpg",
+        "videoUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20251105_30_991569_Woodwalkers-2-Haupttrailer_720.mp4",
+        "iosUrl": "https://vs-str-cineplexx.sf.apa.at/vod/_definst_/http/cineplexx/smil:20251105_30_991569_Woodwalkers-2-Haupttrailer_404.smil/playlist.m3u8",
+        "androidUrl": "https://vs-dl-cineplexx.sf.apa.at/apavideoservice/cineplexx/20251105_30_991569_Woodwalkers-2-Haupttrailer_720.mp4",
+        "universalPlayerUrl": "https://uvp-cineplexx.sf.apa.at/embed/b217dd85-2cc8-4a5e-b991-db79ca392b3f"
+      }
+    ],
+    "director": "Sven Unterwaldt",
+    "directors": [
+      "Sven Unterwaldt"
+    ],
+    "actors": [
+      "Moritz Bleibtreu",
+      "Martina Gedeck",
+      "Hannah  Herzsprung",
+      "Oliver Masucci",
+      "David Schütter",
+      "Tom Schilling",
+      "Lilli Falk",
+      "Olivia Sinclair",
+      "Emile Cherif",
+      "Sophie Lelenta",
+      "Johan von Ehrlich"
+    ],
+    "startDate": "2026-01-29",
+    "openingDate": "2026-01-29T00:00:00+01:00",
+    "genres": [
+      "Fantasy",
+      "Abenteuer"
+    ],
+    "genreId": "0000000010",
+    "comingSoon": false,
+    "isScheduledAtCinema": null,
+    "rating": "Ab 6 Jahren",
+    "ratingDescription": "Ab 6 Jahren",
+    "allStateRatings": "{\"stateFsk\":[]}",
+    "ratingAlt": null,
+    "runTime": 103,
+    "avgRating": null,
+    "nrOfRating": null,
+    "gallery": [
+      "https://s3proxygw.cineplexx.at/cms-live/asset/AUT/movies/Woodwalkers%202/WOODWALKERS2_002_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/AUT/movies/Woodwalkers%202/WOODWALKERS2_001_A4_500px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/WOODWALKERS2_010_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/WOODWALKERS2_003_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/WOODWALKERS2_004_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/WOODWALKERS2_011_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/WOODWALKERS2_012_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/WOODWALKERS2_013_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/WOODWALKERS2_016_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/Woodwalkers2_017_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/WOODWALKERS2_018_A4_295px.jpg",
+      "https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/Woodwalkers2_019_A4_295px.jpg"
+    ],
+    "teachingMaterials": [
+      {
+        "fullpath": "https://s3proxygw.cineplexx.at/cms-live/asset/AUT/Schulkino/Unterrichtsmaterial/WOODWALKERS_2.pdf",
+        "value": "Unterrichtsmaterial"
+      }
+    ],
+    "cinemaIds": [
+      "1010",
+      "1011",
+      "1013",
+      "1017",
+      "1018",
+      "1033",
+      "1003",
+      "1005",
+      "1008",
+      "1001",
+      "1004",
+      "1006",
+      "1007",
+      "1012",
+      "1016",
+      "1019",
+      "1022",
+      "1014",
+      "1020",
+      "1032",
+      "1021",
+      "1023",
+      "1024",
+      "1029"
+    ],
+    "technologies": [],
+    "isInWatchlist": null,
+    "ratingGetmesh": null,
+    "ratingGetmeshEn": null,
+    "originLangCMS": "Deutsch",
+    "availableTechCMS": [],
+    "availableVersCMS": [
+      {
+        "id": "297",
+        "Description": "<p>DF</p>\n",
+        "DescriptionEN": "<p>DF (german)</p>\n"
+      }
+    ],
+    "movieStartCMS": "2025-01-01T00:00:00+01:00",
+    "movieCountryCMS": [
+      "DEU",
+      "AUT"
+    ],
+    "keywords": [],
+    "Sortierung": null,
+    "Filmtipp": false,
+    "distributorName": "Constantin Film",
+    "shortURL": "woodwalkers-2",
+    "EUYouthLogo": null,
+    "synopsis": "Master",
+    "shortSynopsis": "Mit Sven Unterwaldts \"Woodwalkers 2“ kommt der zweite Teil der spektakulären Fantasy-Trilogie ins Kino! Im Mittelpunkt stehen wieder die sechs jugendlichen Held:innen.",
+    "descriptionCalculated": "Für Carag, Brandon, Holly und Lou beginnt ein neues Schuljahr an der Clearwater High. Und das hat es in sich, denn das Naturschutzgebiet rund um die Schule ist in Gefahr. Carags früherer Mentor Andrew Milling plant, den Wald rund um das Internat zu verkaufen – das Revier der Gestaltwandler! Puma-Wandler Carag und seine Freunde versuchen dies mit allen Mitteln zu verhindern, doch Milling hat einen Spion an der Schule und ist ihnen immer einen Schritt voraus. Ausgerechnet die Schneewölfin Tikaani kommt ihnen schließlich zur Hilfe. Doch kann Carag ihr wirklich trauen – und ist da vielleicht sogar mehr als Freundschaft zwischen den beiden?",
+    "descriptionShortCalculated": "Mit Sven Unterwaldts \"Woodwalkers 2“ kommt der zweite Teil der spektakulären Fantasy-Trilogie ins Kino! Im Mittelpunkt stehen wieder die sechs jugendlichen Held:innen.",
+    "scheduledMovies": [
+      {
+        "id": "1003-HO00016505",
+        "corporateId": null,
+        "cinemaId": null,
+        "ageRating": null,
+        "title": null
+      }
+    ],
+    "sessions": [
+      {
+        "id": "1003-121697",
+        "salesChannels": ";IVR;CALL;GSALE;WWW;KIOSK;CELL;PDA;POSBK;POS;RSP;USHER;VENDO;",
+        "cinemaId": "1003",
+        "movieId": "HO00016505",
+        "sessionId": "121697",
+        "cinemaName": "Cineplexx Donau Zentrum",
+        "screenName": "Saal 13",
+        "screenNumber": 13,
+        "technologies": [
+          [
+            "2D"
+          ],
+          [
+            "MONATSSPARER FAMILY"
+          ]
+        ],
+        "showtime": "2026-06-07T14:30:00+02:00",
+        "isAllocatedSeating": true,
+        "status": "yellow",
+        "restrictions": {
+          "id": "0a9adaf8-39d7-11e9-8e20-02f411795376",
+          "allowedGiftCardNumber": "21090*;21091*;21092*;21093*;21094*;21095*;21096*;21097*;21098*;21099*;80001*;8500*;85002*",
+          "isAllowGiftCardNumber": true,
+          "activateCurrencyTwo": false,
+          "allowBookingSplitting": false,
+          "boughtTicketTTL": 2400,
+          "blackStatusCount": 24,
+          "currencyCodeOne": null,
+          "currencyCodeTwo": null,
+          "currencyConversionFactor": null,
+          "greySessionTTL": 600,
+          "maxBonusCardTickets": 2,
+          "maxReservedBonusTickets": 2,
+          "maxReservedTickets": 6,
+          "maxTickets": 6,
+          "orderPaymentTTL": 1500,
+          "orderTTL": 250,
+          "pickupTimeLimit": 30,
+          "pickupTimeLimitVip": 10,
+          "purchaseTicketsScreenPopupText": "",
+          "redSessionTTL": 600,
+          "refundTimespan": 300,
+          "retryTimeout": 2,
+          "showPopupOnPurchaseTicketsScreen": false,
+          "timeout": 90,
+          "yellowSeatsAvailablePercent": 50,
+          "yellowSessionTTL": 1800
+        },
+        "cinemaIsFavorite": false,
+        "conceptAttributesNames": [
+          "MoSpF",
+          "wwwsaleonl"
+        ],
+        "isUnderAbo": false
+      }
+    ]
+  }
+]
