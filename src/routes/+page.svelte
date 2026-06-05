@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ThemeSwitcher from '$lib/components/themeSwitcher.svelte';
+	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 	import CinemasAndMovies from '$lib/components/CinemasAndMovies.svelte';
 	import DateSelector from '$lib/components/DateSelector.svelte';
 

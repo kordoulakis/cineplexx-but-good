@@ -7,7 +7,7 @@
 	let { children } = $props();
 </script>
 
-<ModeWatcher />
+<ModeWatcher defaultMode="dark"/>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 {@render children()}
