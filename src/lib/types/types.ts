@@ -7,8 +7,10 @@ export interface MovieVersion {
 export interface TrimmedSession {
 	cinemaId: string;
 	cinemaName: string;
+	screenName: string;
 	technologies: string[][];
 	showtime: string;
+	isOv: boolean;
 }
 
 export interface TrimmedMovie {
@@ -18,6 +20,8 @@ export interface TrimmedMovie {
 	comingSoon: boolean;
 	availableVersCMS: MovieVersion[];
 	sessions: TrimmedSession[];
+	isOv: boolean;
+	posterImage: string;
 }
 
 // Strict mapping shapes for incoming un-trimmed API data
@@ -31,6 +35,7 @@ export interface RawMovieVersion {
 export interface RawSession {
 	cinemaId: string;
 	cinemaName: string;
+	screenName: string;
 	technologies: string[][];
 	showtime: string;
 	[key: string]: unknown;
@@ -41,6 +46,7 @@ export interface RawMovie {
 	titleOriginalCalculated: string;
 	startDate: string;
 	comingSoon: boolean;
+	posterImage: string;
 	availableVersCMS?: RawMovieVersion[];
 	sessions?: RawSession[];
 	[key: string]: unknown;

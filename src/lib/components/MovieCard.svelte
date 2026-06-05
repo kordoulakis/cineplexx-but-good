@@ -11,13 +11,16 @@
 
 	// Pure data derivations
 	const ovSessions = $derived(
-		movie.sessions.filter((session) =>
-			session.technologies.flat().some((t) => t.toUpperCase() === 'OV')
-		)
+		movie.sessions.filter((session) => session.isOv)
 	);
 
-	const isEnglishOV = $derived(
-		movie.availableVersCMS.some(v => v.DescriptionEN.toLowerCase().includes('ov (english)'))
+	const isEnglishOV = $derived(movie.isOv);
+
+	const movieTechs = $derived(
+		[...new Set(movie.sessions.flatMap((s) => getCleanTech(s.technologies)))].sort((a, b) => {
+			const priority: Record<string, number> = { IMAX: 1, '4DX': 2, '3D': 3, '2D': 4 };
+			return (priority[a] || 99) - (priority[b] || 99);
+		})
 	);
 
 	const formattedDate = $derived(
@@ -30,23 +33,34 @@
 	const showStartsAt = $derived(formattedDate && movie.startDate && new Date(movie.startDate) > new Date());
 
 	const getCleanTech = (techMatrix: string[][]): string[] => {
-		const flattened = techMatrix.flat().map(t => t.toUpperCase());
+		const flattened = techMatrix.flat().map((t) => t.toUpperCase());
 		// Filter down to notable highlights so the UI stays tidy
-		const targets = ['IMAX', '3D', '4DX', 'ATMOS', 'OV'];
-		return [...new Set(flattened.filter(t => targets.includes(t)))];
+		const targets = ['IMAX', '2D', '3D', '4DX', 'ATMOS', 'OV', 'VIP', 'DBOX'];
+		return [...new Set(flattened.filter((t) => targets.includes(t)))];
 	};
 
 	const formatTime = (isoString: string) => {
-		return new Date(isoString).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+		return new Date(isoString).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
 	};
 </script>
 
-<Card.Root class="flex flex-col w-full h-full overflow-hidden transition-all hover:shadow-md border-muted">
-	<Card.Header class="p-4 pb-2 space-y-1">
+<Card.Root class="group relative flex flex-col w-full h-full overflow-hidden transition-all hover:shadow-lg border-muted">
+	<!-- Background Poster with Overlay -->
+	<div class="absolute inset-0 z-0 transition-transform duration-500 group-hover:scale-105">
+		<img 
+			src={movie.posterImage} 
+			alt="" 
+			class="w-full h-full object-cover"
+		/>
+		<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-background/40"></div>
+	</div>
+
+	<Card.Header class="relative z-10 p-4 pb-2 space-y-1">
+		<h3 class="font-bold text-base leading-tight tracking-tight text-card-foreground" title={movie.title}>
+			{movie.title}
+		</h3>
 		<div class="flex items-start justify-between gap-2">
-			<h3 class="font-bold text-base leading-tight tracking-tight text-card-foreground line-clamp-2" title={movie.title}>
-				{movie.title}
-			</h3>
+
 
 			<div class="flex gap-1 shrink-0 pt-0.5">
 				{#if isEnglishOV}
@@ -59,6 +73,13 @@
 						Soon
 					</Badge>
 				{/if}
+				{#each movieTechs as tech (tech)}
+					{#if tech !== 'OV'}
+						<Badge variant="outline" class="text-[10px] px-1.5 py-0 font-semibold tracking-wider uppercase border-primary/20 bg-primary/5 text-primary/80">
+							{tech}
+						</Badge>
+					{/if}
+				{/each}
 			</div>
 		</div>
 
@@ -69,8 +90,8 @@
 		{/if}
 	</Card.Header>
 
-	<Card.Content class="p-4 pt-0 pb-3 flex-grow flex flex-col justify-between gap-3">
-		{#if formattedDate}
+	<Card.Content class="relative z-10 p-4 pt-0 pb-3 flex-grow flex flex-col justify-between gap-3">
+		{#if showStartsAt}
 			<div class="flex items-center gap-1.5 text-xs text-muted-foreground">
 				<CalendarIcon class="w-3.5 h-3.5 text-muted-foreground/70" />
 				<span>Starts {formattedDate}</span>
@@ -80,27 +101,44 @@
 		<div class="space-y-2">
 			<div class="flex items-center gap-1 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
 				<ClockIcon class="w-3.5 h-3.5" />
-				<span>Today's Sessions</span>
+				<span>Showtimes</span>
 			</div>
 
 			{#if !ovSessions || ovSessions.length === 0}
 				<p class="text-xs text-muted-foreground italic">No OV screenings listed for this date.</p>
 			{:else}
-				<div class="flex flex-wrap gap-1.5 max-h-[110px] overflow-y-auto pr-1">
+				<div class="flex flex-nowrap gap-1.5 overflow-x-auto pb-2 no-scrollbar">
 					{#each ovSessions as session (session)}
 						{@const techs = getCleanTech(session.technologies)}
 
 						<Button
 							variant="outline"
-							size="sm"
-							class="h-auto py-1 px-2.5 flex flex-col items-center gap-0.5 font-mono text-xs border-input hover:bg-accent hover:text-accent-foreground"
+							class="h-auto py-2 px-3.5 flex flex-col items-center gap-1 font-mono text-sm border-input hover:bg-accent hover:text-accent-foreground"
 						>
 							<span class="font-bold">{formatTime(session.showtime)}</span>
+							<span class="text-[10px] text-muted-foreground font-sans">{session.screenName}</span>
 
-							{#if techs.length > 0}
-                <span class="text-[9px] font-sans font-black tracking-tighter text-primary/80 uppercase">
-                  {techs.join('+')}
-                </span>
+							{#if techs.length > 0 || session.isOv}
+								<div class="flex flex-wrap gap-1 justify-center mt-1">
+									{#if session.isOv}
+										<Badge 
+											variant="default" 
+											class="text-[9px] px-1.5 py-0 leading-none h-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-black uppercase border-none"
+										>
+											OV
+										</Badge>
+									{/if}
+									{#each techs as tech (tech)}
+										{#if tech !== 'OV'}
+											<Badge 
+												variant="outline" 
+												class="text-[9px] px-1.5 py-0 leading-none h-3.5 border-primary/20 bg-primary/5 text-primary/80 font-black uppercase"
+											>
+												{tech}
+											</Badge>
+										{/if}
+									{/each}
+								</div>
 							{/if}
 						</Button>
 					{/each}
@@ -109,3 +147,13 @@
 		</div>
 	</Card.Content>
 </Card.Root>
+
+<style>
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+	.no-scrollbar {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+</style>

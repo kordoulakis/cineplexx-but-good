@@ -2,8 +2,8 @@ import type { Cinema, FetchResult, RawMovie, TrimmedMovie } from './types/types.
 import { retryFetch } from './async.ts';
 
 const cinemas: Cinema[] = [
-	{ id: 1001, key: 'apollo', name: 'Apollo' },
 	{ id: 1003, key: 'donauzentrum', name: 'Donauzentrum' },
+	{ id: 1001, key: 'apollo', name: 'Apollo' },
 	{ id: 1004, key: 'millennium', name: 'Millennium' },
 	{ id: 1016, key: 'scs', name: 'SCS' }
 ];
@@ -11,23 +11,45 @@ const cinemas: Cinema[] = [
 const BASE = 'https://app.cineplexx.at/api/v1/cinemasweb';
 
 function mapToTrimmedMovies(raw: RawMovie[]): TrimmedMovie[] {
-	return (raw || []).map((movie) => ({
-		title: movie.title,
-		titleOriginalCalculated: movie.titleOriginalCalculated,
-		startDate: movie.startDate,
-		comingSoon: movie.comingSoon,
-		availableVersCMS: (movie.availableVersCMS || []).map((v) => ({
+	return (raw || []).map((movie) => {
+		const availableVersCMS = (movie.availableVersCMS || []).map((v) => ({
 			id: v.id,
 			Description: v.Description,
 			DescriptionEN: v.DescriptionEN
-		})),
-		sessions: (movie.sessions || []).map((s) => ({
-			cinemaId: s.cinemaId,
-			cinemaName: s.cinemaName,
-			technologies: s.technologies,
-			showtime: s.showtime
-		}))
-	}));
+		}));
+
+		const hasOVDescription = availableVersCMS.some(
+			(v) =>
+				v.DescriptionEN?.toLowerCase().includes('ov (english)') ||
+				v.Description?.toLowerCase().includes('ov (english)')
+		);
+
+		const sessions = (movie.sessions || []).map((s) => {
+			const isOvSession = s.technologies.flat().some((t) => t.toUpperCase() === 'OV');
+			return {
+				cinemaId: s.cinemaId,
+				cinemaName: s.cinemaName,
+				screenName: s.screenName,
+				technologies: s.technologies,
+				showtime: s.showtime,
+				// A session is OV if it has the tech OR if the movie version itself is OV
+				isOv: isOvSession || hasOVDescription
+			};
+		});
+
+		const hasOVTech = sessions.some((session) => session.isOv);
+
+		return {
+			title: movie.title.replace("*", ""),
+			titleOriginalCalculated: movie.titleOriginalCalculated,
+			startDate: movie.startDate,
+			comingSoon: movie.comingSoon,
+			posterImage: movie.posterImage,
+			availableVersCMS,
+			sessions,
+			isOv: hasOVTech || hasOVDescription
+		};
+	});
 }
 
 export async function getMoviesForAllCinemas(
@@ -42,7 +64,6 @@ export async function getMoviesForAllCinemas(
 		const url = `${BASE}/${cinema.id}/movies?date=${encodeURIComponent(date)}`;
 		try {
 			const rawData = await retryFetch<RawMovie[]>(url, retries, timeoutMs);
-			console.log(`Fetched cinema ${cinema.name} with ${rawData.length} movies`);
 			return { key: cinema.key, result: { ok: true, data: mapToTrimmedMovies(rawData) } as const };
 		} catch (err) {
 			const error = err instanceof Error ? err.message : String(err);
