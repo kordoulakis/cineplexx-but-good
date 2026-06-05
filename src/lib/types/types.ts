@@ -39,6 +39,7 @@ export interface RawSession {
 	screenName: string;
 	technologies: string[][];
 	showtime: string;
+	conceptAttributesNames?: string[];
 	[key: string]: unknown;
 }
 

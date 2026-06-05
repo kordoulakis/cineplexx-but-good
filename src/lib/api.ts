@@ -13,9 +13,16 @@ const BASE = 'https://app.cineplexx.at/api/v1/cinemasweb';
 function mapToTrimmedMovies(raw: RawMovie[]): TrimmedMovie[] {
 	return (raw || []).map((movie) => {
 		const sessions = (movie.sessions || []).map((s) => {
-			const isOvSession = s.technologies.flat().some((t) => t.toUpperCase() === 'OV') || 
-				s.screenName.toUpperCase().includes('OV') ||
-				s.technologies.flat().some((t) => t.toUpperCase() === 'OMU');
+			const isOvSession =
+				s.technologies
+					.flat()
+					.some(
+						(technology) =>
+							technology.toUpperCase().includes('OV') || technology.toUpperCase().includes('OMU')
+					) ||
+				s.screenName?.toLowerCase().includes('ov') ||
+				s.screenName?.toLowerCase().includes('omu') ||
+				s.screenName?.toLowerCase().includes('englisch');
 			return {
 				cinemaId: s.cinemaId,
 				cinemaName: s.cinemaName,
