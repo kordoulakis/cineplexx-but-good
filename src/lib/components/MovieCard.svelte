@@ -7,17 +7,17 @@
 	import ClockIcon from '@lucide/svelte/icons/clock';
 
 	// Svelte 5 component props contract
-	let { movie }: { movie: TrimmedMovie } = $props();
+	let { movie, sessionsToDisplay }: { movie: TrimmedMovie, sessionsToDisplay?: typeof movie.sessions } = $props();
 
 	// Pure data derivations
-	const ovSessions = $derived(
-		movie.sessions.filter((session) => session.isOv)
+	const displaySessions = $derived(
+		sessionsToDisplay ?? (movie.isOv ? movie.sessions.filter(s => s.isOv) : movie.sessions)
 	);
 
 	const isEnglishOV = $derived(movie.isOv);
 
 	const movieTechs = $derived(
-		[...new Set(movie.sessions.flatMap((s) => getCleanTech(s.technologies)))].sort((a, b) => {
+		[...new Set(movie.sessions.flatMap((s) => getCleanTech(s.technologies, s.screenName)))].sort((a, b) => {
 			const priority: Record<string, number> = { IMAX: 1, '4DX': 2, '3D': 3, '2D': 4 };
 			return (priority[a] || 99) - (priority[b] || 99);
 		})
@@ -32,8 +32,11 @@
 
 	const showStartsAt = $derived(formattedDate && movie.startDate && new Date(movie.startDate) > new Date());
 
-	const getCleanTech = (techMatrix: string[][]): string[] => {
+	const getCleanTech = (techMatrix: string[][], screenName: string): string[] => {
 		const flattened = techMatrix.flat().map((t) => t.toUpperCase());
+		if (screenName.toUpperCase().includes('IMAX')) {
+			flattened.push('IMAX');
+		}
 		// Filter down to notable highlights so the UI stays tidy
 		const targets = ['IMAX', '2D', '3D', '4DX', 'ATMOS', 'OV', 'VIP', 'DBOX'];
 		return [...new Set(flattened.filter((t) => targets.includes(t)))];
@@ -104,12 +107,12 @@
 				<span>Showtimes</span>
 			</div>
 
-			{#if !ovSessions || ovSessions.length === 0}
-				<p class="text-xs text-muted-foreground italic">No OV screenings listed for this date.</p>
+			{#if !displaySessions || displaySessions.length === 0}
+				<p class="text-xs text-muted-foreground italic">No screenings matching filters listed for this date.</p>
 			{:else}
 				<div class="flex flex-nowrap gap-1.5 overflow-x-auto pb-2 no-scrollbar">
-					{#each ovSessions as session (session)}
-						{@const techs = getCleanTech(session.technologies)}
+					{#each displaySessions as session (session)}
+						{@const techs = getCleanTech(session.technologies, session.screenName)}
 
 						<Button
 							variant="outline"

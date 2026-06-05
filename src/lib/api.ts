@@ -1,11 +1,11 @@
 import type { Cinema, FetchResult, RawMovie, TrimmedMovie } from './types/types.ts';
 import { retryFetch } from './async.ts';
 
-const cinemas: Cinema[] = [
-	{ id: 1003, key: 'donauzentrum', name: 'Donauzentrum' },
-	{ id: 1001, key: 'apollo', name: 'Apollo' },
-	{ id: 1004, key: 'millennium', name: 'Millennium' },
-	{ id: 1016, key: 'scs', name: 'SCS' }
+export const cinemas: Cinema[] = [
+	{ id: 1003, key: 'donauzentrum', name: 'Donauzentrum', slug: 'Cineplexx-Donau-Zentrum' },
+	{ id: 1001, key: 'apollo', name: 'Apollo', slug: 'Apollo-Das-Kino' },
+	{ id: 1004, key: 'millennium', name: 'Millennium', slug: 'Cineplexx-Millennium-City' },
+	{ id: 1016, key: 'scs', name: 'SCS', slug: 'Cineplexx-Westfield-SCS' }
 ];
 
 const BASE = 'https://app.cineplexx.at/api/v1/cinemasweb';
@@ -38,6 +38,10 @@ function mapToTrimmedMovies(raw: RawMovie[]): TrimmedMovie[] {
 		});
 
 		const hasOVTech = sessions.some((session) => session.isOv);
+		const hasIMAXTech = sessions.some((session) =>
+			session.technologies.flat().some((t) => t.toUpperCase() === 'IMAX') ||
+			session.screenName.toUpperCase().includes('IMAX')
+		);
 
 		return {
 			title: movie.title.replace("*", ""),
@@ -47,7 +51,8 @@ function mapToTrimmedMovies(raw: RawMovie[]): TrimmedMovie[] {
 			posterImage: movie.posterImage,
 			availableVersCMS,
 			sessions,
-			isOv: hasOVTech || hasOVDescription
+			isOv: hasOVTech || hasOVDescription,
+			isImax: hasIMAXTech
 		};
 	});
 }

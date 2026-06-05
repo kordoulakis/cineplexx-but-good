@@ -97,10 +97,10 @@
 							)}
 						>
 							<CalendarIcon class="h-4 w-4" />
-							{#if !quickDates.some(d => isSelected(d.date))}
+							{#if !quickDates.some(date => isSelected(date.date))}
 								{formatDate(calendarValue)}
 							{:else}
-								More
+								Select date
 							{/if}
 							<ChevronDownIcon class="h-4 w-4 opacity-50" />
 						</Button>
@@ -110,10 +110,10 @@
 					<Calendar
 						type="single"
 						bind:value={calendarValue}
-						onValueChange={(v) => {
-							if (v) {
-								calendarValue = v;
-								value = v.toString();
+						onValueChange={(newValue) => {
+							if (newValue) {
+								calendarValue = newValue;
+								value = newValue.toString();
 								open = false;
 							}
 						}}

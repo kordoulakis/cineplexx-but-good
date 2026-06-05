@@ -21,6 +21,7 @@ export interface TrimmedMovie {
 	availableVersCMS: MovieVersion[];
 	sessions: TrimmedSession[];
 	isOv: boolean;
+	isImax: boolean;
 	posterImage: string;
 }
 
@@ -52,5 +53,5 @@ export interface RawMovie {
 	[key: string]: unknown;
 }
 
-export type Cinema = { id: number; key: string; name: string };
+export type Cinema = { id: number; key: string; name: string; slug: string };
 export type FetchResult<T> = { ok: true; data: T } | { ok: false; error: string };
