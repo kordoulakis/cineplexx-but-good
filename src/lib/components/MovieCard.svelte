@@ -50,11 +50,13 @@
 <Card.Root class="group relative flex flex-col w-full h-full overflow-hidden transition-all hover:shadow-lg border-muted">
 	<!-- Background Poster with Overlay -->
 	<div class="absolute inset-0 z-0 transition-transform duration-500 group-hover:scale-105">
-		<img 
-			src={movie.posterImage} 
-			alt="" 
-			class="w-full h-full object-cover"
-		/>
+		{#if movie.posterImage?.startsWith('https://kf-cineplexx.sf.apa.at/')}
+			<img
+				src={movie.posterImage}
+				alt=""
+				class="w-full h-full object-cover"
+			/>
+		{/if}
 		<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-background/40"></div>
 	</div>
 

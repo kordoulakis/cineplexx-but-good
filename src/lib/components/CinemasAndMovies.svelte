@@ -36,7 +36,8 @@
 				componentError = null;
 			} catch (err) {
 				console.error('Component fetch crashed:', err);
-				componentError = err instanceof Error ? err.message : String(err);
+				console.error('Component fetch crashed:', err);
+			componentError = 'Could not load showtimes. Please try again later.';
 			} finally {
 				loading = false;
 			}
