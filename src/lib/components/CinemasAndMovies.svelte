@@ -25,6 +25,40 @@
 		}
 	};
 
+	const sessionMatchesFilters = (session: TrimmedMovie['sessions'][number]) => {
+		if (showOnlyOv && !session.isOv) return false;
+		if (selectedTechs.length > 0) {
+			const sessionTechs = session.technologies.flat().map((t) => t.toUpperCase());
+			const matchesTech = selectedTechs.some(
+				(tech) =>
+					sessionTechs.includes(tech) ||
+					(tech === 'IMAX' && session.screenName.toUpperCase().includes('IMAX'))
+			);
+			if (!matchesTech) return false;
+		}
+		return true;
+	};
+
+	const filteredSchedules = $derived(
+		Object.entries(schedules).map(([cinemaKey, result]) => {
+			const query = searchQuery.trim().toLowerCase();
+			const movies = result.ok
+				? result.data
+						.map((movie) => ({
+							...movie,
+							filteredSessions: movie.sessions.filter(sessionMatchesFilters)
+						}))
+						.filter((movie) => {
+							if (movie.filteredSessions.length === 0) return false;
+							if (!query) return true;
+							const haystack = `${movie.title} ${movie.titleOriginalCalculated ?? ''}`.toLowerCase();
+							return haystack.includes(query);
+						})
+				: [];
+			return { cinemaKey, result, movies };
+		})
+	);
+
 	$effect(() => {
 		const dateToFetch = selectedDate;
 		const fetchData = async () => {
@@ -123,37 +157,8 @@
 		</div>
 
 		<div class="grid grid-cols-1 gap-12">
-			{#each Object.entries(schedules) as [cinemaKey, result] (cinemaKey)}
-				{@const filteredData = result.ok ? result.data.map(movie => {
-					const filteredSessions = movie.sessions.filter(session => {
-						// 1. Optional OV filter
-						if (showOnlyOv && !session.isOv) return false;
-
-						// 2. Applied Tech Filters
-						if (selectedTechs.length > 0) {
-							const sessionTechs = session.technologies.flat().map(t => t.toUpperCase());
-							const matchesTech = selectedTechs.some(tech => 
-								sessionTechs.includes(tech) || (tech === 'IMAX' && session.screenName.toUpperCase().includes('IMAX'))
-							);
-							if (!matchesTech) return false;
-						}
-
-						return true;
-					});
-
-					return { ...movie, filteredSessions };
-				}).filter(movie => {
-					// 0. Search Filter (Title)
-					if (searchQuery && !movie.title.toLowerCase().includes(searchQuery.toLowerCase())) {
-						return false;
-					}
-
-					// Only keep movie if it has sessions matching the filters
-					return movie.filteredSessions.length > 0;
-				}) : []}
-
-
-				{#if filteredData.length > 0}
+			{#each filteredSchedules as { cinemaKey, result, movies } (cinemaKey)}
+				{#if movies.length > 0}
 				{@const cinema = cinemas.find(c => c.key === cinemaKey)}
 				<section class="flex flex-col gap-6">
 					<div class="border-b-2 border-primary/20 pb-4 mb-2 flex flex-col sm:flex-row items-center sm:items-end justify-between gap-4 sm:gap-0">
@@ -176,15 +181,11 @@
 						{/if}
 					</div>
 
-					{#if result.ok}
-						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
-							{#each filteredData as movie (movie.title)}
-								<MovieCard {movie} sessionsToDisplay={movie.filteredSessions} />
-							{/each}
-						</div>
-					{:else}
-						<p class="text-muted-foreground italic">Failed to load movies: {result.error}</p>
-					{/if}
+					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
+						{#each movies as movie (movie.title)}
+							<MovieCard {movie} sessionsToDisplay={movie.filteredSessions} />
+						{/each}
+					</div>
 				</section>
 
 				{/if}

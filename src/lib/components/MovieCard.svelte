@@ -17,7 +17,7 @@
 	const isEnglishOV = $derived(movie.isOv);
 
 	const movieTechs = $derived(
-		[...new Set(movie.sessions.flatMap((s) => getCleanTech(s.technologies, s.screenName)))].sort((a, b) => {
+		[...new Set(displaySessions.flatMap((s) => getCleanTech(s.technologies, s.screenName)))].sort((a, b) => {
 			const priority: Record<string, number> = { IMAX: 1, '4DX': 2, '3D': 3, '2D': 4 };
 			return (priority[a] || 99) - (priority[b] || 99);
 		})
