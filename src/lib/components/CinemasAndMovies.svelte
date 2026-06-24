@@ -29,12 +29,12 @@
 		if (showOnlyOv && !session.isOv) return false;
 		if (selectedTechs.length > 0) {
 			const sessionTechs = session.technologies.flat().map((t) => t.toUpperCase());
-			const matchesTech = selectedTechs.some(
+			const matchesAllTechs = selectedTechs.every(
 				(tech) =>
 					sessionTechs.includes(tech) ||
 					(tech === 'IMAX' && session.screenName.toUpperCase().includes('IMAX'))
 			);
-			if (!matchesTech) return false;
+			if (!matchesAllTechs) return false;
 		}
 		return true;
 	};
