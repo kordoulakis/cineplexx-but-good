@@ -69,7 +69,7 @@
 
 			<div class="flex flex-wrap justify-center sm:justify-start gap-1 shrink-0 pt-0.5">
 				{#if isEnglishOV}
-					<Badge variant="default" class="bg-emerald-600 hover:bg-emerald-700 text-[10px] px-1.5 py-0 font-semibold tracking-wider uppercase">
+					<Badge variant="default" class="bg-ov text-ov-foreground hover:bg-ov/90 text-[10px] px-1.5 py-0 font-semibold tracking-wider uppercase">
 						OV
 					</Badge>
 				{/if}
@@ -128,7 +128,7 @@
 									{#if session.isOv}
 										<Badge 
 											variant="default" 
-											class="text-[9px] px-1.5 py-0 leading-none h-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-black uppercase border-none"
+											class="text-[9px] px-1.5 py-0 leading-none h-3.5 bg-ov text-ov-foreground hover:bg-ov/90 font-black uppercase border-none"
 										>
 											OV
 										</Badge>

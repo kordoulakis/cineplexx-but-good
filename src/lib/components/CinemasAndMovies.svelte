@@ -125,7 +125,7 @@
 				>
 					<Badge
 						variant={showOnlyOv ? "default" : "outline"}
-						class="px-3 py-1 cursor-pointer hover:bg-emerald-600 hover:text-white {showOnlyOv ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-background text-muted-foreground border-muted-foreground/30'}"
+						class="px-3 py-1 cursor-pointer hover:bg-ov hover:text-ov-foreground {showOnlyOv ? 'bg-ov text-ov-foreground border-ov' : 'bg-background text-muted-foreground border-muted-foreground/30'}"
 					>
 						OV Only
 					</Badge>
