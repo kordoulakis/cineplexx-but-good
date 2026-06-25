@@ -70,8 +70,7 @@
 				componentError = null;
 			} catch (err) {
 				console.error('Component fetch crashed:', err);
-				console.error('Component fetch crashed:', err);
-			componentError = 'Could not load showtimes. Please try again later.';
+				componentError = 'Could not load showtimes. Please try again later.';
 			} finally {
 				loading = false;
 			}
@@ -158,7 +157,9 @@
 
 		<div class="grid grid-cols-1 gap-12">
 			{#each filteredSchedules as { cinemaKey, result, movies } (cinemaKey)}
-				{#if movies.length > 0}
+				{#if !result.ok}
+					<p class="text-muted-foreground italic">Could not load {cinemas.find(c => c.key === cinemaKey)?.name ?? cinemaKey}.</p>
+				{:else if movies.length > 0}
 				{@const cinema = cinemas.find(c => c.key === cinemaKey)}
 				<section class="flex flex-col gap-6">
 					<div class="border-b-2 border-primary/20 pb-4 mb-2 flex flex-col sm:flex-row items-center sm:items-end justify-between gap-4 sm:gap-0">
