@@ -5,6 +5,7 @@
 	import { Badge } from '$lib/components/ui/badge';
 	import { Button } from '$lib/components/ui/button';
 	import ExternalLinkIcon from '@lucide/svelte/icons/external-link';
+	import { browser } from '$app/environment';
 
 	let { selectedDate = new Date().toISOString().split('T')[0] } = $props();
 
@@ -16,6 +17,37 @@
 	let selectedTechs = $state<string[]>([]);
 	let showOnlyOv = $state(true);
 	let searchQuery = $state('');
+
+	const allCinemaKeys = cinemas.map((c) => c.key);
+
+	function loadSelectedCinemas(): string[] {
+		if (!browser) return allCinemaKeys;
+		try {
+			const stored = localStorage.getItem('selectedCinemas');
+			if (stored) {
+				const parsed = JSON.parse(stored);
+				if (Array.isArray(parsed) && parsed.length > 0 && parsed.every((k) => allCinemaKeys.includes(k))) {
+					return parsed;
+				}
+			}
+		} catch {}
+		return allCinemaKeys;
+	}
+
+	let selectedCinemas = $state<string[]>(loadSelectedCinemas());
+
+	$effect(() => {
+		localStorage.setItem('selectedCinemas', JSON.stringify(selectedCinemas));
+	});
+
+	const toggleCinema = (key: string) => {
+		if (selectedCinemas.includes(key)) {
+			if (selectedCinemas.length === 1) return; // keep at least one
+			selectedCinemas = selectedCinemas.filter((k) => k !== key);
+		} else {
+			selectedCinemas = [...selectedCinemas, key];
+		}
+	};
 
 	const toggleTech = (tech: string) => {
 		if (selectedTechs.includes(tech)) {
@@ -40,7 +72,7 @@
 	};
 
 	const filteredSchedules = $derived(
-		Object.entries(schedules).map(([cinemaKey, result]) => {
+		Object.entries(schedules).filter(([cinemaKey]) => selectedCinemas.includes(cinemaKey)).map(([cinemaKey, result]) => {
 			const query = searchQuery.trim().toLowerCase();
 			const movies = result.ok
 				? result.data
@@ -94,6 +126,21 @@
 		{/if}
 
 		<div class="flex flex-col items-center gap-6 mb-8 w-full">
+			<!-- Cinema Selector -->
+			<div class="flex flex-wrap gap-2 items-center justify-center">
+				<span class="text-sm font-semibold uppercase tracking-wider text-muted-foreground mr-2 w-full text-center sm:w-auto">Cinemas:</span>
+				{#each cinemas as cinema (cinema.key)}
+					<button onclick={() => toggleCinema(cinema.key)} class="transition-all">
+						<Badge
+							variant={selectedCinemas.includes(cinema.key) ? "default" : "outline"}
+							class="px-3 py-1 cursor-pointer hover:bg-primary hover:text-primary-foreground {selectedCinemas.includes(cinema.key) ? '' : 'bg-background text-muted-foreground border-muted-foreground/30'}"
+						>
+							{cinema.name}
+						</Badge>
+					</button>
+				{/each}
+			</div>
+
 			<!-- Search Bar -->
 			<div class="relative w-full max-w-md">
 				<div class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
