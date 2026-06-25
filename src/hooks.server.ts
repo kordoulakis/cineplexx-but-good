@@ -5,11 +5,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 
 	response.headers.set(
 		'Content-Security-Policy',
-		"default-src 'self'; " +
-			"script-src 'self' 'wasm-unsafe-eval'; " +
-			"style-src 'self' 'unsafe-inline'; " +
-			"img-src 'self' https://kf-cineplexx.sf.apa.at data:; " +
-			"font-src 'self'; " +
+		"img-src 'self' https://kf-cineplexx.sf.apa.at data:; " +
 			"connect-src 'self'; " +
 			"frame-ancestors 'none';"
 	);
