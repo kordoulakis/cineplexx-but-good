@@ -5,7 +5,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 
 	response.headers.set(
 		'Content-Security-Policy',
-		"img-src 'self' https://kf-cineplexx.sf.apa.at data:; " +
+		"img-src 'self' https: data:; " +
 			"connect-src 'self'; " +
 			"frame-ancestors 'none';"
 	);
