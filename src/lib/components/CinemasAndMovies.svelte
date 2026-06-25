@@ -7,7 +7,7 @@
 	import ExternalLinkIcon from '@lucide/svelte/icons/external-link';
 	import { browser } from '$app/environment';
 
-	let { selectedDate = new Date().toISOString().split('T')[0] } = $props();
+	let { selectedDate = $bindable(new Date().toISOString().split('T')[0]) } = $props();
 
 	let schedules = $state<Record<string, FetchResult<TrimmedMovie[]>>>({});
 	let loading = $state(true);
@@ -71,25 +71,66 @@
 		return true;
 	};
 
-	const filteredSchedules = $derived(
-		Object.entries(schedules).filter(([cinemaKey]) => selectedCinemas.includes(cinemaKey)).map(([cinemaKey, result]) => {
-			const query = searchQuery.trim().toLowerCase();
-			const movies = result.ok
-				? result.data
-						.map((movie) => ({
-							...movie,
-							filteredSessions: movie.sessions.filter(sessionMatchesFilters)
-						}))
-						.filter((movie) => {
-							if (movie.filteredSessions.length === 0) return false;
-							if (!query) return true;
-							const haystack = `${movie.title} ${movie.titleOriginalCalculated ?? ''}`.toLowerCase();
-							return haystack.includes(query);
-						})
-				: [];
-			return { cinemaKey, result, movies };
-		})
+	function computeFiltered(sched: Record<string, FetchResult<TrimmedMovie[]>>) {
+		const query = searchQuery.trim().toLowerCase();
+		return Object.entries(sched)
+			.filter(([cinemaKey]) => selectedCinemas.includes(cinemaKey))
+			.map(([cinemaKey, result]) => {
+				const movies = result.ok
+					? result.data
+							.map((movie) => ({
+								...movie,
+								filteredSessions: movie.sessions.filter(sessionMatchesFilters)
+							}))
+							.filter((movie) => {
+								if (movie.filteredSessions.length === 0) return false;
+								if (!query) return true;
+								const haystack = `${movie.title} ${movie.titleOriginalCalculated ?? ''}`.toLowerCase();
+								return haystack.includes(query);
+							})
+					: [];
+				return { cinemaKey, result, movies };
+			});
+	}
+
+	const filteredSchedules = $derived(computeFiltered(schedules));
+	const hasMatches = $derived(filteredSchedules.some((s) => s.movies.length > 0));
+
+	let searchingNextDate = $state(false);
+	let noFutureMatch = $state(false);
+
+	// Clear a stale "no upcoming date" message whenever the query changes.
+	const querySignature = $derived(
+		JSON.stringify([selectedDate, selectedTechs, showOnlyOv, searchQuery.trim(), selectedCinemas])
 	);
+	$effect(() => {
+		if (querySignature) noFutureMatch = false;
+	});
+
+	async function goToNextAvailableDate() {
+		searchingNextDate = true;
+		noFutureMatch = false;
+		const HORIZON_DAYS = 60;
+		const probe = new Date(selectedDate);
+		for (let i = 0; i < HORIZON_DAYS; i++) {
+			probe.setDate(probe.getDate() + 1);
+			const dateStr = probe.toISOString().split('T')[0];
+			try {
+				const res = await fetch(`/api/movies?date=${dateStr}`);
+				if (!res.ok) continue;
+				const sched = (await res.json()) as Record<string, FetchResult<TrimmedMovie[]>>;
+				if (computeFiltered(sched).some((s) => s.movies.length > 0)) {
+					selectedDate = dateStr;
+					searchingNextDate = false;
+					return;
+				}
+			} catch {
+				// keep probing subsequent dates
+			}
+		}
+		searchingNextDate = false;
+		noFutureMatch = true;
+	}
 
 	$effect(() => {
 		const dateToFetch = selectedDate;
@@ -240,5 +281,19 @@
 
 			{/each}
 		</div>
+
+		{#if !hasMatches}
+			<div class="flex flex-col items-center justify-center gap-4 py-16 text-center">
+				{#if noFutureMatch}
+					<p class="text-lg font-semibold">No upcoming date has anything matching these filters.</p>
+					<p class="text-sm text-muted-foreground">Try removing a filter or selecting more cinemas.</p>
+				{:else}
+					<p class="text-lg font-semibold">Nothing matches these filters on this date.</p>
+					<Button onclick={goToNextAvailableDate} disabled={searchingNextDate} class="gap-2">
+						{searchingNextDate ? 'Searching…' : 'Go to next available date'}
+					</Button>
+				{/if}
+			</div>
+		{/if}
 	{/if}
 </div>

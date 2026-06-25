@@ -21,7 +21,7 @@
 			<div class="mt-4 w-full flex justify-center">
 				<DateSelector bind:value={selectedDate} />
 			</div>
-			<CinemasAndMovies {selectedDate} />
+			<CinemasAndMovies bind:selectedDate />
 		</main>
 	</div>
 </div>
