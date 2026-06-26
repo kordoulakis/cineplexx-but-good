@@ -3,7 +3,7 @@
 	import CinemasAndMovies from '$lib/components/CinemasAndMovies.svelte';
 	import DateSelector from '$lib/components/DateSelector.svelte';
 	import { Button } from '$lib/components/ui/button';
-	import MapPinIcon from '@lucide/svelte/icons/map-pin';
+	import ClapperboardIcon from '@lucide/svelte/icons/clapperboard';
 
 	let selectedDate = $state(new Date().toISOString().split('T')[0]);
 </script>
@@ -24,7 +24,7 @@
 
 			<div class="flex items-center gap-3">
 				<Button href="/cinemas" variant="outline" size="sm" class="gap-2 border-input shadow-sm">
-					<MapPinIcon class="h-4 w-4 text-cineplexx" />
+					<ClapperboardIcon class="h-4 w-4 text-cineplexx" />
 					<span class="font-bold">Cinemas</span>
 				</Button>
 				<ThemeSwitcher />

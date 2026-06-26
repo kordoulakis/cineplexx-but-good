@@ -27,6 +27,34 @@
 	const mapsUrl = (address: string) =>
 		`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
 
+	type SortKey = 'screen' | 'seats' | 'screens' | 'name';
+	const sortOptions: { value: SortKey; label: string }[] = [
+		{ value: 'screen', label: 'Max screen size' },
+		{ value: 'seats', label: 'Total seats' },
+		{ value: 'screens', label: 'Number of screens' },
+		{ value: 'name', label: 'Name (A–Z)' }
+	];
+	let sortBy = $state<SortKey>('screen');
+
+	const sortedCinemas = $derived(
+		[...cinemaLocations].sort((a, b) => {
+			const sa = cinemaStats(a);
+			const sb = cinemaStats(b);
+			switch (sortBy) {
+				case 'seats':
+					return sb.seats - sa.seats;
+				case 'screens':
+					return sb.screens - sa.screens;
+				case 'name':
+					return a.name.localeCompare(b.name);
+				case 'screen':
+				default:
+					// Descending by biggest screen; cinemas without a known size go last.
+					return (sb.biggestScreen ?? -1) - (sa.biggestScreen ?? -1);
+			}
+		})
+	);
+
 	// Track which cinemas are expanded; default to all collapsed for a clean overview.
 	let expanded = $state<Record<string, boolean>>({});
 	const toggle = (name: string) => (expanded[name] = !expanded[name]);
@@ -68,8 +96,26 @@
 			<ThemeSwitcher />
 		</header>
 
+		<div class="mb-6 flex w-full items-center justify-end gap-2">
+			<label
+				for="sort-cinemas"
+				class="text-sm font-semibold tracking-wider text-muted-foreground uppercase"
+			>
+				Order by
+			</label>
+			<select
+				id="sort-cinemas"
+				bind:value={sortBy}
+				class="rounded-full border border-muted-foreground/30 bg-background py-2 pr-8 pl-4 text-sm font-semibold transition-all focus:ring-2 focus:ring-primary/50 focus:outline-none"
+			>
+				{#each sortOptions as option (option.value)}
+					<option value={option.value}>{option.label}</option>
+				{/each}
+			</select>
+		</div>
+
 		<main class="grid w-full grid-cols-1 gap-6 lg:grid-cols-2">
-			{#each cinemaLocations as cinema (cinema.name)}
+			{#each sortedCinemas as cinema (cinema.name)}
 				{@const stats = cinemaStats(cinema)}
 				<Card.Root class="flex flex-col border-muted">
 					<Card.Header class="space-y-3">
@@ -139,12 +185,15 @@
 							onclick={() => toggle(cinema.name)}
 							class="mt-auto flex items-center justify-between gap-2 text-sm font-semibold tracking-wider text-muted-foreground uppercase transition-colors hover:text-primary"
 						>
-							<span>{expanded[cinema.name] ? 'Hide' : 'Show'} {cinema.saals.length} halls</span>
-							<ChevronDownIcon
-								class="h-4 w-4 transition-transform duration-200 {expanded[cinema.name]
-									? 'rotate-180'
-									: ''}"
-							/>
+							<span>{cinema.saals.length} halls</span>
+							<span class="flex items-center gap-1">
+								<span>{expanded[cinema.name] ? 'Hide' : 'Show'}</span>
+								<ChevronDownIcon
+									class="h-4 w-4 transition-transform duration-200 {expanded[cinema.name]
+										? 'rotate-180'
+										: ''}"
+								/>
+							</span>
 						</button>
 
 						{#if expanded[cinema.name]}
