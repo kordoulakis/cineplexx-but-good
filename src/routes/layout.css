@@ -113,6 +113,8 @@
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-ring: var(--sidebar-ring);
     --color-cineplexx: #df1b12;
+    --color-ov: oklch(0.596 0.145 163.225);
+    --color-ov-foreground: oklch(0.985 0 0);
     --font-sans: 'Inter Variable', sans-serif;
     --radius-2xl: calc(var(--radius) * 1.8);
     --radius-3xl: calc(var(--radius) * 2.2);

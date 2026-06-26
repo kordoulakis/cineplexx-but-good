@@ -23,6 +23,14 @@ export interface TrimmedMovie {
 	isOv: boolean;
 	isImax: boolean;
 	posterImage: string;
+	runTime: number | null;
+	genres: string[];
+	directors: string[];
+	actors: string[];
+	rating: string | null;
+	descriptionShort: string | null;
+	trailerUrl: string | null;
+	trailerKeyframe: string | null;
 }
 
 // Strict mapping shapes for incoming un-trimmed API data
@@ -51,6 +59,13 @@ export interface RawMovie {
 	posterImage: string;
 	availableVersCMS?: RawMovieVersion[];
 	sessions?: RawSession[];
+	runTime?: number;
+	genres?: string[];
+	directors?: string[];
+	actors?: string[];
+	rating?: string;
+	descriptionShortCalculated?: string;
+	trailers?: Array<{ videoUrl?: string; keyframeUrl?: string; universalPlayerUrl?: string }>;
 	[key: string]: unknown;
 }
 

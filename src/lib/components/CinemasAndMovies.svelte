@@ -5,8 +5,9 @@
 	import { Badge } from '$lib/components/ui/badge';
 	import { Button } from '$lib/components/ui/button';
 	import ExternalLinkIcon from '@lucide/svelte/icons/external-link';
+	import { browser } from '$app/environment';
 
-	let { selectedDate = new Date().toISOString().split('T')[0] } = $props();
+	let { selectedDate = $bindable(new Date().toISOString().split('T')[0]) } = $props();
 
 	let schedules = $state<Record<string, FetchResult<TrimmedMovie[]>>>({});
 	let loading = $state(true);
@@ -17,6 +18,37 @@
 	let showOnlyOv = $state(true);
 	let searchQuery = $state('');
 
+	const allCinemaKeys = cinemas.map((c) => c.key);
+
+	function loadSelectedCinemas(): string[] {
+		if (!browser) return allCinemaKeys;
+		try {
+			const stored = localStorage.getItem('selectedCinemas');
+			if (stored) {
+				const parsed = JSON.parse(stored);
+				if (Array.isArray(parsed) && parsed.length > 0 && parsed.every((k) => allCinemaKeys.includes(k))) {
+					return parsed;
+				}
+			}
+		} catch {}
+		return allCinemaKeys;
+	}
+
+	let selectedCinemas = $state<string[]>(loadSelectedCinemas());
+
+	$effect(() => {
+		localStorage.setItem('selectedCinemas', JSON.stringify(selectedCinemas));
+	});
+
+	const toggleCinema = (key: string) => {
+		if (selectedCinemas.includes(key)) {
+			if (selectedCinemas.length === 1) return; // keep at least one
+			selectedCinemas = selectedCinemas.filter((k) => k !== key);
+		} else {
+			selectedCinemas = [...selectedCinemas, key];
+		}
+	};
+
 	const toggleTech = (tech: string) => {
 		if (selectedTechs.includes(tech)) {
 			selectedTechs = selectedTechs.filter((t) => t !== tech);
@@ -24,6 +56,81 @@
 			selectedTechs = [...selectedTechs, tech];
 		}
 	};
+
+	const sessionMatchesFilters = (session: TrimmedMovie['sessions'][number]) => {
+		if (showOnlyOv && !session.isOv) return false;
+		if (selectedTechs.length > 0) {
+			const sessionTechs = session.technologies.flat().map((t) => t.toUpperCase());
+			const matchesAllTechs = selectedTechs.every(
+				(tech) =>
+					sessionTechs.includes(tech) ||
+					(tech === 'IMAX' && session.screenName.toUpperCase().includes('IMAX'))
+			);
+			if (!matchesAllTechs) return false;
+		}
+		return true;
+	};
+
+	function computeFiltered(sched: Record<string, FetchResult<TrimmedMovie[]>>) {
+		const query = searchQuery.trim().toLowerCase();
+		return Object.entries(sched)
+			.filter(([cinemaKey]) => selectedCinemas.includes(cinemaKey))
+			.map(([cinemaKey, result]) => {
+				const movies = result.ok
+					? result.data
+							.map((movie) => ({
+								...movie,
+								filteredSessions: movie.sessions.filter(sessionMatchesFilters)
+							}))
+							.filter((movie) => {
+								if (movie.filteredSessions.length === 0) return false;
+								if (!query) return true;
+								const haystack = `${movie.title} ${movie.titleOriginalCalculated ?? ''}`.toLowerCase();
+								return haystack.includes(query);
+							})
+					: [];
+				return { cinemaKey, result, movies };
+			});
+	}
+
+	const filteredSchedules = $derived(computeFiltered(schedules));
+	const hasMatches = $derived(filteredSchedules.some((s) => s.movies.length > 0));
+
+	let searchingNextDate = $state(false);
+	let noFutureMatch = $state(false);
+
+	// Clear a stale "no upcoming date" message whenever the query changes.
+	const querySignature = $derived(
+		JSON.stringify([selectedDate, selectedTechs, showOnlyOv, searchQuery.trim(), selectedCinemas])
+	);
+	$effect(() => {
+		if (querySignature) noFutureMatch = false;
+	});
+
+	async function goToNextAvailableDate() {
+		searchingNextDate = true;
+		noFutureMatch = false;
+		const HORIZON_DAYS = 60;
+		const probe = new Date(selectedDate);
+		for (let i = 0; i < HORIZON_DAYS; i++) {
+			probe.setDate(probe.getDate() + 1);
+			const dateStr = probe.toISOString().split('T')[0];
+			try {
+				const res = await fetch(`/api/movies?date=${dateStr}`);
+				if (!res.ok) continue;
+				const sched = (await res.json()) as Record<string, FetchResult<TrimmedMovie[]>>;
+				if (computeFiltered(sched).some((s) => s.movies.length > 0)) {
+					selectedDate = dateStr;
+					searchingNextDate = false;
+					return;
+				}
+			} catch {
+				// keep probing subsequent dates
+			}
+		}
+		searchingNextDate = false;
+		noFutureMatch = true;
+	}
 
 	$effect(() => {
 		const dateToFetch = selectedDate;
@@ -36,7 +143,7 @@
 				componentError = null;
 			} catch (err) {
 				console.error('Component fetch crashed:', err);
-				componentError = err instanceof Error ? err.message : String(err);
+				componentError = 'Could not load showtimes. Please try again later.';
 			} finally {
 				loading = false;
 			}
@@ -60,6 +167,21 @@
 		{/if}
 
 		<div class="flex flex-col items-center gap-6 mb-8 w-full">
+			<!-- Cinema Selector -->
+			<div class="flex flex-wrap gap-2 items-center justify-center">
+				<span class="text-sm font-semibold uppercase tracking-wider text-muted-foreground mr-2 w-full text-center sm:w-auto">Cinemas:</span>
+				{#each cinemas as cinema (cinema.key)}
+					<button onclick={() => toggleCinema(cinema.key)} class="transition-all">
+						<Badge
+							variant={selectedCinemas.includes(cinema.key) ? "default" : "outline"}
+							class="px-3 py-1 cursor-pointer hover:bg-primary hover:text-primary-foreground {selectedCinemas.includes(cinema.key) ? '' : 'bg-background text-muted-foreground border-muted-foreground/30'}"
+						>
+							{cinema.name}
+						</Badge>
+					</button>
+				{/each}
+			</div>
+
 			<!-- Search Bar -->
 			<div class="relative w-full max-w-md">
 				<div class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
@@ -90,7 +212,7 @@
 				>
 					<Badge
 						variant={showOnlyOv ? "default" : "outline"}
-						class="px-3 py-1 cursor-pointer hover:bg-emerald-600 hover:text-white {showOnlyOv ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-background text-muted-foreground border-muted-foreground/30'}"
+						class="px-3 py-1 cursor-pointer hover:bg-ov hover:text-ov-foreground {showOnlyOv ? 'bg-ov text-ov-foreground border-ov' : 'bg-background text-muted-foreground border-muted-foreground/30'}"
 					>
 						OV Only
 					</Badge>
@@ -122,37 +244,10 @@
 		</div>
 
 		<div class="grid grid-cols-1 gap-12">
-			{#each Object.entries(schedules) as [cinemaKey, result] (cinemaKey)}
-				{@const filteredData = result.ok ? result.data.map(movie => {
-					const filteredSessions = movie.sessions.filter(session => {
-						// 1. Optional OV filter
-						if (showOnlyOv && !session.isOv) return false;
-
-						// 2. Applied Tech Filters
-						if (selectedTechs.length > 0) {
-							const sessionTechs = session.technologies.flat().map(t => t.toUpperCase());
-							const matchesTech = selectedTechs.some(tech => 
-								sessionTechs.includes(tech) || (tech === 'IMAX' && session.screenName.toUpperCase().includes('IMAX'))
-							);
-							if (!matchesTech) return false;
-						}
-
-						return true;
-					});
-
-					return { ...movie, filteredSessions };
-				}).filter(movie => {
-					// 0. Search Filter (Title)
-					if (searchQuery && !movie.title.toLowerCase().includes(searchQuery.toLowerCase())) {
-						return false;
-					}
-
-					// Only keep movie if it has sessions matching the filters
-					return movie.filteredSessions.length > 0;
-				}) : []}
-
-
-				{#if filteredData.length > 0}
+			{#each filteredSchedules as { cinemaKey, result, movies } (cinemaKey)}
+				{#if !result.ok}
+					<p class="text-muted-foreground italic">Could not load {cinemas.find(c => c.key === cinemaKey)?.name ?? cinemaKey}.</p>
+				{:else if movies.length > 0}
 				{@const cinema = cinemas.find(c => c.key === cinemaKey)}
 				<section class="flex flex-col gap-6">
 					<div class="border-b-2 border-primary/20 pb-4 mb-2 flex flex-col sm:flex-row items-center sm:items-end justify-between gap-4 sm:gap-0">
@@ -175,20 +270,30 @@
 						{/if}
 					</div>
 
-					{#if result.ok}
-						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
-							{#each filteredData as movie (movie.title)}
-								<MovieCard {movie} sessionsToDisplay={movie.filteredSessions} />
-							{/each}
-						</div>
-					{:else}
-						<p class="text-muted-foreground italic">Failed to load movies: {result.error}</p>
-					{/if}
+					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
+						{#each movies as movie (movie.title)}
+							<MovieCard {movie} sessionsToDisplay={movie.filteredSessions} />
+						{/each}
+					</div>
 				</section>
 
 				{/if}
 
 			{/each}
 		</div>
+
+		{#if !hasMatches}
+			<div class="flex flex-col items-center justify-center gap-4 py-16 text-center">
+				{#if noFutureMatch}
+					<p class="text-lg font-semibold">No upcoming date has anything matching these filters.</p>
+					<p class="text-sm text-muted-foreground">Try removing a filter or selecting more cinemas.</p>
+				{:else}
+					<p class="text-lg font-semibold">Nothing matches these filters on this date.</p>
+					<Button onclick={goToNextAvailableDate} disabled={searchingNextDate} class="gap-2">
+						{searchingNextDate ? 'Searching…' : 'Go to next available date'}
+					</Button>
+				{/if}
+			</div>
+		{/if}
 	{/if}
 </div>

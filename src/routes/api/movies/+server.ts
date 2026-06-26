@@ -55,7 +55,15 @@ function mapToTrimmedMovies(raw: RawMovie[]): TrimmedMovie[] {
 			})),
 			sessions,
 			isOv: isOvMovie,
-			isImax: hasIMAXTech
+			isImax: hasIMAXTech,
+			runTime: typeof movie.runTime === 'number' ? movie.runTime : null,
+			genres: Array.isArray(movie.genres) ? movie.genres : [],
+			directors: Array.isArray(movie.directors) ? movie.directors : [],
+			actors: Array.isArray(movie.actors) ? movie.actors : [],
+			rating: typeof movie.rating === 'string' ? movie.rating : null,
+			descriptionShort: typeof movie.descriptionShortCalculated === 'string' ? movie.descriptionShortCalculated : null,
+			trailerUrl: movie.trailers?.[0]?.videoUrl ?? null,
+			trailerKeyframe: movie.trailers?.[0]?.keyframeUrl ?? null
 		};
 	});
 }
@@ -86,10 +94,12 @@ async function retryFetch<T>(url: string, attempts: number, timeoutMs: number): 
 	throw lastError;
 }
 
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+
 export const GET: RequestHandler = async ({ url }) => {
 	const date = url.searchParams.get('date');
-	if (!date) {
-		return json({ error: 'Date parameter is required' }, { status: 400 });
+	if (!date || !DATE_RE.test(date)) {
+		return json({ error: 'Date parameter is required (YYYY-MM-DD)' }, { status: 400 });
 	}
 
 	const promises = cinemas.map(async (cinema) => {
@@ -98,9 +108,8 @@ export const GET: RequestHandler = async ({ url }) => {
 			const rawData = await retryFetch<RawMovie[]>(fetchUrl, 2, 8000);
 			return { key: cinema.key, result: { ok: true, data: mapToTrimmedMovies(rawData) } as const };
 		} catch (err) {
-			const error = err instanceof Error ? err.message : String(err);
-			console.error(`Error fetching cinema ${cinema.name}: ${error}`);
-			return { key: cinema.key, result: { ok: false, error } as const };
+			console.error(`Error fetching cinema ${cinema.name}:`, err instanceof Error ? err.message : err);
+			return { key: cinema.key, result: { ok: false, error: 'Failed to load showtimes' } as const };
 		}
 	});
 
@@ -113,5 +122,7 @@ export const GET: RequestHandler = async ({ url }) => {
 		{} as Record<string, FetchResult<TrimmedMovie[]>>
 	);
 
-	return json(schedules);
+	return json(schedules, {
+		headers: { 'Cache-Control': 'public, max-age=3600' }
+	});
 };
