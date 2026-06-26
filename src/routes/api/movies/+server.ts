@@ -55,7 +55,15 @@ function mapToTrimmedMovies(raw: RawMovie[]): TrimmedMovie[] {
 			})),
 			sessions,
 			isOv: isOvMovie,
-			isImax: hasIMAXTech
+			isImax: hasIMAXTech,
+			runTime: typeof movie.runTime === 'number' ? movie.runTime : null,
+			genres: Array.isArray(movie.genres) ? movie.genres : [],
+			directors: Array.isArray(movie.directors) ? movie.directors : [],
+			actors: Array.isArray(movie.actors) ? movie.actors : [],
+			rating: typeof movie.rating === 'string' ? movie.rating : null,
+			descriptionShort: typeof movie.descriptionShortCalculated === 'string' ? movie.descriptionShortCalculated : null,
+			trailerUrl: movie.trailers?.[0]?.videoUrl ?? null,
+			trailerKeyframe: movie.trailers?.[0]?.keyframeUrl ?? null
 		};
 	});
 }
