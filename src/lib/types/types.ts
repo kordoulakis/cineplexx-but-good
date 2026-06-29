@@ -16,6 +16,7 @@ export interface TrimmedSession {
 export interface TrimmedMovie {
 	title: string;
 	titleOriginalCalculated: string;
+	slug: string;
 	startDate: string;
 	comingSoon: boolean;
 	availableVersCMS: MovieVersion[];

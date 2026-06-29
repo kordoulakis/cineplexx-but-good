@@ -2,6 +2,7 @@ import type { RequestHandler } from '@sveltejs/kit';
 import { json } from '@sveltejs/kit';
 import type { RawMovie, TrimmedMovie, FetchResult } from '$lib/types/types';
 import { cinemas } from '$lib/types/types';
+import { slugify } from '$lib/utils/slug';
 
 const BASE = 'https://app.cineplexx.at/api/v1/cinemasweb';
 
@@ -29,22 +30,28 @@ function mapToTrimmedMovies(raw: RawMovie[]): TrimmedMovie[] {
 		});
 
 		const hasOVTech = sessions.some((session) => session.isOv);
-		const isOvMovie = hasOVTech || 
-			[movie.titleOriginalCalculated, movie.title].some(t => 
-				t?.toUpperCase().includes('(OV)') || 
-				t?.toUpperCase().includes(' OV') ||
-				t?.toUpperCase().includes('(OMU)') || 
-				t?.toUpperCase().includes(' OMU')
+		const isOvMovie =
+			hasOVTech ||
+			[movie.titleOriginalCalculated, movie.title].some(
+				(t) =>
+					t?.toUpperCase().includes('(OV)') ||
+					t?.toUpperCase().includes(' OV') ||
+					t?.toUpperCase().includes('(OMU)') ||
+					t?.toUpperCase().includes(' OMU')
 			);
 
-		const hasIMAXTech = sessions.some((session) =>
-			session.technologies.flat().some((t) => t.toUpperCase() === 'IMAX') ||
-			session.screenName.toUpperCase().includes('IMAX')
+		const hasIMAXTech = sessions.some(
+			(session) =>
+				session.technologies.flat().some((t) => t.toUpperCase() === 'IMAX') ||
+				session.screenName.toUpperCase().includes('IMAX')
 		);
 
+		const cleanTitle = movie.title.replace('*', '');
+
 		return {
-			title: movie.title.replace("*", ""),
+			title: cleanTitle,
 			titleOriginalCalculated: movie.titleOriginalCalculated,
+			slug: slugify(movie.titleOriginalCalculated || cleanTitle),
 			startDate: movie.startDate,
 			comingSoon: movie.comingSoon,
 			posterImage: movie.posterImage,
@@ -61,7 +68,10 @@ function mapToTrimmedMovies(raw: RawMovie[]): TrimmedMovie[] {
 			directors: Array.isArray(movie.directors) ? movie.directors : [],
 			actors: Array.isArray(movie.actors) ? movie.actors : [],
 			rating: typeof movie.rating === 'string' ? movie.rating : null,
-			descriptionShort: typeof movie.descriptionShortCalculated === 'string' ? movie.descriptionShortCalculated : null,
+			descriptionShort:
+				typeof movie.descriptionShortCalculated === 'string'
+					? movie.descriptionShortCalculated
+					: null,
 			trailerUrl: movie.trailers?.[0]?.videoUrl ?? null,
 			trailerKeyframe: movie.trailers?.[0]?.keyframeUrl ?? null
 		};
@@ -75,7 +85,7 @@ async function fetchWithTimeout<T>(url: string, timeoutMs: number): Promise<T> {
 	try {
 		const response = await fetch(url, { signal: controller.signal });
 		if (!response.ok) throw new Error(`HTTP ${response.status}`);
-		return await response.json() as T;
+		return (await response.json()) as T;
 	} finally {
 		clearTimeout(id);
 	}
@@ -108,7 +118,10 @@ export const GET: RequestHandler = async ({ url }) => {
 			const rawData = await retryFetch<RawMovie[]>(fetchUrl, 2, 8000);
 			return { key: cinema.key, result: { ok: true, data: mapToTrimmedMovies(rawData) } as const };
 		} catch (err) {
-			console.error(`Error fetching cinema ${cinema.name}:`, err instanceof Error ? err.message : err);
+			console.error(
+				`Error fetching cinema ${cinema.name}:`,
+				err instanceof Error ? err.message : err
+			);
 			return { key: cinema.key, result: { ok: false, error: 'Failed to load showtimes' } as const };
 		}
 	});

@@ -4,8 +4,13 @@
 	import DateSelector from '$lib/components/DateSelector.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import ClapperboardIcon from '@lucide/svelte/icons/clapperboard';
+	import { page } from '$app/state';
+	import { parseFilters, type ViewMode } from '$lib/utils/urlState';
 
-	let selectedDate = $state(new Date().toISOString().split('T')[0]);
+	const today = new Date().toISOString().split('T')[0];
+	const initialFilters = parseFilters(page.url.searchParams);
+	let selectedDate = $state(initialFilters.date ?? today);
+	let viewMode = $state<ViewMode>(initialFilters.view ?? 'schedule');
 </script>
 
 <div class="flex min-h-screen w-full flex-col items-center">
@@ -32,10 +37,12 @@
 		</header>
 
 		<main class="flex w-full flex-col items-center">
-			<div class="mt-4 flex w-full justify-center">
-				<DateSelector bind:value={selectedDate} />
-			</div>
-			<CinemasAndMovies bind:selectedDate />
+			{#if viewMode !== 'now'}
+				<div class="mt-4 flex w-full justify-center">
+					<DateSelector bind:value={selectedDate} />
+				</div>
+			{/if}
+			<CinemasAndMovies bind:selectedDate bind:viewMode />
 		</main>
 	</div>
 </div>
