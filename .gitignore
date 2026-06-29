@@ -22,5 +22,8 @@ Thumbs.db
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
+# pnpm-generated build-approval placeholder (builds are configured via .npmrc)
+pnpm-workspace.yaml
+
 .dev.vars*
 !.dev.vars.example
