@@ -80,15 +80,7 @@
 	<!-- Background Poster with Overlay -->
 	<div class="absolute inset-0 z-0 transition-transform duration-500 group-hover:scale-105">
 		{#if movie.posterImage?.startsWith('https://')}
-			<!-- Blurred, zoomed copy fills the card so the whole poster can show with no empty bands -->
-			<img
-				src={movie.posterImage}
-				alt=""
-				aria-hidden="true"
-				class="absolute inset-0 h-full w-full scale-110 object-cover opacity-60 blur-2xl"
-			/>
-			<!-- Sharp, full poster — never cropped -->
-			<img src={movie.posterImage} alt="" class="absolute inset-0 h-full w-full object-contain" />
+			<img src={movie.posterImage} alt="" class="h-full w-full object-cover" />
 		{/if}
 		<div
 			class="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-background/40"
