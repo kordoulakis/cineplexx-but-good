@@ -160,7 +160,7 @@
 	<title>{displayMeta?.title ?? fallbackTitle} · Cineplexx but good</title>
 </svelte:head>
 
-<div class="flex min-h-screen w-full flex-col items-center">
+<div class="flex w-full flex-1 flex-col items-center">
 	<div class="flex w-full max-w-5xl flex-col px-4 py-8">
 		<header
 			class="mb-8 flex w-full items-center justify-between gap-4 border-b-4 border-primary pb-4"

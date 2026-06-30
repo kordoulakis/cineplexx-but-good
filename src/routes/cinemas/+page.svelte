@@ -68,7 +68,7 @@
 	/>
 </svelte:head>
 
-<div class="flex min-h-screen w-full flex-col items-center">
+<div class="flex w-full flex-1 flex-col items-center">
 	<div class="flex w-full max-w-7xl flex-col items-center px-4 py-8">
 		<header
 			class="mb-12 flex w-full flex-col items-center justify-between gap-6 border-b-4 border-primary pb-4 md:flex-row md:items-end md:gap-0"
@@ -114,7 +114,7 @@
 			</select>
 		</div>
 
-		<main class="grid w-full grid-cols-1 gap-6 lg:grid-cols-2">
+		<main class="grid w-full grid-cols-1 items-start gap-6 lg:grid-cols-2">
 			{#each sortedCinemas as cinema (cinema.name)}
 				{@const stats = cinemaStats(cinema)}
 				<Card.Root class="flex flex-col border-muted">
