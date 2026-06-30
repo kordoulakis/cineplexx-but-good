@@ -3,6 +3,7 @@
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
 	import { browser } from '$app/environment';
+	import { untrack } from 'svelte';
 	import DateSelector from '$lib/components/DateSelector.svelte';
 	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 	import { Badge } from '$lib/components/ui/badge';
@@ -13,6 +14,8 @@
 	import FilmIcon from '@lucide/svelte/icons/film';
 	import PlayIcon from '@lucide/svelte/icons/play';
 	import MapPinIcon from '@lucide/svelte/icons/map-pin';
+
+	type Schedules = Record<string, FetchResult<TrimmedMovie[]>>;
 
 	const today = new Date().toISOString().split('T')[0];
 	const slug = $derived(page.params.id ?? '');
@@ -30,14 +33,33 @@
 		}
 	});
 
-	let schedules = $state<Record<string, FetchResult<TrimmedMovie[]>>>({});
-	let loading = $state(true);
+	// Per-date cache: a date is fetched at most once and reused, so switching dates
+	// is instant. Nearby dates are prefetched in the background.
+	const PREFETCH_DAYS = 7;
+	let cache = $state<Record<string, Schedules>>({});
+	const inflight = new Map<string, Promise<Schedules>>();
 	let error = $state<string | null>(null);
 
 	let searchingNextDate = $state(false);
 	let noFutureMatch = $state(false);
 
-	function buildDetail(sched: Record<string, FetchResult<TrimmedMovie[]>>) {
+	function loadDate(dateStr: string): Promise<Schedules> {
+		const cached = untrack(() => cache[dateStr]);
+		if (cached) return Promise.resolve(cached);
+		const existing = inflight.get(dateStr);
+		if (existing) return existing;
+		const promise = (async () => {
+			const res = await fetch(`/api/movies?date=${dateStr}`);
+			if (!res.ok) throw new Error(`Failed to fetch: ${res.statusText}`);
+			const data = (await res.json()) as Schedules;
+			cache = { ...cache, [dateStr]: data };
+			return data;
+		})().finally(() => inflight.delete(dateStr));
+		inflight.set(dateStr, promise);
+		return promise;
+	}
+
+	function buildDetail(sched: Schedules) {
 		let meta: TrimmedMovie | null = null;
 		const sessions: TrimmedMovie['sessions'] = [];
 		for (const result of Object.values(sched)) {
@@ -65,15 +87,41 @@
 		return { meta, groups, count: sessions.length };
 	}
 
-	const detail = $derived(buildDetail(schedules));
+	const currentSchedules = $derived(cache[selectedDate]);
+	const detail = $derived(buildDetail(currentSchedules ?? {}));
+	const schedulesLoading = $derived(currentSchedules === undefined);
 	const fallbackTitle = $derived(slug.replace(/-/g, ' '));
 
-	async function probeSlugOnDate(dateStr: string): Promise<boolean> {
-		const res = await fetch(`/api/movies?date=${dateStr}`);
-		if (!res.ok) return false;
-		const sched = (await res.json()) as Record<string, FetchResult<TrimmedMovie[]>>;
-		return buildDetail(sched).count > 0;
-	}
+	// Sticky metadata: once we've loaded this film's details keep showing them, even
+	// while a new date fetches or on a date where the film isn't playing. Reset when
+	// navigating to a different film.
+	let stickyMeta = $state<TrimmedMovie | null>(null);
+	$effect(() => {
+		slug;
+		untrack(() => (stickyMeta = null));
+	});
+	$effect(() => {
+		if (detail.meta) stickyMeta = detail.meta;
+	});
+	const displayMeta = $derived(detail.meta ?? stickyMeta);
+
+	// Load the selected date (instant if cached) and prefetch the coming week.
+	$effect(() => {
+		const base = selectedDate;
+		untrack(() => {
+			error = null;
+			noFutureMatch = false;
+			loadDate(base).catch((err) => {
+				console.error('Movie detail fetch crashed:', err);
+				if (selectedDate === base) error = 'Could not load showtimes. Please try again later.';
+			});
+			const d = new Date(base);
+			for (let i = 1; i <= PREFETCH_DAYS; i++) {
+				d.setDate(d.getDate() + 1);
+				loadDate(d.toISOString().split('T')[0]).catch(() => {});
+			}
+		});
+	});
 
 	async function goToNextScreening() {
 		searchingNextDate = true;
@@ -83,7 +131,8 @@
 			probe.setDate(probe.getDate() + 1);
 			const dateStr = probe.toISOString().split('T')[0];
 			try {
-				if (await probeSlugOnDate(dateStr)) {
+				const data = await loadDate(dateStr);
+				if (buildDetail(data).count > 0) {
 					selectedDate = dateStr;
 					searchingNextDate = false;
 					return;
@@ -96,29 +145,9 @@
 		noFutureMatch = true;
 	}
 
-	$effect(() => {
-		const dateToFetch = selectedDate;
-		noFutureMatch = false;
-		const run = async () => {
-			loading = true;
-			try {
-				const res = await fetch(`/api/movies?date=${dateToFetch}`);
-				if (!res.ok) throw new Error(`Failed to fetch: ${res.statusText}`);
-				schedules = await res.json();
-				error = null;
-			} catch (err) {
-				console.error('Movie detail fetch crashed:', err);
-				error = 'Could not load showtimes. Please try again later.';
-			} finally {
-				loading = false;
-			}
-		};
-		run();
-	});
-
 	const formattedStart = $derived(
-		detail.meta?.startDate
-			? new Date(detail.meta.startDate).toLocaleDateString(undefined, {
+		displayMeta?.startDate
+			? new Date(displayMeta.startDate).toLocaleDateString(undefined, {
 					day: 'numeric',
 					month: 'long',
 					year: 'numeric'
@@ -128,7 +157,7 @@
 </script>
 
 <svelte:head>
-	<title>{detail.meta?.title ?? fallbackTitle} · Cineplexx but good</title>
+	<title>{displayMeta?.title ?? fallbackTitle} · Cineplexx but good</title>
 </svelte:head>
 
 <div class="flex min-h-screen w-full flex-col items-center">
@@ -146,185 +175,181 @@
 			<ThemeSwitcher />
 		</header>
 
-		{#if loading}
-			<div class="flex min-h-50 items-center justify-center">
-				<p class="animate-pulse text-lg">Loading…</p>
-			</div>
-		{:else}
-			{#if error}
-				<div
-					class="mb-6 rounded-md border border-destructive bg-destructive/10 px-4 py-3 text-destructive"
-				>
-					<p class="font-bold">Critical Error</p>
-					<p>{error}</p>
-				</div>
+		<!-- Movie header (persists across date changes) -->
+		<div class="flex flex-col gap-6 sm:flex-row">
+			{#if displayMeta?.posterImage?.startsWith('https://')}
+				<img
+					src={displayMeta.posterImage}
+					alt=""
+					class="mx-auto h-72 w-48 shrink-0 rounded-lg object-cover shadow-lg sm:mx-0"
+				/>
 			{/if}
-
-			<!-- Movie header -->
-			<div class="flex flex-col gap-6 sm:flex-row">
-				{#if detail.meta?.posterImage?.startsWith('https://')}
-					<img
-						src={detail.meta.posterImage}
-						alt=""
-						class="mx-auto h-72 w-48 shrink-0 rounded-lg object-cover shadow-lg sm:mx-0"
-					/>
+			<div class="flex flex-1 flex-col gap-3">
+				<h1
+					class="text-center text-4xl leading-none font-black tracking-tighter uppercase sm:text-left sm:text-5xl"
+				>
+					{displayMeta?.title ?? fallbackTitle}
+				</h1>
+				{#if displayMeta && displayMeta.titleOriginalCalculated && displayMeta.titleOriginalCalculated !== displayMeta.title}
+					<p class="text-center text-sm text-muted-foreground italic sm:text-left">
+						{displayMeta.titleOriginalCalculated}
+					</p>
 				{/if}
-				<div class="flex flex-1 flex-col gap-3">
-					<h1
-						class="text-center text-4xl leading-none font-black tracking-tighter uppercase sm:text-left sm:text-5xl"
-					>
-						{detail.meta?.title ?? fallbackTitle}
-					</h1>
-					{#if detail.meta && detail.meta.titleOriginalCalculated && detail.meta.titleOriginalCalculated !== detail.meta.title}
-						<p class="text-center text-sm text-muted-foreground italic sm:text-left">
-							{detail.meta.titleOriginalCalculated}
+
+				{#if displayMeta}
+					<div class="flex flex-wrap justify-center gap-2 sm:justify-start">
+						{#if displayMeta.isOv}
+							<Badge
+								variant="default"
+								class="bg-ov px-1.5 py-0 text-[10px] font-semibold tracking-wider text-ov-foreground uppercase hover:bg-ov/90"
+								>OV</Badge
+							>
+						{/if}
+						{#if displayMeta.rating}
+							<Badge
+								variant="outline"
+								class="border-muted-foreground/20 px-1.5 py-0 text-[10px] font-medium text-muted-foreground"
+								>{displayMeta.rating}</Badge
+							>
+						{/if}
+						{#if displayMeta.runTime}
+							<Badge
+								variant="outline"
+								class="flex items-center gap-1 border-muted-foreground/20 px-1.5 py-0 text-[10px] font-medium text-muted-foreground"
+							>
+								<FilmIcon class="h-3 w-3" />{displayMeta.runTime} min
+							</Badge>
+						{/if}
+					</div>
+
+					<div class="space-y-1.5 text-sm text-muted-foreground">
+						{#if displayMeta.genres.length > 0}
+							<p>{displayMeta.genres.join(', ')}</p>
+						{/if}
+						{#if displayMeta.directors.length > 0}
+							<p>
+								<span class="font-semibold text-foreground/70">Dir.</span>
+								{displayMeta.directors.join(', ')}
+							</p>
+						{/if}
+						{#if displayMeta.actors.length > 0}
+							<p>
+								<span class="font-semibold text-foreground/70">Cast</span>
+								{displayMeta.actors.slice(0, 6).join(', ')}{displayMeta.actors.length > 6
+									? '…'
+									: ''}
+							</p>
+						{/if}
+						{#if formattedStart}
+							<p>
+								<span class="font-semibold text-foreground/70">Release</span>
+								{formattedStart}
+							</p>
+						{/if}
+					</div>
+
+					{#if displayMeta.descriptionShort}
+						<p class="text-sm leading-relaxed text-muted-foreground italic">
+							{displayMeta.descriptionShort}
 						</p>
 					{/if}
 
-					{#if detail.meta}
-						<div class="flex flex-wrap justify-center gap-2 sm:justify-start">
-							{#if detail.meta.isOv}
-								<Badge
-									variant="default"
-									class="bg-ov px-1.5 py-0 text-[10px] font-semibold tracking-wider text-ov-foreground uppercase hover:bg-ov/90"
-									>OV</Badge
-								>
-							{/if}
-							{#if detail.meta.rating}
-								<Badge
-									variant="outline"
-									class="border-muted-foreground/20 px-1.5 py-0 text-[10px] font-medium text-muted-foreground"
-									>{detail.meta.rating}</Badge
-								>
-							{/if}
-							{#if detail.meta.runTime}
-								<Badge
-									variant="outline"
-									class="flex items-center gap-1 border-muted-foreground/20 px-1.5 py-0 text-[10px] font-medium text-muted-foreground"
-								>
-									<FilmIcon class="h-3 w-3" />{detail.meta.runTime} min
-								</Badge>
-							{/if}
-						</div>
-
-						<div class="space-y-1.5 text-sm text-muted-foreground">
-							{#if detail.meta.genres.length > 0}
-								<p>{detail.meta.genres.join(', ')}</p>
-							{/if}
-							{#if detail.meta.directors.length > 0}
-								<p>
-									<span class="font-semibold text-foreground/70">Dir.</span>
-									{detail.meta.directors.join(', ')}
-								</p>
-							{/if}
-							{#if detail.meta.actors.length > 0}
-								<p>
-									<span class="font-semibold text-foreground/70">Cast</span>
-									{detail.meta.actors.slice(0, 6).join(', ')}{detail.meta.actors.length > 6
-										? '…'
-										: ''}
-								</p>
-							{/if}
-							{#if formattedStart}
-								<p>
-									<span class="font-semibold text-foreground/70">Release</span>
-									{formattedStart}
-								</p>
-							{/if}
-						</div>
-
-						{#if detail.meta.descriptionShort}
-							<p class="text-sm leading-relaxed text-muted-foreground italic">
-								{detail.meta.descriptionShort}
-							</p>
-						{/if}
-
-						{#if detail.meta.trailerUrl}
-							<a
-								href={detail.meta.trailerUrl}
-								target="_blank"
-								rel="noopener noreferrer"
-								class="inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
-							>
-								<PlayIcon class="h-4 w-4" /> Watch trailer
-							</a>
-						{/if}
+					{#if displayMeta.trailerUrl}
+						<a
+							href={displayMeta.trailerUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+						>
+							<PlayIcon class="h-4 w-4" /> Watch trailer
+						</a>
 					{/if}
-				</div>
+				{/if}
 			</div>
+		</div>
 
-			<!-- Date picker -->
-			<div class="mt-10 flex flex-col items-center gap-2">
-				<span
-					class="flex items-center gap-1.5 text-xs font-semibold tracking-wider text-muted-foreground uppercase"
-				>
-					<ClockIcon class="h-3.5 w-3.5" /> Showtimes
-				</span>
-				<DateSelector bind:value={selectedDate} />
+		<!-- Date picker -->
+		<div class="mt-10 flex flex-col items-center gap-2">
+			<span
+				class="flex items-center gap-1.5 text-xs font-semibold tracking-wider text-muted-foreground uppercase"
+			>
+				<ClockIcon class="h-3.5 w-3.5" /> Showtimes
+			</span>
+			<DateSelector bind:value={selectedDate} />
+		</div>
+
+		<!-- Showtimes by cinema (only this section reacts to fetching) -->
+		{#if error}
+			<div
+				class="mt-8 rounded-md border border-destructive bg-destructive/10 px-4 py-3 text-destructive"
+			>
+				<p class="font-bold">Critical Error</p>
+				<p>{error}</p>
 			</div>
-
-			<!-- Showtimes by cinema -->
-			{#if detail.groups.length > 0}
-				<div class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
-					{#each detail.groups as group (group.cinemaName)}
-						<section class="space-y-3">
-							<h2
-								class="flex items-center gap-1.5 border-b-2 border-primary/20 pb-2 text-lg font-black tracking-tighter text-primary uppercase"
-							>
-								<MapPinIcon class="h-4 w-4 shrink-0" />
-								{group.cinemaName}
-							</h2>
-							<div class="flex flex-wrap gap-2">
-								{#each group.sessions as session (session.cinemaId + session.showtime)}
-									{@const techs = getCleanTech(session.technologies, session.screenName)}
-									<div
-										class="flex flex-col items-center gap-1 rounded-md border border-input bg-card/60 px-3.5 py-2"
+		{:else if schedulesLoading}
+			<div class="mt-8 flex min-h-40 items-center justify-center">
+				<p class="animate-pulse text-lg">Loading showtimes…</p>
+			</div>
+		{:else if detail.groups.length > 0}
+			<div class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+				{#each detail.groups as group (group.cinemaName)}
+					<section class="space-y-3">
+						<h2
+							class="flex items-center gap-1.5 border-b-2 border-primary/20 pb-2 text-lg font-black tracking-tighter text-primary uppercase"
+						>
+							<MapPinIcon class="h-4 w-4 shrink-0" />
+							{group.cinemaName}
+						</h2>
+						<div class="flex flex-wrap gap-2">
+							{#each group.sessions as session (session.cinemaId + session.showtime)}
+								{@const techs = getCleanTech(session.technologies, session.screenName)}
+								<div
+									class="flex flex-col items-center gap-1 rounded-md border border-input bg-card/60 px-3.5 py-2"
+								>
+									<span class="font-mono text-sm font-bold tabular-nums"
+										>{formatTime(session.showtime)}</span
 									>
-										<span class="font-mono text-sm font-bold tabular-nums"
-											>{formatTime(session.showtime)}</span
-										>
-										<span class="font-sans text-[10px] text-muted-foreground"
-											>{session.screenName}</span
-										>
-										{#if techs.length > 0 || session.isOv}
-											<div class="mt-1 flex flex-wrap justify-center gap-1">
-												{#if session.isOv}
+									<span class="font-sans text-[10px] text-muted-foreground"
+										>{session.screenName}</span
+									>
+									{#if techs.length > 0 || session.isOv}
+										<div class="mt-1 flex flex-wrap justify-center gap-1">
+											{#if session.isOv}
+												<Badge
+													variant="default"
+													class="h-3.5 border-none bg-ov px-1.5 py-0 text-[9px] leading-none font-black text-ov-foreground uppercase hover:bg-ov/90"
+													>OV</Badge
+												>
+											{/if}
+											{#each techs as tech (tech)}
+												{#if tech !== 'OV'}
 													<Badge
-														variant="default"
-														class="h-3.5 border-none bg-ov px-1.5 py-0 text-[9px] leading-none font-black text-ov-foreground uppercase hover:bg-ov/90"
-														>OV</Badge
+														variant="outline"
+														class="h-3.5 border-primary/20 bg-primary/5 px-1.5 py-0 text-[9px] leading-none font-black text-primary/80 uppercase"
+														>{tech}</Badge
 													>
 												{/if}
-												{#each techs as tech (tech)}
-													{#if tech !== 'OV'}
-														<Badge
-															variant="outline"
-															class="h-3.5 border-primary/20 bg-primary/5 px-1.5 py-0 text-[9px] leading-none font-black text-primary/80 uppercase"
-															>{tech}</Badge
-														>
-													{/if}
-												{/each}
-											</div>
-										{/if}
-									</div>
-								{/each}
-							</div>
-						</section>
-					{/each}
-				</div>
-			{:else}
-				<div class="mt-10 flex flex-col items-center justify-center gap-4 py-12 text-center">
-					{#if noFutureMatch}
-						<p class="text-lg font-semibold">No upcoming date has a screening for this film.</p>
-						<p class="text-sm text-muted-foreground">It may have left the schedule.</p>
-					{:else}
-						<p class="text-lg font-semibold">No showtimes for this film on this date.</p>
-						<Button onclick={goToNextScreening} disabled={searchingNextDate} class="gap-2">
-							{searchingNextDate ? 'Searching…' : 'Find next screening'}
-						</Button>
-					{/if}
-				</div>
-			{/if}
+											{/each}
+										</div>
+									{/if}
+								</div>
+							{/each}
+						</div>
+					</section>
+				{/each}
+			</div>
+		{:else}
+			<div class="mt-10 flex flex-col items-center justify-center gap-4 py-12 text-center">
+				{#if noFutureMatch}
+					<p class="text-lg font-semibold">No upcoming date has a screening for this film.</p>
+					<p class="text-sm text-muted-foreground">It may have left the schedule.</p>
+				{:else}
+					<p class="text-lg font-semibold">No showtimes for this film on this date.</p>
+					<Button onclick={goToNextScreening} disabled={searchingNextDate} class="gap-2">
+						{searchingNextDate ? 'Searching…' : 'Find next screening'}
+					</Button>
+				{/if}
+			</div>
 		{/if}
 	</div>
 </div>

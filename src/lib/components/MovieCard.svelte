@@ -8,6 +8,8 @@
 	import ChevronDownIcon from '@lucide/svelte/icons/chevron-down';
 	import FilmIcon from '@lucide/svelte/icons/film';
 	import PlayIcon from '@lucide/svelte/icons/play';
+	import CalendarDaysIcon from '@lucide/svelte/icons/calendar-days';
+	import ArrowUpRightIcon from '@lucide/svelte/icons/arrow-up-right';
 	import { getCleanTech, formatTime } from '$lib/utils/sessions';
 
 	let {
@@ -271,6 +273,16 @@
 				{/if}
 			</div>
 		{/if}
+
+		<a
+			href={detailHref}
+			onclick={(e) => e.stopPropagation()}
+			class="mt-auto inline-flex items-center justify-center gap-1.5 rounded-md border border-input bg-background/70 px-3 py-1.5 text-xs font-bold text-foreground/80 transition-colors hover:border-primary/50 hover:text-primary"
+		>
+			<CalendarDaysIcon class="h-3.5 w-3.5" />
+			All showtimes &amp; dates
+			<ArrowUpRightIcon class="h-3 w-3 opacity-60" />
+		</a>
 	</Card.Content>
 </Card.Root>
 
