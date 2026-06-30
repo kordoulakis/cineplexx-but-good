@@ -42,12 +42,6 @@
 			</a>
 		</p>
 
-		<!-- Cheeky-but-honest tagline -->
-		<p class="max-w-md text-xs leading-relaxed text-muted-foreground/70 italic">
-			An unofficial fan project — faster, calmer, and actually good. Showtimes &amp; movie data
-			belong to Cineplexx.
-		</p>
-
 		<!-- Links -->
 		<div
 			class="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs font-semibold text-muted-foreground"
