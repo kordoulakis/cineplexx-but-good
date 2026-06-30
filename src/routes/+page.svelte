@@ -4,8 +4,13 @@
 	import DateSelector from '$lib/components/DateSelector.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import ClapperboardIcon from '@lucide/svelte/icons/clapperboard';
+	import { page } from '$app/state';
+	import { parseFilters, type ViewMode } from '$lib/utils/urlState';
 
-	let selectedDate = $state(new Date().toISOString().split('T')[0]);
+	const today = new Date().toISOString().split('T')[0];
+	const initialFilters = parseFilters(page.url.searchParams);
+	let selectedDate = $state(initialFilters.date ?? today);
+	let viewMode = $state<ViewMode>(initialFilters.view ?? 'schedule');
 </script>
 
 <div class="flex min-h-screen w-full flex-col items-center">
@@ -13,14 +18,18 @@
 		<header
 			class="mb-12 flex w-full flex-col items-center justify-between gap-6 border-b-4 border-primary pb-4 md:flex-row md:items-end md:gap-0"
 		>
-			<div class="flex flex-col items-center gap-2 align-bottom md:flex-row md:items-end">
+			<a
+				href="/"
+				aria-label="Cineplexx but good — home"
+				class="flex flex-col items-center gap-2 align-bottom transition-opacity hover:opacity-80 md:flex-row md:items-end"
+			>
 				<h1
 					class="text-center text-5xl leading-none font-black tracking-tighter uppercase sm:text-6xl md:text-left"
 				>
 					Cineplexx
 				</h1>
 				<p class="text-sm font-light text-cineplexx uppercase sm:text-base">but good</p>
-			</div>
+			</a>
 
 			<div class="flex items-center gap-3">
 				<Button href="/cinemas" variant="outline" size="sm" class="gap-2 border-input shadow-sm">
@@ -32,10 +41,12 @@
 		</header>
 
 		<main class="flex w-full flex-col items-center">
-			<div class="mt-4 flex w-full justify-center">
-				<DateSelector bind:value={selectedDate} />
-			</div>
-			<CinemasAndMovies bind:selectedDate />
+			{#if viewMode !== 'now'}
+				<div class="mt-4 flex w-full justify-center">
+					<DateSelector bind:value={selectedDate} />
+				</div>
+			{/if}
+			<CinemasAndMovies bind:selectedDate bind:viewMode />
 		</main>
 	</div>
 </div>
