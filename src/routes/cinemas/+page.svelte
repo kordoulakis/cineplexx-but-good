@@ -114,7 +114,7 @@
 			</select>
 		</div>
 
-		<main class="grid w-full grid-cols-1 gap-6 lg:grid-cols-2">
+		<main class="grid w-full grid-cols-1 items-start gap-6 lg:grid-cols-2">
 			{#each sortedCinemas as cinema (cinema.name)}
 				{@const stats = cinemaStats(cinema)}
 				<Card.Root class="flex flex-col border-muted">
