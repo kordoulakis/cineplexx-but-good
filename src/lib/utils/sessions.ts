@@ -4,7 +4,18 @@
  * tech-badge and time formatting logic stays identical everywhere.
  */
 
+import { cinemas } from '$lib/types/types';
+
 const TECH_TARGETS = ['IMAX', '2D', '3D', '4DX', 'ATMOS', 'OV', 'VIP', 'DBOX'];
+
+/**
+ * Resolve a session's numeric cinemaId to the short cinema name (e.g. "Apollo",
+ * "SCS"). Used when showtimes from multiple cinemas share a card and each one
+ * needs a compact label. Falls back to the provided name if the id is unknown.
+ */
+export function cinemaShortName(cinemaId: string, fallback = ''): string {
+	return cinemas.find((c) => String(c.id) === cinemaId)?.name ?? fallback;
+}
 
 /**
  * Reduce a session's raw technology matrix + screen name to a clean, de-duped

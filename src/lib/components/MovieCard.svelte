@@ -10,13 +10,20 @@
 	import PlayIcon from '@lucide/svelte/icons/play';
 	import CalendarDaysIcon from '@lucide/svelte/icons/calendar-days';
 	import ArrowUpRightIcon from '@lucide/svelte/icons/arrow-up-right';
-	import { getCleanTech, formatTime } from '$lib/utils/sessions';
+	import MapPinIcon from '@lucide/svelte/icons/map-pin';
+	import { getCleanTech, formatTime, cinemaShortName } from '$lib/utils/sessions';
 
 	let {
 		movie,
 		sessionsToDisplay,
-		date
-	}: { movie: TrimmedMovie; sessionsToDisplay?: typeof movie.sessions; date?: string } = $props();
+		date,
+		showCinema = false
+	}: {
+		movie: TrimmedMovie;
+		sessionsToDisplay?: typeof movie.sessions;
+		date?: string;
+		showCinema?: boolean;
+	} = $props();
 
 	const detailHref = $derived(`/movies/${movie.slug}${date ? `?date=${date}` : ''}`);
 
@@ -25,6 +32,26 @@
 	const displaySessions = $derived(
 		sessionsToDisplay ?? (movie.isOv ? movie.sessions.filter((s) => s.isOv) : movie.sessions)
 	);
+
+	// When this card aggregates several cinemas (the /movies page), group the
+	// showtimes by cinema so each one is labelled — the inline reverse lookup.
+	const sessionsByCinema = $derived.by(() => {
+		const map = new Map<string, typeof displaySessions>();
+		for (const s of displaySessions) {
+			const name = cinemaShortName(s.cinemaId, s.cinemaName);
+			const list = map.get(name) ?? [];
+			list.push(s);
+			map.set(name, list);
+		}
+		return [...map.entries()]
+			.map(([name, list]) => ({
+				name,
+				sessions: [...list].sort(
+					(a, b) => new Date(a.showtime).getTime() - new Date(b.showtime).getTime()
+				)
+			}))
+			.sort((a, b) => a.name.localeCompare(b.name));
+	});
 
 	const isEnglishOV = $derived(movie.isOv);
 
@@ -60,6 +87,41 @@
 			movie.trailerUrl
 	);
 </script>
+
+{#snippet showtimeButton(session: (typeof displaySessions)[number])}
+	{@const techs = getCleanTech(session.technologies, session.screenName)}
+	<Button
+		variant="outline"
+		class="flex h-auto flex-col items-center gap-1 border-input px-3.5 py-2 font-mono text-sm hover:bg-accent hover:text-accent-foreground"
+		onclick={(e) => e.stopPropagation()}
+	>
+		<span class="font-bold">{formatTime(session.showtime)}</span>
+		<span class="font-sans text-[10px] text-muted-foreground">{session.screenName}</span>
+
+		{#if techs.length > 0 || session.isOv}
+			<div class="mt-1 flex flex-wrap justify-center gap-1">
+				{#if session.isOv}
+					<Badge
+						variant="default"
+						class="h-3.5 border-none bg-ov px-1.5 py-0 text-[9px] leading-none font-black text-ov-foreground uppercase hover:bg-ov/90"
+					>
+						OV
+					</Badge>
+				{/if}
+				{#each techs as tech (tech)}
+					{#if tech !== 'OV'}
+						<Badge
+							variant="outline"
+							class="h-3.5 border-primary/20 bg-primary/5 px-1.5 py-0 text-[9px] leading-none font-black text-primary/80 uppercase"
+						>
+							{tech}
+						</Badge>
+					{/if}
+				{/each}
+			</div>
+		{/if}
+	</Button>
+{/snippet}
 
 <Card.Root
 	class="group relative flex h-full w-full flex-col overflow-hidden border-muted transition-all hover:shadow-lg {hasDetails
@@ -177,44 +239,30 @@
 				<p class="text-center text-xs text-muted-foreground italic sm:text-left">
 					No screenings matching filters listed for this date.
 				</p>
+			{:else if showCinema}
+				<div class="space-y-2.5">
+					{#each sessionsByCinema as group (group.name)}
+						<div class="space-y-1.5">
+							<div
+								class="flex items-center gap-1 text-[10px] font-bold tracking-wider text-muted-foreground/80 uppercase"
+							>
+								<MapPinIcon class="h-3 w-3 shrink-0" />
+								{group.name}
+							</div>
+							<div class="no-scrollbar flex flex-nowrap justify-start gap-1.5 overflow-x-auto pb-1">
+								{#each group.sessions as session (session)}
+									{@render showtimeButton(session)}
+								{/each}
+							</div>
+						</div>
+					{/each}
+				</div>
 			{:else}
 				<div
 					class="no-scrollbar flex flex-nowrap justify-start gap-1.5 overflow-x-auto pb-2 sm:justify-start"
 				>
 					{#each displaySessions as session (session)}
-						{@const techs = getCleanTech(session.technologies, session.screenName)}
-
-						<Button
-							variant="outline"
-							class="flex h-auto flex-col items-center gap-1 border-input px-3.5 py-2 font-mono text-sm hover:bg-accent hover:text-accent-foreground"
-							onclick={(e) => e.stopPropagation()}
-						>
-							<span class="font-bold">{formatTime(session.showtime)}</span>
-							<span class="font-sans text-[10px] text-muted-foreground">{session.screenName}</span>
-
-							{#if techs.length > 0 || session.isOv}
-								<div class="mt-1 flex flex-wrap justify-center gap-1">
-									{#if session.isOv}
-										<Badge
-											variant="default"
-											class="h-3.5 border-none bg-ov px-1.5 py-0 text-[9px] leading-none font-black text-ov-foreground uppercase hover:bg-ov/90"
-										>
-											OV
-										</Badge>
-									{/if}
-									{#each techs as tech (tech)}
-										{#if tech !== 'OV'}
-											<Badge
-												variant="outline"
-												class="h-3.5 border-primary/20 bg-primary/5 px-1.5 py-0 text-[9px] leading-none font-black text-primary/80 uppercase"
-											>
-												{tech}
-											</Badge>
-										{/if}
-									{/each}
-								</div>
-							{/if}
-						</Button>
+						{@render showtimeButton(session)}
 					{/each}
 				</div>
 			{/if}

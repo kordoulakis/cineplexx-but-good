@@ -4,6 +4,7 @@
 	import DateSelector from '$lib/components/DateSelector.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import ClapperboardIcon from '@lucide/svelte/icons/clapperboard';
+	import FilmIcon from '@lucide/svelte/icons/film';
 	import { page } from '$app/state';
 	import { parseFilters, type ViewMode } from '$lib/utils/urlState';
 
@@ -32,6 +33,10 @@
 			</a>
 
 			<div class="flex items-center gap-3">
+				<Button href="/movies" variant="outline" size="sm" class="gap-2 border-input shadow-sm">
+					<FilmIcon class="h-4 w-4 text-cineplexx" />
+					<span class="font-bold">All movies</span>
+				</Button>
 				<Button href="/cinemas" variant="outline" size="sm" class="gap-2 border-input shadow-sm">
 					<ClapperboardIcon class="h-4 w-4 text-cineplexx" />
 					<span class="font-bold">Cinemas</span>
