@@ -18,14 +18,18 @@
 		<header
 			class="mb-12 flex w-full flex-col items-center justify-between gap-6 border-b-4 border-primary pb-4 md:flex-row md:items-end md:gap-0"
 		>
-			<div class="flex flex-col items-center gap-2 align-bottom md:flex-row md:items-end">
+			<a
+				href="/"
+				aria-label="Cineplexx but good — home"
+				class="flex flex-col items-center gap-2 align-bottom transition-opacity hover:opacity-80 md:flex-row md:items-end"
+			>
 				<h1
 					class="text-center text-5xl leading-none font-black tracking-tighter uppercase sm:text-6xl md:text-left"
 				>
 					Cineplexx
 				</h1>
 				<p class="text-sm font-light text-cineplexx uppercase sm:text-base">but good</p>
-			</div>
+			</a>
 
 			<div class="flex items-center gap-3">
 				<Button href="/cinemas" variant="outline" size="sm" class="gap-2 border-input shadow-sm">
