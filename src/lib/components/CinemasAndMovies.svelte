@@ -181,7 +181,7 @@
 	}
 
 	// --- "Now & Soon" view -------------------------------------------------
-	const WINDOW_AHEAD_MS = 2 * 60 * 60 * 1000; // surface sessions up to 2h out
+	const WINDOW_AHEAD_MS = 6 * 60 * 60 * 1000; // surface sessions up to 6h out
 	const WINDOW_BEHIND_MS = 15 * 60 * 1000; // ...plus ones that just started
 
 	let now = $state(Date.now());
@@ -433,7 +433,7 @@
 				{#if nowSessions.length === 0}
 					<div class="flex flex-col items-center justify-center gap-2 py-16 text-center">
 						<p class="text-lg font-semibold">
-							Nothing starting in the next 2 hours at your cinemas.
+							Nothing starting in the next 6 hours at your cinemas.
 						</p>
 						<p class="text-sm text-muted-foreground">
 							Try the <button
