@@ -124,7 +124,7 @@
 {/snippet}
 
 <Card.Root
-	class="group relative flex h-full w-full flex-col overflow-hidden border-muted transition-all hover:shadow-lg {hasDetails
+	class="group relative flex w-full flex-col overflow-hidden border-muted transition-all hover:shadow-lg {hasDetails
 		? 'cursor-pointer'
 		: ''}"
 	onclick={hasDetails ? () => (expanded = !expanded) : undefined}

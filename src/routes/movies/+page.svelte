@@ -224,7 +224,7 @@
 
 					{#if movies.length > 0}
 						<div
-							class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
+							class="grid grid-cols-1 items-start gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
 						>
 							{#each movies as movie (movie.slug)}
 								<MovieCard
