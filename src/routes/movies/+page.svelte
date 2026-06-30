@@ -155,7 +155,7 @@
 	<title>All movies · Cineplexx but good</title>
 </svelte:head>
 
-<div class="flex min-h-screen w-full flex-col items-center">
+<div class="flex w-full flex-1 flex-col items-center">
 	<div class="flex w-full max-w-7xl flex-col items-center px-4 py-8">
 		<header
 			class="mb-12 flex w-full flex-col items-center justify-between gap-6 border-b-4 border-primary pb-4 md:flex-row md:items-end md:gap-0"
