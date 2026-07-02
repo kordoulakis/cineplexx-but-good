@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { TrimmedMovie, FetchResult } from '../types/types.ts';
 	import { cinemas } from '$lib/types/types';
+	import { getCinemaBySlug } from '$lib/data/cinemaLocations';
 	import MovieCard from '$lib/components/MovieCard.svelte';
 	import FilterControls from '$lib/components/FilterControls.svelte';
 	import { Badge } from '$lib/components/ui/badge';
@@ -333,6 +334,9 @@
 						</p>
 					{:else if movies.length > 0}
 						{@const cinema = cinemas.find((c) => c.key === cinemaKey)}
+						{@const detailCinema = getCinemaBySlug(cinemaKey)}
+						{@const cinemaName =
+							(result.ok && result.data[0]?.sessions[0]?.cinemaName) || cinema?.name || cinemaKey}
 						<section class="flex flex-col gap-6">
 							<div
 								class="mb-2 flex flex-col items-center justify-between gap-4 border-b-2 border-primary/20 pb-4 sm:flex-row sm:items-end sm:gap-0"
@@ -340,9 +344,16 @@
 								<h2
 									class="text-center text-3xl font-black tracking-tighter text-primary uppercase sm:text-left sm:text-4xl"
 								>
-									{(result.ok && result.data[0]?.sessions[0]?.cinemaName) ||
-										cinema?.name ||
-										cinemaKey}
+									{#if detailCinema}
+										<a
+											href="/cinemas/{detailCinema.slug}"
+											class="underline decoration-primary/30 decoration-2 underline-offset-4 transition-colors hover:text-primary/80 hover:decoration-primary/80"
+										>
+											{cinemaName}
+										</a>
+									{:else}
+										{cinemaName}
+									{/if}
 								</h2>
 
 								{#if cinema}

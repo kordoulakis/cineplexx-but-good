@@ -8,6 +8,10 @@ export interface Saal {
 }
 
 export interface CinemaLocation {
+	/** URL-friendly id used for the /cinemas/[slug] detail route. For cinemas that
+	 *  also appear in the showtime schedule, this matches their key in
+	 *  `cinemas` (src/lib/types/types.ts) so the two data sources line up. */
+	slug: string;
 	name: string;
 	address: string;
 	notes?: string;
@@ -18,6 +22,7 @@ export interface CinemaLocation {
 // Static data for the Cineplexx (and partner) cinemas in Vienna.
 export const cinemaLocations: CinemaLocation[] = [
 	{
+		slug: 'apollo',
 		name: 'Apollo – Das Kino',
 		address: 'Gumpendorferstraße 63, 1060 Wien',
 		saals: [
@@ -41,6 +46,7 @@ export const cinemaLocations: CinemaLocation[] = [
 		]
 	},
 	{
+		slug: 'artis',
 		name: 'Artis International',
 		address: 'Schultergasse 5, 1010 Wien',
 		notes: 'OV-only',
@@ -59,6 +65,7 @@ export const cinemaLocations: CinemaLocation[] = [
 		]
 	},
 	{
+		slug: 'donauzentrum',
 		name: 'Cineplexx Donau Zentrum',
 		address: 'Wagramerstraße 79, 1220 Wien',
 		total_saals: 13,
@@ -95,6 +102,7 @@ export const cinemaLocations: CinemaLocation[] = [
 		]
 	},
 	{
+		slug: 'millennium',
 		name: 'Cineplexx Millennium City',
 		address: 'Handelskai, 1200 Wien',
 		saals: [
@@ -174,6 +182,7 @@ export const cinemaLocations: CinemaLocation[] = [
 		]
 	},
 	{
+		slug: 'auhof',
 		name: 'Cineplexx Wien Auhof',
 		address: 'Albert-Schweitzer-Gasse 6, 1140 Wien',
 		saals: [
@@ -187,6 +196,7 @@ export const cinemaLocations: CinemaLocation[] = [
 		]
 	},
 	{
+		slug: 'wienerberg',
 		name: 'Cineplexx Wienerberg',
 		address: 'Wienerbergstraße 11, 1100 Wien',
 		saals: [
@@ -256,12 +266,14 @@ export const cinemaLocations: CinemaLocation[] = [
 		]
 	},
 	{
+		slug: 'urania',
 		name: 'Urania Kino',
 		address: 'Uraniastraße 1, 1010 Wien',
 		notes: 'Single-screen arthouse, cultural/documentary focus',
 		saals: [{ id: 'Großer Saal', seats: 268, rows: 11, screen_m2: 36, special: [] }]
 	},
 	{
+		slug: 'village',
 		name: 'Village Cinema Wien Mitte',
 		address: 'Landstraßer Hauptstraße 2a, 1030 Wien',
 		notes: 'Screen sizes for Säle 1-9 not published',
@@ -285,3 +297,8 @@ export const cinemaLocations: CinemaLocation[] = [
 		]
 	}
 ];
+
+/** Look up a single cinema by its URL slug (used by the /cinemas/[slug] route). */
+export function getCinemaBySlug(slug: string): CinemaLocation | undefined {
+	return cinemaLocations.find((c) => c.slug === slug);
+}
