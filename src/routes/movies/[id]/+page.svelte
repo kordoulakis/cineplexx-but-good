@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { TrimmedMovie, FetchResult } from '$lib/types/types';
+	import { cinemas } from '$lib/types/types';
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
 	import { browser } from '$app/environment';
@@ -79,6 +80,7 @@
 		const groups = [...byCinema.entries()]
 			.map(([cinemaName, list]) => ({
 				cinemaName,
+				cinemaKey: cinemas.find((c) => String(c.id) === list[0]?.cinemaId)?.key,
 				sessions: [...list].sort(
 					(a, b) => new Date(a.showtime).getTime() - new Date(b.showtime).getTime()
 				)
@@ -298,7 +300,16 @@
 							class="flex items-center gap-1.5 border-b-2 border-primary/20 pb-2 text-lg font-black tracking-tighter text-primary uppercase"
 						>
 							<MapPinIcon class="h-4 w-4 shrink-0" />
-							{group.cinemaName}
+							{#if group.cinemaKey}
+								<a
+									href={`/?cinemas=${group.cinemaKey}&date=${selectedDate}`}
+									class="underline decoration-primary/30 decoration-2 underline-offset-4 transition-colors hover:text-primary/80 hover:decoration-primary/80"
+								>
+									{group.cinemaName}
+								</a>
+							{:else}
+								{group.cinemaName}
+							{/if}
 						</h2>
 						<div class="flex flex-wrap gap-2">
 							{#each group.sessions as session (session.cinemaId + session.showtime)}
