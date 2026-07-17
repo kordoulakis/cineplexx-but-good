@@ -106,7 +106,7 @@
 			{#each sortedCinemas as cinema (cinema.slug)}
 				<CinemaCard
 					{cinema}
-					titleHref="/cinemas/{cinema.slug}"
+					titleOpensModal={true}
 					expanded={expanded[cinema.slug]}
 					onToggle={() => toggle(cinema.slug)}
 				/>
