@@ -4,6 +4,7 @@
 	import { getCinemaBySlug } from '$lib/data/cinemaLocations';
 	import MovieCard from '$lib/components/MovieCard.svelte';
 	import FilterControls from '$lib/components/FilterControls.svelte';
+	import CinemaActionModal from '$lib/components/CinemaActionModal.svelte';
 	import { Badge } from '$lib/components/ui/badge';
 	import { Button } from '$lib/components/ui/button';
 	import ExternalLinkIcon from '@lucide/svelte/icons/external-link';
@@ -345,12 +346,11 @@
 									class="text-center text-3xl font-black tracking-tighter text-primary uppercase sm:text-left sm:text-4xl"
 								>
 									{#if detailCinema}
-										<a
-											href="/cinemas/{detailCinema.slug}"
-											class="underline decoration-primary/30 decoration-2 underline-offset-4 transition-colors hover:text-primary/80 hover:decoration-primary/80"
-										>
+										<CinemaActionModal
 											{cinemaName}
-										</a>
+											slug={detailCinema.slug}
+											onViewShowtimes={() => (selectedCinemas = [cinemaKey])}
+										/>
 									{:else}
 										{cinemaName}
 									{/if}

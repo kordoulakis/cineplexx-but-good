@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { type CinemaLocation, type Saal } from '$lib/data/cinemaLocations';
 	import * as Card from '$lib/components/ui/card';
+	import CinemaActionModal from '$lib/components/CinemaActionModal.svelte';
 	import { Badge } from '$lib/components/ui/badge';
 	import MapPinIcon from '@lucide/svelte/icons/map-pin';
 	import ArmchairIcon from '@lucide/svelte/icons/armchair';
@@ -12,14 +13,14 @@
 	let {
 		cinema,
 		expanded = false,
-		titleHref = undefined,
+		titleOpensModal = false,
 		onToggle = undefined
 	}: {
 		cinema: CinemaLocation;
 		/** Whether the halls list is shown. On the detail page this is always true. */
 		expanded?: boolean;
-		/** When set, the title becomes a link to this URL (used on the overview grid). */
-		titleHref?: string;
+		/** When set, the title opens the showtimes/details modal (used on the overview grid). */
+		titleOpensModal?: boolean;
 		/** When set, a collapse/expand toggle is rendered; otherwise halls follow `expanded`. */
 		onToggle?: () => void;
 	} = $props();
@@ -44,13 +45,8 @@
 	<Card.Header class="space-y-3">
 		<div class="flex items-start justify-between gap-3">
 			<Card.Title class="text-2xl leading-tight font-black tracking-tighter text-primary uppercase">
-				{#if titleHref}
-					<a
-						href={titleHref}
-						class="underline decoration-primary/30 decoration-2 underline-offset-4 transition-colors hover:text-primary/80 hover:decoration-primary/80"
-					>
-						{cinema.name}
-					</a>
+				{#if titleOpensModal}
+					<CinemaActionModal cinemaName={cinema.name} slug={cinema.slug} triggerClass="text-left" />
 				{:else}
 					{cinema.name}
 				{/if}
