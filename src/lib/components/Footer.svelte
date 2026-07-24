@@ -47,7 +47,7 @@
 			class="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs font-semibold text-muted-foreground"
 		>
 			<a
-				href="https://github.com/kordoulakis"
+				href="https://github.com/kordoulakis/cineplexx-but-good/"
 				target="_blank"
 				rel="noopener noreferrer"
 				class="inline-flex items-center gap-1 transition-colors hover:text-primary"
