@@ -13,6 +13,7 @@
 	import LayoutGridIcon from '@lucide/svelte/icons/layout-grid';
 	import { parseFilters, buildFilterParams } from '$lib/utils/urlState';
 	import { sessionMatchesFilters, matchesQuery, mergeMoviesBySlug } from '$lib/utils/filters';
+	import { SvelteDate } from 'svelte/reactivity';
 
 	const todayStr = new Date().toISOString().split('T')[0];
 
@@ -128,16 +129,16 @@
 	async function goToNextAvailableDate() {
 		searchingNextDate = true;
 		noFutureMatch = false;
-		const HORIZON_DAYS = 60;
-		const probe = new Date(selectedDate);
+		const HORIZON_DAYS = 30;
+		const probe = new SvelteDate(selectedDate);
 		for (let i = 0; i < HORIZON_DAYS; i++) {
 			probe.setDate(probe.getDate() + 1);
 			const dateStr = probe.toISOString().split('T')[0];
 			try {
 				const res = await fetch(`/api/movies?date=${dateStr}`);
 				if (!res.ok) continue;
-				const sched = (await res.json()) as Record<string, FetchResult<TrimmedMovie[]>>;
-				if (computeMovies(sched).length > 0) {
+				const schedule = (await res.json()) as Record<string, FetchResult<TrimmedMovie[]>>;
+				if (computeMovies(schedule).length > 0) {
 					selectedDate = dateStr;
 					searchingNextDate = false;
 					return;

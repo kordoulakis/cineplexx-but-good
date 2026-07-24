@@ -28,11 +28,14 @@ export function sessionMatchesFilters(
 	return true;
 }
 
+// Strip everything but letters/digits so "spiderman" matches "Spider-Man".
+const normalizeForSearch = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '');
+
 /** Title / original-title search. `query` is expected to be lower-cased + trimmed. */
 export function matchesQuery(movie: TrimmedMovie, query: string): boolean {
 	if (!query) return true;
-	const haystack = `${movie.title} ${movie.titleOriginalCalculated ?? ''}`.toLowerCase();
-	return haystack.includes(query);
+	const haystack = normalizeForSearch(`${movie.title} ${movie.titleOriginalCalculated ?? ''}`);
+	return haystack.includes(normalizeForSearch(query));
 }
 
 /**
