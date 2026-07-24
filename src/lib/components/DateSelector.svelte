@@ -3,6 +3,7 @@
 	import * as Popover from "$lib/components/ui/popover/index.js";
 	import { Button } from "$lib/components/ui/button/index.js";
 	import ChevronDownIcon from "@lucide/svelte/icons/chevron-down";
+	import ChevronRightIcon from "@lucide/svelte/icons/chevron-right";
 	import CalendarIcon from "@lucide/svelte/icons/calendar";
 	import {
 		getLocalTimeZone,
@@ -57,6 +58,12 @@
 	};
 
 	const isSelected = (date: DateValue) => date.toString() === value;
+
+	const goToNextDay = () => {
+		const nextDay = calendarValue.add({ days: 1 });
+		calendarValue = nextDay;
+		value = nextDay.toString();
+	};
 </script>
 
 <div class="flex flex-col gap-4 w-full items-center">
@@ -120,6 +127,17 @@
 					/>
 				</Popover.Content>
 			</Popover.Root>
+
+			<Button
+				variant="outline"
+				size="sm"
+				class="font-bold border-primary/20 hover:border-primary flex gap-2 items-center"
+				style="cursor: pointer"
+				onclick={goToNextDay}
+			>
+				Next day
+				<ChevronRightIcon class="h-4 w-4" />
+			</Button>
 		</div>
 	</div>
 </div>
