@@ -38,3 +38,8 @@ export function formatTime(isoString: string): string {
 		hour12: false
 	});
 }
+
+/** Build the direct link to the ticket purchase wizard for a given session id. */
+export function purchaseUrl(sessionId: string): string {
+	return `https://cineplexx.at/purchase/wizard/${sessionId}`;
+}

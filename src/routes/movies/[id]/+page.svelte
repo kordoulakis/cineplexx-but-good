@@ -10,12 +10,13 @@
 	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 	import { Badge } from '$lib/components/ui/badge';
 	import { Button } from '$lib/components/ui/button';
-	import { getCleanTech, formatTime } from '$lib/utils/sessions';
+	import { getCleanTech, formatTime, purchaseUrl } from '$lib/utils/sessions';
 	import ArrowLeftIcon from '@lucide/svelte/icons/arrow-left';
 	import ClockIcon from '@lucide/svelte/icons/clock';
 	import FilmIcon from '@lucide/svelte/icons/film';
 	import PlayIcon from '@lucide/svelte/icons/play';
 	import MapPinIcon from '@lucide/svelte/icons/map-pin';
+	import TicketIcon from '@lucide/svelte/icons/ticket';
 
 	const today = new Date().toISOString().split('T')[0];
 	const slug = $derived(page.params.id ?? '');
@@ -311,14 +312,16 @@
 							{/if}
 						</h2>
 						<div class="flex flex-wrap gap-2">
-							{#each group.sessions as session (session.cinemaId + session.showtime)}
+							{#each group.sessions as session (session.id)}
 								{@const techs = getCleanTech(session.technologies, session.screenName)}
-								<div
-									class="flex flex-col items-center gap-1 rounded-md border border-input bg-card/60 px-3.5 py-2"
+								<Button
+									variant="outline"
+									href={session.isPurchasable ? purchaseUrl(session.id) : undefined}
+									target={session.isPurchasable ? '_blank' : undefined}
+									rel={session.isPurchasable ? 'noopener noreferrer' : undefined}
+									class="flex h-auto flex-col items-center gap-1 border-input bg-card/60 px-3.5 py-2 font-mono text-sm hover:bg-accent hover:text-accent-foreground"
 								>
-									<span class="font-mono text-sm font-bold tabular-nums"
-										>{formatTime(session.showtime)}</span
-									>
+									<span class="font-bold tabular-nums">{formatTime(session.showtime)}</span>
 									<span class="font-sans text-[10px] text-muted-foreground"
 										>{session.screenName}</span
 									>
@@ -342,7 +345,15 @@
 											{/each}
 										</div>
 									{/if}
-								</div>
+									{#if session.isPurchasable}
+										<span
+											class="mt-1 flex items-center gap-1 text-[10px] font-black text-primary uppercase"
+										>
+											<TicketIcon class="h-3 w-3" />
+											Tickets
+										</span>
+									{/if}
+								</Button>
 							{/each}
 						</div>
 					</section>

@@ -11,7 +11,8 @@
 	import CalendarDaysIcon from '@lucide/svelte/icons/calendar-days';
 	import ArrowUpRightIcon from '@lucide/svelte/icons/arrow-up-right';
 	import MapPinIcon from '@lucide/svelte/icons/map-pin';
-	import { getCleanTech, formatTime, cinemaShortName } from '$lib/utils/sessions';
+	import TicketIcon from '@lucide/svelte/icons/ticket';
+	import { getCleanTech, formatTime, cinemaShortName, purchaseUrl } from '$lib/utils/sessions';
 
 	let {
 		movie,
@@ -92,6 +93,9 @@
 	{@const techs = getCleanTech(session.technologies, session.screenName)}
 	<Button
 		variant="outline"
+		href={session.isPurchasable ? purchaseUrl(session.id) : undefined}
+		target={session.isPurchasable ? '_blank' : undefined}
+		rel={session.isPurchasable ? 'noopener noreferrer' : undefined}
 		class="flex h-auto flex-col items-center gap-1 border-input px-3.5 py-2 font-mono text-sm hover:bg-accent hover:text-accent-foreground"
 		onclick={(e) => e.stopPropagation()}
 	>
@@ -119,6 +123,13 @@
 					{/if}
 				{/each}
 			</div>
+		{/if}
+
+		{#if session.isPurchasable}
+			<span class="mt-1 flex items-center gap-1 text-[10px] font-black text-primary uppercase">
+				<TicketIcon class="h-3 w-3" />
+				Tickets
+			</span>
 		{/if}
 	</Button>
 {/snippet}

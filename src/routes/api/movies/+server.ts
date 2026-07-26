@@ -8,6 +8,19 @@ import { slugify } from '$lib/utils/slug';
 
 const BASE = 'https://app.cineplexx.at/api/v1/cinemasweb';
 
+/** Session statuses that mean it can't be booked online even if WWW is a listed sales channel. */
+const NON_PURCHASABLE_STATUSES = ['red', 'grey', 'gray'];
+
+function isOnlinePurchasable(
+	salesChannels: string | undefined,
+	status: string | undefined
+): boolean {
+	const hasWWWChannel =
+		typeof salesChannels === 'string' && salesChannels.split(';').includes('WWW');
+	const statusAllowsSale = !status || !NON_PURCHASABLE_STATUSES.includes(status.toLowerCase());
+	return hasWWWChannel && statusAllowsSale;
+}
+
 function mapToTrimmedMovies(raw: RawMovie[]): TrimmedMovie[] {
 	return (raw || []).map((movie) => {
 		const sessions = (movie.sessions || []).map((s) => {
@@ -22,12 +35,14 @@ function mapToTrimmedMovies(raw: RawMovie[]): TrimmedMovie[] {
 				s.screenName?.toLowerCase().includes('omu') ||
 				s.screenName?.toLowerCase().includes('englisch');
 			return {
+				id: s.id,
 				cinemaId: s.cinemaId,
 				cinemaName: s.cinemaName,
 				screenName: s.screenName,
 				technologies: s.technologies,
 				showtime: s.showtime,
-				isOv: isOvSession
+				isOv: isOvSession,
+				isPurchasable: isOnlinePurchasable(s.salesChannels, s.status)
 			};
 		});
 

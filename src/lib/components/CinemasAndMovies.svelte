@@ -9,10 +9,11 @@
 	import { Badge } from '$lib/components/ui/badge';
 	import { Button } from '$lib/components/ui/button';
 	import ExternalLinkIcon from '@lucide/svelte/icons/external-link';
+	import TicketIcon from '@lucide/svelte/icons/ticket';
 	import { browser } from '$app/environment';
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
-	import { getCleanTech, formatTime } from '$lib/utils/sessions';
+	import { getCleanTech, formatTime, purchaseUrl } from '$lib/utils/sessions';
 	import { sessionMatchesFilters, matchesQuery } from '$lib/utils/filters';
 	import { parseFilters, buildFilterParams } from '$lib/utils/urlState';
 	import type { ViewMode } from '$lib/models/filter/ViewMode';
@@ -203,38 +204,55 @@
 
 {#snippet sessionRow(item: NowItem)}
 	{@const techs = getCleanTech(item.session.technologies, item.session.screenName)}
-	<a
-		href="/movies/{item.movie.slug}?date={todayStr}"
-		class="flex items-center gap-3 rounded-lg border border-muted bg-card/60 px-3 py-2.5 transition-all hover:border-primary/40 hover:bg-accent"
+	<div
+		class="flex items-center gap-1 rounded-lg border border-muted bg-card/60 pr-2.5 transition-all hover:border-primary/40 hover:bg-accent"
 	>
-		<span class="w-14 shrink-0 font-mono text-lg font-bold tabular-nums"
-			>{formatTime(item.session.showtime)}</span
+		<a
+			href="/movies/{item.movie.slug}?date={todayStr}"
+			class="flex min-w-0 flex-1 items-center gap-3 px-3 py-2.5"
 		>
-		<span class="min-w-0 flex-1">
-			<span class="block truncate font-semibold">{item.movie.title}</span>
-			<span class="block truncate text-xs text-muted-foreground"
-				>{item.session.cinemaName} · {item.session.screenName}</span
+			<span class="w-14 shrink-0 font-mono text-lg font-bold tabular-nums"
+				>{formatTime(item.session.showtime)}</span
 			>
-		</span>
-		<span class="flex shrink-0 flex-wrap justify-end gap-1">
-			{#if item.session.isOv}
-				<Badge
-					variant="default"
-					class="bg-ov px-1.5 py-0 text-[10px] font-black text-ov-foreground uppercase hover:bg-ov/90"
-					>OV</Badge
+			<span class="min-w-0 flex-1">
+				<span class="block truncate font-semibold">{item.movie.title}</span>
+				<span class="block truncate text-xs text-muted-foreground"
+					>{item.session.cinemaName} · {item.session.screenName}</span
 				>
-			{/if}
-			{#each techs as tech (tech)}
-				{#if tech !== 'OV'}
+			</span>
+			<span class="flex shrink-0 flex-wrap justify-end gap-1">
+				{#if item.session.isOv}
 					<Badge
-						variant="outline"
-						class="border-primary/20 bg-primary/5 px-1.5 py-0 text-[10px] font-black text-primary/80 uppercase"
-						>{tech}</Badge
+						variant="default"
+						class="bg-ov px-1.5 py-0 text-[10px] font-black text-ov-foreground uppercase hover:bg-ov/90"
+						>OV</Badge
 					>
 				{/if}
-			{/each}
-		</span>
-	</a>
+				{#each techs as tech (tech)}
+					{#if tech !== 'OV'}
+						<Badge
+							variant="outline"
+							class="border-primary/20 bg-primary/5 px-1.5 py-0 text-[10px] font-black text-primary/80 uppercase"
+							>{tech}</Badge
+						>
+					{/if}
+				{/each}
+			</span>
+		</a>
+		{#if item.session.isPurchasable}
+			<Button
+				variant="outline"
+				size="icon-sm"
+				href={purchaseUrl(item.session.id)}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="shrink-0"
+				aria-label="Buy tickets for {item.movie.title}"
+			>
+				<TicketIcon class="h-4 w-4" />
+			</Button>
+		{/if}
+	</div>
 {/snippet}
 
 <div class="container mx-auto space-y-8 p-4">
@@ -302,7 +320,7 @@
 								On now
 							</h2>
 							<div class="flex flex-col gap-2">
-								{#each onNowSessions as item (item.session.cinemaId + item.session.showtime + item.movie.slug)}
+								{#each onNowSessions as item (item.session.id)}
 									{@render sessionRow(item)}
 								{/each}
 							</div>
@@ -315,7 +333,7 @@
 								Starting soon
 							</h2>
 							<div class="flex flex-col gap-2">
-								{#each soonSessions as item (item.session.cinemaId + item.session.showtime + item.movie.slug)}
+								{#each soonSessions as item (item.session.id)}
 									{@render sessionRow(item)}
 								{/each}
 							</div>
