@@ -1,23 +1,4 @@
-export interface Saal {
-	id: number | string;
-	seats: number;
-	rows?: number;
-	screen_m2?: number | null;
-	screen_type?: string;
-	special: string[];
-}
-
-export interface CinemaLocation {
-	/** URL-friendly id used for the /cinemas/[slug] detail route. For cinemas that
-	 *  also appear in the showtime schedule, this matches their key in
-	 *  `cinemas` (src/lib/types/types.ts) so the two data sources line up. */
-	slug: string;
-	name: string;
-	address: string;
-	notes?: string;
-	total_saals?: number;
-	saals: Saal[];
-}
+import type { CinemaLocation } from '$lib/models/cinema/CinemaLocation';
 
 // Static data for the Cineplexx (and partner) cinemas in Vienna.
 export const cinemaLocations: CinemaLocation[] = [
@@ -25,7 +6,7 @@ export const cinemaLocations: CinemaLocation[] = [
 		slug: 'apollo',
 		name: 'Apollo – Das Kino',
 		address: 'Gumpendorferstraße 63, 1060 Wien',
-		saals: [
+		screens: [
 			{
 				id: 1,
 				seats: 388,
@@ -50,7 +31,7 @@ export const cinemaLocations: CinemaLocation[] = [
 		name: 'Artis International',
 		address: 'Schultergasse 5, 1010 Wien',
 		notes: 'OV-only',
-		saals: [
+		screens: [
 			{
 				id: 1,
 				seats: 256,
@@ -68,9 +49,9 @@ export const cinemaLocations: CinemaLocation[] = [
 		slug: 'donauzentrum',
 		name: 'Cineplexx Donau Zentrum',
 		address: 'Wagramerstraße 79, 1220 Wien',
-		total_saals: 13,
-		notes: '3 saals data unavailable',
-		saals: [
+		total_screens: 13,
+		notes: '3 screens data unavailable',
+		screens: [
 			{
 				id: 1,
 				seats: 478,
@@ -105,7 +86,7 @@ export const cinemaLocations: CinemaLocation[] = [
 		slug: 'millennium',
 		name: 'Cineplexx Millennium City',
 		address: 'Handelskai, 1200 Wien',
-		saals: [
+		screens: [
 			{
 				id: 1,
 				seats: 585,
@@ -185,7 +166,7 @@ export const cinemaLocations: CinemaLocation[] = [
 		slug: 'auhof',
 		name: 'Cineplexx Wien Auhof',
 		address: 'Albert-Schweitzer-Gasse 6, 1140 Wien',
-		saals: [
+		screens: [
 			{ id: 1, seats: 277, rows: 16, screen_m2: 92, special: ['RealD 3D'] },
 			{ id: 2, seats: 261, rows: 15, screen_m2: 81, special: ['RealD 3D'] },
 			{ id: 3, seats: 155, rows: 10, screen_m2: 41, special: ['RealD 3D'] },
@@ -199,7 +180,7 @@ export const cinemaLocations: CinemaLocation[] = [
 		slug: 'wienerberg',
 		name: 'Cineplexx Wienerberg',
 		address: 'Wienerbergstraße 11, 1100 Wien',
-		saals: [
+		screens: [
 			{
 				id: 1,
 				seats: 339,
@@ -270,14 +251,14 @@ export const cinemaLocations: CinemaLocation[] = [
 		name: 'Urania Kino',
 		address: 'Uraniastraße 1, 1010 Wien',
 		notes: 'Single-screen arthouse, cultural/documentary focus',
-		saals: [{ id: 'Großer Saal', seats: 268, rows: 11, screen_m2: 36, special: [] }]
+		screens: [{ id: 'Großer Saal', seats: 268, rows: 11, screen_m2: 36, special: [] }]
 	},
 	{
 		slug: 'village',
 		name: 'Village Cinema Wien Mitte',
 		address: 'Landstraßer Hauptstraße 2a, 1030 Wien',
 		notes: 'Screen sizes for Säle 1-9 not published',
-		saals: [
+		screens: [
 			{ id: 1, seats: 117, screen_m2: null, special: ['RealD 3D', 'Laser', 'HFR'] },
 			{ id: 2, seats: 123, screen_m2: null, special: ['RealD 3D', 'Laser', 'HFR'] },
 			{ id: 3, seats: 123, screen_m2: null, special: ['Laser', 'HFR'] },

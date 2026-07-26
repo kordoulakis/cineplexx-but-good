@@ -4,7 +4,7 @@
  * tech-badge and time formatting logic stays identical everywhere.
  */
 
-import { cinemas } from '$lib/types/types';
+import { cinemas } from '$lib/data/cinemas';
 
 const TECH_TARGETS = ['IMAX', '2D', '3D', '4DX', 'ATMOS', 'OV', 'VIP', 'DBOX'];
 

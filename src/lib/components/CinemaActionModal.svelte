@@ -1,7 +1,7 @@
 <script lang="ts">
 	import * as Dialog from '$lib/components/ui/dialog';
 	import { Button } from '$lib/components/ui/button';
-	import { cinemas } from '$lib/types/types';
+	import { cinemas } from '$lib/data/cinemas';
 	import { cn } from '$lib/utils';
 	import { goto } from '$app/navigation';
 	import ClapperboardIcon from '@lucide/svelte/icons/clapperboard';

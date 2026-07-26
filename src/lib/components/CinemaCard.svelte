@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { type CinemaLocation, type Saal } from '$lib/data/cinemaLocations';
+	import type { CinemaLocation } from '$lib/models/cinema/CinemaLocation';
+	import type { Screen } from '$lib/models/cinema/Screen';
 	import * as Card from '$lib/components/ui/card';
 	import CinemaActionModal from '$lib/components/CinemaActionModal.svelte';
 	import { Badge } from '$lib/components/ui/badge';
@@ -26,16 +27,17 @@
 	} = $props();
 
 	const stats = $derived.by(() => {
-		const screens = cinema.total_saals ?? cinema.saals.length;
-		const seats = cinema.saals.reduce((sum, s) => sum + s.seats, 0);
-		const biggestScreen = cinema.saals.reduce<number | null>(
+		const screens = cinema.total_screens ?? cinema.screens.length;
+		const seats = cinema.screens.reduce((sum, s) => sum + s.seats, 0);
+		const biggestScreen = cinema.screens.reduce<number | null>(
 			(max, s) => (s.screen_m2 != null && (max == null || s.screen_m2 > max) ? s.screen_m2 : max),
 			null
 		);
 		return { screens, seats, biggestScreen };
 	});
 
-	const saalLabel = (saal: Saal) => (typeof saal.id === 'number' ? `Saal ${saal.id}` : saal.id);
+	const screenLabel = (screen: Screen) =>
+		typeof screen.id === 'number' ? `Screen ${screen.id}` : screen.id;
 
 	const mapsUrl = (address: string) =>
 		`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
@@ -64,7 +66,7 @@
 		<a
 			href={mapsUrl(cinema.address)}
 			target="_blank"
-			rel="noopener noreferrer"
+			rel="noopener noreferrer external"
 			class="inline-flex w-fit items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-primary"
 		>
 			<MapPinIcon class="h-4 w-4 shrink-0 text-cineplexx" />
@@ -73,7 +75,7 @@
 		</a>
 	</Card.Header>
 
-	<Card.Content class="flex flex-grow flex-col gap-4">
+	<Card.Content class="flex grow flex-col gap-4">
 		<!-- Summary stats -->
 		<div class="grid grid-cols-3 gap-2">
 			<div class="flex flex-col items-center justify-center rounded-lg bg-muted/50 px-2 py-3">
@@ -101,7 +103,7 @@
 				onclick={onToggle}
 				class="mt-auto flex items-center justify-between gap-2 text-sm font-semibold tracking-wider text-muted-foreground uppercase transition-colors hover:text-primary"
 			>
-				<span>{cinema.saals.length} halls</span>
+				<span>{cinema.screens.length} halls</span>
 				<span class="flex items-center gap-1">
 					<span>{expanded ? 'Hide' : 'Show'}</span>
 					<ChevronDownIcon
@@ -111,35 +113,35 @@
 			</button>
 		{:else}
 			<h2 class="mt-auto text-sm font-semibold tracking-wider text-muted-foreground uppercase">
-				{cinema.saals.length} halls
+				{cinema.screens.length} halls
 			</h2>
 		{/if}
 
 		{#if expanded}
 			<div class="flex flex-col gap-2 border-t border-muted pt-3">
-				{#each cinema.saals as saal (saal.id)}
+				{#each cinema.screens as screen (screen.id)}
 					<div class="flex flex-col gap-1.5 rounded-md bg-muted/30 p-3">
 						<div class="flex flex-wrap items-center justify-between gap-2">
-							<span class="text-sm font-bold">{saalLabel(saal)}</span>
+							<span class="text-sm font-bold">{screenLabel(screen)}</span>
 							<div class="flex items-center gap-3 text-xs text-muted-foreground tabular-nums">
 								<span class="flex items-center gap-1">
 									<ArmchairIcon class="h-3.5 w-3.5" />
-									{saal.seats}
+									{screen.seats}
 								</span>
-								{#if saal.rows}
-									<span>{saal.rows} rows</span>
+								{#if screen.rows}
+									<span>{screen.rows} rows</span>
 								{/if}
-								{#if saal.screen_m2 != null}
+								{#if screen.screen_m2 != null}
 									<span class="flex items-center gap-1">
 										<MaximizeIcon class="h-3.5 w-3.5" />
-										{saal.screen_m2} m²
+										{screen.screen_m2} m²
 									</span>
 								{/if}
 							</div>
 						</div>
-						{#if saal.special.length > 0}
+						{#if screen.special.length > 0}
 							<div class="flex flex-wrap gap-1">
-								{#each saal.special as tech (tech)}
+								{#each screen.special as tech (tech)}
 									<Badge
 										variant="outline"
 										class="border-primary/20 bg-primary/5 px-1.5 py-0 text-[10px] font-semibold tracking-wide text-primary/80"
@@ -151,9 +153,9 @@
 						{/if}
 					</div>
 				{/each}
-				{#if cinema.total_saals && cinema.total_saals > cinema.saals.length}
+				{#if cinema.total_screens && cinema.total_screens > cinema.screens.length}
 					<p class="pt-1 text-center text-xs text-muted-foreground italic">
-						+ {cinema.total_saals - cinema.saals.length} more (data unavailable)
+						+ {cinema.total_screens - cinema.screens.length} more (data unavailable)
 					</p>
 				{/if}
 			</div>

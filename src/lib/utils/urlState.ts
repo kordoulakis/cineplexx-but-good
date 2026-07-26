@@ -10,23 +10,13 @@
  *   q       search query
  *   view    "now" for the "Now & Soon" view
  */
-import { cinemas } from '$lib/types/types';
+import { cinemas } from '$lib/data/cinemas';
+import type { FilterState } from '$lib/models/filter/FilterState';
 
 export const AVAILABLE_TECHS = ['IMAX', '4DX', '3D', '2D', 'ATMOS', 'VIP', 'DBOX'];
 
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const allCinemaKeys = cinemas.map((c) => c.key);
-
-export type ViewMode = 'schedule' | 'now';
-
-export interface FilterState {
-	date: string;
-	cinemas: string[];
-	techs: string[];
-	showOnlyOv: boolean;
-	query: string;
-	view: ViewMode;
-}
 
 /** Parse whatever filter params are present in the URL. Absent/invalid keys are omitted. */
 export function parseFilters(searchParams: URLSearchParams): Partial<FilterState> {

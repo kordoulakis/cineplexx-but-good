@@ -1,14 +1,15 @@
 <script lang="ts">
-	import { cinemaLocations, type CinemaLocation } from '$lib/data/cinemaLocations';
+	import { cinemaLocations } from '$lib/data/cinemaLocations';
+	import type { CinemaLocation } from '$lib/models/cinema/CinemaLocation';
 	import CinemaCard from '$lib/components/CinemaCard.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 	import ArrowLeftIcon from '@lucide/svelte/icons/arrow-left';
 
 	const cinemaStats = (cinema: CinemaLocation) => {
-		const screens = cinema.total_saals ?? cinema.saals.length;
-		const seats = cinema.saals.reduce((sum, s) => sum + s.seats, 0);
-		const biggestScreen = cinema.saals.reduce<number | null>(
+		const screens = cinema.total_screens ?? cinema.screens.length;
+		const seats = cinema.screens.reduce((sum, s) => sum + s.seats, 0);
+		const biggestScreen = cinema.screens.reduce<number | null>(
 			(max, s) => (s.screen_m2 != null && (max == null || s.screen_m2 > max) ? s.screen_m2 : max),
 			null
 		);

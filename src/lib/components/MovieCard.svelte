@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { TrimmedMovie } from '$lib/types/types';
+	import type { TrimmedMovie } from '$lib/models/movie/TrimmedMovie';
 	import * as Card from '$lib/components/ui/card';
 	import { Badge } from '$lib/components/ui/badge';
 	import { Button } from '$lib/components/ui/button';

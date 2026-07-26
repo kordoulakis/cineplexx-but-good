@@ -6,7 +6,8 @@
 	import ClapperboardIcon from '@lucide/svelte/icons/clapperboard';
 	import FilmIcon from '@lucide/svelte/icons/film';
 	import { page } from '$app/state';
-	import { parseFilters, type ViewMode } from '$lib/utils/urlState';
+	import { parseFilters } from '$lib/utils/urlState';
+	import type { ViewMode } from '$lib/models/filter/ViewMode';
 
 	const today = new Date().toISOString().split('T')[0];
 	const initialFilters = parseFilters(page.url.searchParams);

@@ -1,7 +1,9 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { json } from '@sveltejs/kit';
-import type { RawMovie, TrimmedMovie, FetchResult } from '$lib/types/types';
-import { cinemas } from '$lib/types/types';
+import type { RawMovie } from '$lib/models/movie/RawMovie';
+import type { TrimmedMovie } from '$lib/models/movie/TrimmedMovie';
+import type { CinemaSchedules } from '$lib/models/movie/CinemaSchedules';
+import { cinemas } from '$lib/data/cinemas';
 import { slugify } from '$lib/utils/slug';
 
 const BASE = 'https://app.cineplexx.at/api/v1/cinemasweb';
@@ -127,13 +129,10 @@ export const GET: RequestHandler = async ({ url }) => {
 	});
 
 	const responses = await Promise.all(promises);
-	const schedules = responses.reduce(
-		(acc, curr) => {
-			acc[curr.key] = curr.result;
-			return acc;
-		},
-		{} as Record<string, FetchResult<TrimmedMovie[]>>
-	);
+	const schedules = responses.reduce((acc, curr) => {
+		acc[curr.key] = curr.result;
+		return acc;
+	}, {} as CinemaSchedules);
 
 	return json(schedules, {
 		headers: { 'Cache-Control': 'public, max-age=3600' }

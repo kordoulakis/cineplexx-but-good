@@ -21,9 +21,10 @@ No test framework is configured (no vitest/jest/playwright, no `*.test.ts` files
 
 - `src/routes/` — pages (`+page.svelte` home schedule, `cinemas/`, `cinemas/[slug]/`, `movies/`, `movies/[id]/`) plus the one API route `api/movies/+server.ts`.
 - `src/lib/components/` — feature components; `src/lib/components/ui/` — shadcn-svelte primitives, each with an `index.ts` barrel (regenerate via `components.json` config, don't hand-edit primitives if avoidable).
-- `src/lib/types/types.ts` — shared interfaces and the `cinemas` list (the four Vienna locations).
+- `src/lib/models/` — shared interfaces/types, one per file, grouped by domain (`movie/`, `cinema/`, `filter/`, `api/`); `index.ts` barrel re-exports all of them.
 - `src/lib/utils/` — `filters.ts`, `sessions.ts`, `slug.ts`, `urlState.ts`. Small, single-purpose, JSDoc'd where reused across components.
-- `src/lib/data/cinemaLocations.ts` — static location data.
+- `src/lib/data/cinemas.ts` — the `cinemas` list (the four Vienna locations with showtime data).
+- `src/lib/data/cinemaLocations.ts` — static location data (screens/seats) for all cinemas, including ones without showtimes.
 
 ## Cineplexx API integration
 

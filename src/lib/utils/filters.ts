@@ -3,12 +3,10 @@
  * (CinemasAndMovies) and the aggregated "all movies" page (/movies), so the
  * OV / tech / search semantics stay identical across both views.
  */
-import type { TrimmedMovie, TrimmedSession, FetchResult } from '$lib/types/types';
-
-export interface SessionFilterOptions {
-	showOnlyOv: boolean;
-	selectedTechs: string[];
-}
+import type { TrimmedMovie } from '$lib/models/movie/TrimmedMovie';
+import type { TrimmedSession } from '$lib/models/movie/TrimmedSession';
+import type { CinemaSchedules } from '$lib/models/movie/CinemaSchedules';
+import type { SessionFilterOptions } from '$lib/models/filter/SessionFilterOptions';
 
 /** Does a single session pass the active OV + technology filters? */
 export function sessionMatchesFilters(
@@ -45,7 +43,7 @@ export function matchesQuery(movie: TrimmedMovie, query: string): boolean {
  * lists the film. Sorted by title.
  */
 export function mergeMoviesBySlug(
-	schedules: Record<string, FetchResult<TrimmedMovie[]>>,
+	schedules: CinemaSchedules,
 	selectedCinemas: string[]
 ): TrimmedMovie[] {
 	const bySlug = new Map<string, TrimmedMovie>();

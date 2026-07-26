@@ -1,6 +1,7 @@
 <script lang="ts">
-	import type { TrimmedMovie, FetchResult } from '../types/types.ts';
-	import { cinemas } from '$lib/types/types';
+	import type { CinemaSchedules } from '$lib/models/movie/CinemaSchedules';
+	import type { NowItem } from '$lib/models/movie/NowItem';
+	import { cinemas } from '$lib/data/cinemas';
 	import { getCinemaBySlug } from '$lib/data/cinemaLocations';
 	import MovieCard from '$lib/components/MovieCard.svelte';
 	import FilterControls from '$lib/components/FilterControls.svelte';
@@ -13,7 +14,8 @@
 	import { goto } from '$app/navigation';
 	import { getCleanTech, formatTime } from '$lib/utils/sessions';
 	import { sessionMatchesFilters, matchesQuery } from '$lib/utils/filters';
-	import { parseFilters, buildFilterParams, type ViewMode } from '$lib/utils/urlState';
+	import { parseFilters, buildFilterParams } from '$lib/utils/urlState';
+	import type { ViewMode } from '$lib/models/filter/ViewMode';
 
 	let {
 		selectedDate = $bindable(new Date().toISOString().split('T')[0]),
@@ -25,7 +27,7 @@
 	// Seed filters from the URL on load (URL wins so shared links restore exactly).
 	const urlFilters = parseFilters(page.url.searchParams);
 
-	let schedules = $state<Record<string, FetchResult<TrimmedMovie[]>>>({});
+	let schedules = $state<CinemaSchedules>({});
 	let loading = $state(true);
 	let componentError = $state<string | null>(null);
 
@@ -85,7 +87,7 @@
 		}
 	});
 
-	function computeFiltered(sched: Record<string, FetchResult<TrimmedMovie[]>>) {
+	function computeFiltered(sched: CinemaSchedules) {
 		const query = searchQuery.trim().toLowerCase();
 		return Object.entries(sched)
 			.filter(([cinemaKey]) => selectedCinemas.includes(cinemaKey))
@@ -129,7 +131,7 @@
 			try {
 				const res = await fetch(`/api/movies?date=${dateStr}`);
 				if (!res.ok) continue;
-				const sched = (await res.json()) as Record<string, FetchResult<TrimmedMovie[]>>;
+				const sched = (await res.json()) as CinemaSchedules;
 				if (computeFiltered(sched).some((s) => s.movies.length > 0)) {
 					selectedDate = dateStr;
 					searchingNextDate = false;
@@ -153,12 +155,7 @@
 		return () => clearInterval(id);
 	});
 
-	type NowItem = { movie: TrimmedMovie; session: TrimmedMovie['sessions'][number]; t: number };
-
-	function computeNowSessions(
-		sched: Record<string, FetchResult<TrimmedMovie[]>>,
-		nowMs: number
-	): NowItem[] {
+	function computeNowSessions(sched: CinemaSchedules, nowMs: number): NowItem[] {
 		const query = searchQuery.trim().toLowerCase();
 		const items: NowItem[] = [];
 		for (const [cinemaKey, result] of Object.entries(sched)) {

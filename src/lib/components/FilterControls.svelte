@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cinemas } from '$lib/types/types';
+	import { cinemas } from '$lib/data/cinemas';
 	import { Badge } from '$lib/components/ui/badge';
 	import { AVAILABLE_TECHS } from '$lib/utils/urlState';
 

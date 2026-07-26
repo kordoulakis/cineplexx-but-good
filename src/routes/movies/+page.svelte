@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { TrimmedMovie, FetchResult } from '$lib/types/types';
-	import { cinemas } from '$lib/types/types';
+	import type { CinemaSchedules } from '$lib/models/movie/CinemaSchedules';
+	import { cinemas } from '$lib/data/cinemas';
 	import { browser } from '$app/environment';
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
@@ -76,7 +76,7 @@
 		}
 	});
 
-	let schedules = $state<Record<string, FetchResult<TrimmedMovie[]>>>({});
+	let schedules = $state<CinemaSchedules>({});
 	let loading = $state(true);
 	let componentError = $state<string | null>(null);
 
@@ -101,7 +101,7 @@
 
 	// Merge every selected cinema into one deduped list, then apply the active
 	// session/search filters. Each surviving movie keeps the sessions that passed.
-	function computeMovies(sched: Record<string, FetchResult<TrimmedMovie[]>>) {
+	function computeMovies(sched: CinemaSchedules) {
 		const query = searchQuery.trim().toLowerCase();
 		return mergeMoviesBySlug(sched, selectedCinemas)
 			.map((movie) => ({
@@ -137,7 +137,7 @@
 			try {
 				const res = await fetch(`/api/movies?date=${dateStr}`);
 				if (!res.ok) continue;
-				const schedule = (await res.json()) as Record<string, FetchResult<TrimmedMovie[]>>;
+				const schedule = (await res.json()) as CinemaSchedules;
 				if (computeMovies(schedule).length > 0) {
 					selectedDate = dateStr;
 					searchingNextDate = false;

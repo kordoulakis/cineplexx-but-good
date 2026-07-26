@@ -1,6 +1,7 @@
 <script lang="ts">
-	import type { TrimmedMovie, FetchResult } from '$lib/types/types';
-	import { cinemas } from '$lib/types/types';
+	import type { TrimmedMovie } from '$lib/models/movie/TrimmedMovie';
+	import type { CinemaSchedules } from '$lib/models/movie/CinemaSchedules';
+	import { cinemas } from '$lib/data/cinemas';
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
 	import { browser } from '$app/environment';
@@ -15,8 +16,6 @@
 	import FilmIcon from '@lucide/svelte/icons/film';
 	import PlayIcon from '@lucide/svelte/icons/play';
 	import MapPinIcon from '@lucide/svelte/icons/map-pin';
-
-	type Schedules = Record<string, FetchResult<TrimmedMovie[]>>;
 
 	const today = new Date().toISOString().split('T')[0];
 	const slug = $derived(page.params.id ?? '');
@@ -37,14 +36,14 @@
 	// Per-date cache: a date is fetched at most once and reused, so switching dates
 	// is instant. Nearby dates are prefetched in the background.
 	const PREFETCH_DAYS = 7;
-	let cache = $state<Record<string, Schedules>>({});
-	const inflight = new Map<string, Promise<Schedules>>();
+	let cache = $state<Record<string, CinemaSchedules>>({});
+	const inflight = new Map<string, Promise<CinemaSchedules>>();
 	let error = $state<string | null>(null);
 
 	let searchingNextDate = $state(false);
 	let noFutureMatch = $state(false);
 
-	function loadDate(dateStr: string): Promise<Schedules> {
+	function loadDate(dateStr: string): Promise<CinemaSchedules> {
 		const cached = untrack(() => cache[dateStr]);
 		if (cached) return Promise.resolve(cached);
 		const existing = inflight.get(dateStr);
@@ -52,7 +51,7 @@
 		const promise = (async () => {
 			const res = await fetch(`/api/movies?date=${dateStr}`);
 			if (!res.ok) throw new Error(`Failed to fetch: ${res.statusText}`);
-			const data = (await res.json()) as Schedules;
+			const data = (await res.json()) as CinemaSchedules;
 			cache = { ...cache, [dateStr]: data };
 			return data;
 		})().finally(() => inflight.delete(dateStr));
@@ -60,7 +59,7 @@
 		return promise;
 	}
 
-	function buildDetail(sched: Schedules) {
+	function buildDetail(sched: CinemaSchedules) {
 		let meta: TrimmedMovie | null = null;
 		const sessions: TrimmedMovie['sessions'] = [];
 		for (const result of Object.values(sched)) {
