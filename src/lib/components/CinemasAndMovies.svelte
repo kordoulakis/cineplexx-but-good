@@ -255,7 +255,7 @@
 	</div>
 {/snippet}
 
-<div class="container mx-auto space-y-8 p-4">
+<div class="container mx-auto min-h-screen space-y-8 p-4">
 	{#if loading}
 		<div class="flex min-h-50 items-center justify-center">
 			<p class="animate-pulse text-lg">Loading showtimes...</p>
