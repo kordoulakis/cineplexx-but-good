@@ -131,7 +131,11 @@
 			<Button
 				variant="outline"
 				size="sm"
-				class="font-bold border-primary/20 hover:border-primary flex gap-2 items-center"
+				class={cn(
+					"font-bold border-primary/20 hover:border-primary flex items-center justify-center gap-2",
+					"fixed bottom-10 right-6 z-50 h-12 w-auto rounded-full px-4 shadow-lg bg-background",
+					"sm:static sm:h-8 sm:rounded-[min(var(--radius-md),10px)] sm:px-2.5 sm:shadow-none"
+				)}
 				style="cursor: pointer"
 				onclick={goToNextDay}
 			>
